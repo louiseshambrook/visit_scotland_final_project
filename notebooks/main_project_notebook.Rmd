@@ -19,8 +19,6 @@ Reading in cleaned data
 ```{r}
 activities_data <- read_csv("clean_data/activities_clean.csv")
 
-
-
 ```
 
 Exploring the data for each dataset
@@ -40,29 +38,42 @@ summary(location)
 summary(transport)
 
 head(activities)
-
 head(location)
-
 head(transport)
-
 head(domestic_tourism)
-
 head(accomodation)
-
 ```
-
-
-
 
 The plan is to eventually have all cleaning in one script, but for now, do by cleaning and question.
 
-### Analysis ---------------------a
+### Next to do
+
+## data wrangling and initial analysis
 
 What kind of tourism activity generates the highest income for Scotland?
+```{r}
 
-
+```
 
 Which kind of activity generates the most visits to sites?
+```{r}
+
+```
+
+What kind of tourism activity generates the highest income for Scotland?
+```{r}
+
+```
+
+Which kind of activity generates the most visits to sites?
+```{r}
+
+```
+
+Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?
+```{r}
+
+```
 
 
 
@@ -78,11 +89,7 @@ Which kind of activity generates the most visits to sites?
 
 ### Main questions to answer --------------------------------------------------
 
-What kind of tourism activity generates the highest income for Scotland?
 
-Which kind of activity generates the most visits to sites?
-
-Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?
 
 What type of locations receive the most visits? What kinds of locations do people spend the most time in?
 

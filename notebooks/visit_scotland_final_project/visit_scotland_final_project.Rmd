@@ -26,18 +26,57 @@ transport <- read_csv("raw_data/tourism_day_visits_transport.csv")
 
 EDA
 ```{r}
+head(domestic_tourism)
 
+domestic_tourism %>%
+  filter(Units == "million pounds (GBP)")
 ```
 
-Begin to complete cleaning of each set
+EDA on activities
 ```{r}
+activities 
+```
+Notes on cleaning of activities
+- janitor on names
+- drop 'featurecode'
+- drop measurement
+- figure out how to group / sort this (the question is which type generates the most visits?)
+
+
+EDA on demographic
+```{r}
+demographics %>%
+  select(Age)
+
 
 ```
+Cleaning on demographics
+- janitor
+- drop featurecode
+- drop measurement
+- there are many rows with "All" - seems to be an NA / other value. Need to decide what I'll do about that. 
+- One of the questions is "who spends the most" (and visit) - spend and visit aren't features in that dataset. So I will have to think about joining, and how I do that.
 
+
+EDA on accomodation
+```{r}
+accomodation
+
+accomodation %>%
+  distinct(`Weekday/Weekend`)
+```
+
+Notes on cleaning accomodation
+- use janitor
+- drop 'FeatureCode'
+- drop 'measurement'
+
+
+The plan is to eventually have all cleaning in one script, but for now, do by cleaning and question.
 
 
 ## Steps / questions / Plan
-- Input data
+
 - Complete initial EDA; find out how much data cleaning needs to be completed
 
 - Begin to complete wrangling so that each question can be answered

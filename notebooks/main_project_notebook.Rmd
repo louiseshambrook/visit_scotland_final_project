@@ -80,12 +80,37 @@ clean_demographics <- demographics %>%
 
 ```
 
+
 ```{r}
 clean_demographics %>%
   filter(gender != "All")
 
 # when completing this part of the analysis, I will have to look at each variable individually. There are too many variables with too many of them having "all" as an answer to get anything significant from them as a direct analysis.
 ```
+
+Cleaning location dataset
+```{r}
+clean_location <- location %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+```
+
+Cleaning travel dataset
+```{r}
+clean_transport <- transport %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+```
+
+
+```{r}
+
+```
+
 
 
 The plan is to eventually have all cleaning in one script, but for now, do by cleaning and question.

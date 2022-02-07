@@ -24,60 +24,41 @@ transport <- read_csv("raw_data/tourism_day_visits_transport.csv")
 
 ```
 
-EDA
+Exploring the data for each dataset
 ```{r}
 head(domestic_tourism)
 
 domestic_tourism %>%
   filter(Units == "million pounds (GBP)")
+
+# checking for NA values
+
+summary(accomodation)
+summary(activities)
+summary(demographics)
+summary(domestic_tourism)
+summary(location)
+summary(transport)
+
+head(activities)
+
+head(location)
+
+head(transport)
+
+head(domestic_tourism)
+
+head(accomodation)
+
 ```
 
-EDA on activities
-```{r}
-activities 
-```
-Notes on cleaning of activities
-- janitor on names
-- drop 'featurecode'
-- drop measurement
-- figure out how to group / sort this (the question is which type generates the most visits?)
 
-
-EDA on demographic
-```{r}
-demographics %>%
-  select(Age)
-
-
-```
-Cleaning on demographics
-- janitor
-- drop featurecode
-- drop measurement
-- there are many rows with "All" - seems to be an NA / other value. Need to decide what I'll do about that. 
-- One of the questions is "who spends the most" (and visit) - spend and visit aren't features in that dataset. So I will have to think about joining, and how I do that.
-
-
-EDA on accomodation
-```{r}
-accomodation
-
-accomodation %>%
-  distinct(`Weekday/Weekend`)
-```
-
-Notes on cleaning accomodation
-- use janitor
-- drop 'FeatureCode'
-- drop 'measurement'
 
 
 The plan is to eventually have all cleaning in one script, but for now, do by cleaning and question.
 
-
 ## Steps / questions / Plan
 
-- Complete initial EDA; find out how much data cleaning needs to be completed
 
 - Begin to complete wrangling so that each question can be answered
 - Whilst answering each question, keep an eye out for details / small points - the overall story - remember the bikes project!
@@ -86,7 +67,7 @@ The plan is to eventually have all cleaning in one script, but for now, do by cl
     - For these, what are my options? (linear, logistic, decision tree, forest, any others? Maybe clean and prepare the data in R, and then run the model in Python???)
 
 
-### Main questions to answer
+### Main questions to answer --------------------------------------------------
 
 What kind of tourism activity generates the highest income for Scotland?
 
@@ -94,7 +75,7 @@ Which kind of activity generates the most visits to sites?
 
 Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?
 
-What type of locations receive the most visits? What kinds of locations do people spend the most in?
+What type of locations receive the most visits? What kinds of locations do people spend the most time in?
 
 Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
 

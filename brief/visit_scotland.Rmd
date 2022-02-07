@@ -1,0 +1,77 @@
+---
+title: ' '
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = 'center')
+```
+
+<br>
+
+<br>
+
+```{r, echo = FALSE, out.width= '50%'}
+knitr::include_graphics("images/visit-scotland-logo.jpg")
+```
+
+<br><br>
+
+# Visit Scotland  
+
+<br>
+
+VisitScotland.com is the official consumer website of VisitScotland, Scotland’s national tourist board.
+
+Working closely with private businesses, public agencies and local authorities, we work to ensure that our visitors experience the very best of Scotland and that the country makes the most of its outstanding tourism assets and realises its potential.
+
+To do this, VisitScotland:
+
+ * markets Scotland to all parts of the world to attract visitors.
+ * provides information and inspiration to visitors and potential visitors so they get the best out of a visit to Scotland.
+ * provides quality assurance to visitors and quality advice to our industry partners to help the industry meet - and strive to exceed - visitors' expectations.
+
+
+<br> 
+
+
+
+# The Data
+
+
+We have open data available to download from the scot gov statistics site. Visit Scotland has provided open access data on tourism rates in Scotland.  
+
+[Regional Domestic Tourism](https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fregional-domestic-tourism)    
+
+[Scottish Accomodation Occupancy](https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fscottish-accommodation-occupancy)  
+
+[Tourism Day Visits - Activities](https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Ftourism-day-visits---activities)  
+
+[Tourism Day Visits - Demographics](https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Ftourism-day-visits---demographics)  
+
+[Tourism Day Visits - Location](https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Ftourism-day-visits---location)  
+
+[Tourism Day Visits - Transport](https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Ftourism-day-visits---transport)  
+<br><br>
+
+# General Questions
+
+We would like gain more understanding about our tourism data for Scotland. 
+
+* What kind of tourism activity generates the highest income for Scotland?  
+* Which kind of activity generates the most visits to sites?  
+* Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?   
+* What type of locations receive the most visits? What kinds of locations do people spend the most in?   
+* Is there a particular method of travel our visitors arrive by?  Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.   
+* When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?  
+* What type of accomodation is most popular? Is there a difference by location?  
+* How have general tourism rates changed over time? 
+* Is there any way to predict spending and visits for Visit Scotland?    
+
+
+
+
+<br><br>
+

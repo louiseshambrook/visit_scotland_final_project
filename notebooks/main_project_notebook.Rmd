@@ -68,10 +68,23 @@ regional_domestic_clean <- regional_domestic %>%
          unit = "units")
 
 regional_domestic_clean %>%
-  separate(year, into = c("year_1", "year_2"), sep = "-") %>%
+  separate(year, into = c("year_1", "year_3"), sep = "-") %>%
   mutate(year_1 = as.numeric(year_1),
-         year_2 = as.numeric(year_2),
-         )
+         year_3 = as.numeric(year_3)) %>%
+  mutate(year_2 = case_when(year_1 == 2009 & year_3 == 2011 ~ 2010,
+                            year_1 == 2010 & year_3 == 2012 ~ 2011,
+                            year_1 == 2011 & year_3 == 2013 ~ 2012,
+                            year_1 == 2012 & year_3 == 2014 ~ 2013,
+                            year_1 == 2013 & year_3 == 2015 ~ 2014,
+                            year_1 == 2014 & year_3 == 2016 ~ 2015,
+                            year_1 == 2015 & year_3 == 2017 ~ 2016,
+                            year_1 == 2016 & year_3 == 2018 ~ 2017,
+                            year_1 == 2017 & year_3 == 2019 ~ 2018,
+                            year_1 < 2009 & year_3 > 2019 ~ 0)) %>%
+  relocate(year_2, .after = (year_1)) %>%
+  pivot_longer()
+
+
 
 # I need to add a year 3 for the year in between.
 ```

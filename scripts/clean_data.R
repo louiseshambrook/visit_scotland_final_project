@@ -12,35 +12,51 @@ activities_clean <- activities %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
          unit = "units")
-write_csv(activities_clean, "clean_data/activities_clean")
+write_csv(activities_clean, "clean_data/activities_clean.csv")
 
 # NOTE - I still need to figure out how to sort/group this?
 
 
-# Cleaning of activities
-# - janitor on names
-# - drop 'featurecode'
-# - drop measurement
-# - figure out how to group / sort this (the question is which type generates the most visits?)
+
+# cleaning the demographics dataset --------------------------------------------
+
+demographics <- read_csv("raw_data/tourism_day_visits_demographics.csv")
+demographics_clean <- demographics %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+write_csv(demographics_clean, "clean_data/demographics_clean.csv")
+
+# when completing the analysis with the demographics dataset, I will have to examine
+# each variable individually. There are too many variables with "all" as an answer,
+# which I cannot remove in the cleaning process.
 
 
-# Cleaning on demographics
-# - janitor
-# - drop featurecode
-# - drop measurement
-# - there are many rows with "All" - seems to be an NA / other value.
-    # Need to decide what I'll do about that. 
+# cleaning the location dataset ------------------------------------------------
 
-# Cleaning needed on location
-# - janitor
-# - drop featurecode
-# - drop measurement
+location <- read_csv("raw_data/tourism_day_visits_location.csv")
+location_clean <- location %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+write_csv(location_clean, "clean_data/location_clean.csv")
 
-# Cleaning on travel
-# - janitor
-# - drop featurecode
-# - drop measurement
-# - 
+
+# cleaning the transport dataset -----------------------------------------------
+
+transport <- read_csv("raw_data/tourism_day_visits_transport.csv")
+transport_clean <- transport %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+write_csv(transport_clean, "clean_data/transport_clean.csv")
+
+
+
+
 
 # Cleaning to complete on domestic_tourism
 # - janitor on names

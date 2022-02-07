@@ -56,25 +56,24 @@ activities - breaking up into categories
 regional/domestic - splitting the years up
 
 
-Figuring out the categories for types of activity
-```{r}
-activities_clean %>%
-  distinct(tourism_activity) %>%
-  arrange(tourism_activity)
-
-# this creates a list of 16 items - so these will need to be coded using an ifelse or similar. 
-```
-
 
 
 
 cleaning domestic_tourism
 ```{r}
-domestic_tourism_clean <- domestic_tourism %>%
+regional_domestic_clean <- regional_domestic %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
          unit = "units")
+
+regional_domestic_clean %>%
+  separate(year, into = c("year_1", "year_2"), sep = "-") %>%
+  mutate(year_1 = as.numeric(year_1),
+         year_2 = as.numeric(year_2),
+         )
+
+# I need to add a year 3 for the year in between.
 ```
 
 

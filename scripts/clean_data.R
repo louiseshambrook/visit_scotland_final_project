@@ -17,7 +17,6 @@ write_csv(activities_clean, "clean_data/activities_clean.csv")
 # NOTE - I still need to figure out how to sort/group this?
 
 
-
 # cleaning the demographics dataset --------------------------------------------
 
 demographics <- read_csv("raw_data/tourism_day_visits_demographics.csv")
@@ -55,18 +54,26 @@ transport_clean <- transport %>%
 write_csv(transport_clean, "clean_data/transport_clean.csv")
 
 
+# cleaning the accommodation dataset --------------------------------------------
+
+accomodation <- read_csv("raw_data/scottish_accomodation_occupancy.csv")
+accomodation_clean <- accomodation %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+write_csv(accomodation_clean, "clean_data/accomodation_clean.csv")
 
 
+# cleaning the regional_domestic dataset ---------------------------------------
+regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv")
+regional_domestic_clean <- regional_domestic %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+write_csv(regional_domestic_clean, "clean_data/regional_domestic_clean.csv")
 
-# Cleaning to complete on domestic_tourism
-# - janitor on names
-# - drop 'measurement' column
-# - drop 'featurecode' column
-# - split into 3 sets? pounds, visits and nights?
-#   - mutate DateCode to specify individual years
+# NOTE - I still need to figure out what to do about the years here!!
 
-# Notes on cleaning accomodation
-# - use janitor
-# - drop 'FeatureCode'
-# - drop 'measurement'
-# - 
+

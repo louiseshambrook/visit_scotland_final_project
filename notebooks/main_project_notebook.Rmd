@@ -13,14 +13,11 @@ library(lubridate)
 
 ```
 
-reading in data
+Reading in cleaned data
 ```{r}
-domestic_tourism <- read_csv("raw_data/regional_domestic_tourism.csv")
-accomodation <- read_csv("raw_data/scottish_accomodation_occupancy.csv")
-activities <- read_csv("raw_data/tourism_day_visits_activities.csv")
-demographics <- read_csv("raw_data/tourism_day_visits_demographics.csv")
-location <- read_csv("raw_data/tourism_day_visits_location.csv")
-transport <- read_csv("raw_data/tourism_day_visits_transport.csv")
+activities_data <- read_csv("clean_data/activities_clean.csv")
+
+
 
 ```
 
@@ -52,14 +49,10 @@ head(accomodation)
 
 ```
 
-Cleaning activities dataset
-```{r}
-activities_clean <- activities %>%
-  clean_names() %>%
-  select(-feature_code, -measurement) %>%
-  rename(year = "date_code",
-         unit = "units")
-```
+Incomplete parts:
+activities - breaking up into categories
+regional/domestic - splitting the years up
+
 
 Figuring out the categories for types of activity
 ```{r}
@@ -70,54 +63,12 @@ activities_clean %>%
 # this creates a list of 16 items - so these will need to be coded using an ifelse or similar. 
 ```
 
-Cleaning demographics dataset
-```{r}
-clean_demographics <- demographics %>%
-  clean_names() %>%
-  select(-feature_code, -measurement) %>%
-  rename(year = "date_code",
-         unit = "units")
-
-```
 
 
-```{r}
-clean_demographics %>%
-  filter(gender != "All")
-
-# when completing this part of the analysis, I will have to look at each variable individually. There are too many variables with too many of them having "all" as an answer to get anything significant from them as a direct analysis.
-```
-
-Cleaning location dataset
-```{r}
-clean_location <- location %>%
-  clean_names() %>%
-  select(-feature_code, -measurement) %>%
-  rename(year = "date_code",
-         unit = "units")
-```
-
-Cleaning travel dataset
-```{r}
-clean_transport <- transport %>%
-  clean_names() %>%
-  select(-feature_code, -measurement) %>%
-  rename(year = "date_code",
-         unit = "units")
-```
 
 cleaning domestic_tourism
 ```{r}
 domestic_tourism_clean <- domestic_tourism %>%
-  clean_names() %>%
-  select(-feature_code, -measurement) %>%
-  rename(year = "date_code",
-         unit = "units")
-```
-
-cleaning accomodation
-```{r}
-accomodation_clean <- accomodation %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",

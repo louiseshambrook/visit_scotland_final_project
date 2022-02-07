@@ -14,8 +14,28 @@ activities_clean <- activities %>%
          unit = "units")
 write_csv(activities_clean, "clean_data/activities_clean.csv")
 
-# NOTE - I still need to figure out how to sort/group this?
-# I can't clock this one - I will have to come back to it.
+activities_clean_mutated <- activities_clean %>%
+  mutate(activity_type = 
+           case_when(tourism_activity == "Shopping for items that you do not regularly buy" ~ "Shopping",
+                     tourism_activity == "Watched live sporting events (not on TV)" ~ "Attend events (sports)",
+                     tourism_activity == "Night out to a bar, pub and/or club" ~ "Going out",
+                     tourism_activity == "Special personal events e.g. wedding, graduation" ~ "Attend events (personal)",
+                     tourism_activity == "Leisure activities e.g. hobbies & evening classes" ~ "Leisure",
+                     tourism_activity == "Sport participation, e.g. exercise classes, gym" ~ "Sports",
+                     tourism_activity == "Special public event e.g. festival, exhibition" ~ "Attend events",
+                     tourism_activity == "Went out for a meal" ~ "Going out",
+                     tourism_activity == "Day out to a beauty/health centre/spa, etc." ~ "Leisure",
+                     tourism_activity == "Outdoor leisure activities e.g. walking, golf" ~ "Leisure",
+                     tourism_activity == "Visitor attraction e.g. theme park, museum, zoo" ~ "Day trip (visit attractions)",
+                     tourism_activity == "General day out/ to explore an area" ~ "Day trip",
+                     tourism_activity == "Entertainment - to a cinema, concert or theatre" ~ "Going out",
+                     tourism_activity == "Day trips/excursions for other leisure purpose" ~ "Day trip",
+                     tourism_activity == "Visited friends or family for leisure" ~ "Visit family/friends",
+                     tourism_activity == "All" ~ "Other"))
+
+# same as with the regional dataset; this is still under development, but I have
+# saved it to a variable for now (but not to a csv as I don't know if I will use
+# it in the analysis)
 
 
 # cleaning the demographics dataset --------------------------------------------

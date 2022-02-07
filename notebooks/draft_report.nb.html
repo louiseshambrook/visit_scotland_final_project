@@ -215,23 +215,10 @@ pre code {
 
 
 <!-- rnb-text-begin -->
-<div id="backup-notebook-with-cleaning-code-etc" class="section level3">
-<h3>Backup notebook with cleaning code etc</h3>
+<p>Main project draft output</p>
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWN0aXZpdGllc19jbGVhbiA8LSBhY3Rpdml0aWVzICU+JVxuICBjbGVhbl9uYW1lcygpICU+JVxuICBzZWxlY3QoLWZlYXR1cmVfY29kZSwgLW1lYXN1cmVtZW50KSAlPiVcbiAgcmVuYW1lKHllYXIgPSBcImRhdGVfY29kZVwiLFxuICAgICAgICAgdW5pdCA9IFwidW5pdHNcIilcbmBgYCJ9 -->
-<pre class="r"><code>activities_clean &lt;- activities %&gt;%
-  clean_names() %&gt;%
-  select(-feature_code, -measurement) %&gt;%
-  rename(year = &quot;date_code&quot;,
-         unit = &quot;units&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyMjIEJhY2t1cCBub3RlYm9vayB3aXRoIGNsZWFuaW5nIGNvZGUgZXRjCgpgYGB7cn0KYWN0aXZpdGllc19jbGVhbiA8LSBhY3Rpdml0aWVzICU+JQogIGNsZWFuX25hbWVzKCkgJT4lCiAgc2VsZWN0KC1mZWF0dXJlX2NvZGUsIC1tZWFzdXJlbWVudCkgJT4lCiAgcmVuYW1lKHllYXIgPSAiZGF0ZV9jb2RlIiwKICAgICAgICAgdW5pdCA9ICJ1bml0cyIpCmBgYAoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpNYWluIHByb2plY3QgZHJhZnQgb3V0cHV0</div>
 
 
 
@@ -278,7 +265,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("backup_notebook.Rmd");
+  window.initializeSourceEmbed("draft_report.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

@@ -1,0 +1,108 @@
+---
+title: "Visit Scotland Final Project CodeClan 2022"
+output: 
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+  pdf_document: default
+---
+Main project draft output
+
+```{r}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+
+```{r}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(tsibble)
+library(lubridate)
+library(rgeos)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(sf)
+library(leaflet)
+library(tsibbledata)
+
+
+
+```
+
+```{r}
+READ IN DATA
+
+```
+
+
+# 1. Documentation
+
+#### Domain knowledge (1.1)
+
+
+
+  
+  
+#### Business requirements (1.2)
+
+
+
+
+
+
+#### Business processes and data flow (1.3)
+
+
+
+
+#### Data visualisation as a tool for decision-making (1.4)
+
+
+
+
+
+#### Data types (1.5)
+
+
+
+
+#### Data quality and data bias (1.6)
+
+
+
+
+# 2. Data cleaning
+
+#### Preparing data for visualisation (1.7)
+
+
+
+
+
+Outline cleaning and wrangling
+
+
+
+
+
+# 3. Data visualisation
+#### Introduction to dataset and data ethics
+
+
+
+#### Process and design 
+
+
+
+
+#### Visualisations
+
+Note to self - pick 5-10 plots to put in here and describe what they show
+
+
+
+
+
+### Conclusions
+

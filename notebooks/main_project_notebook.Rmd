@@ -106,9 +106,22 @@ clean_transport <- transport %>%
          unit = "units")
 ```
 
-
+cleaning domestic_tourism
 ```{r}
+domestic_tourism_clean <- domestic_tourism %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+```
 
+cleaning accomodation
+```{r}
+accomodation_clean <- accomodation %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
 ```
 
 

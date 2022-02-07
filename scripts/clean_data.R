@@ -75,6 +75,25 @@ regional_domestic_clean <- regional_domestic %>%
          unit = "units")
 write_csv(regional_domestic_clean, "clean_data/regional_domestic_clean.csv")
 
-# NOTE - I still need to figure out what to do about the years here!!
 
+regional_pivoted <- regional_domestic_clean %>%
+  separate(year, into = c("year_1", "year_3"), sep = "-") %>%
+  mutate(year_1 = as.numeric(year_1),
+         year_3 = as.numeric(year_3)) %>%
+  mutate(year_2 = case_when(year_1 == 2009 & year_3 == 2011 ~ 2010,
+                            year_1 == 2010 & year_3 == 2012 ~ 2011,
+                            year_1 == 2011 & year_3 == 2013 ~ 2012,
+                            year_1 == 2012 & year_3 == 2014 ~ 2013,
+                            year_1 == 2013 & year_3 == 2015 ~ 2014,
+                            year_1 == 2014 & year_3 == 2016 ~ 2015,
+                            year_1 == 2015 & year_3 == 2017 ~ 2016,
+                            year_1 == 2016 & year_3 == 2018 ~ 2017,
+                            year_1 == 2017 & year_3 == 2019 ~ 2018,
+                            year_1 < 2009 & year_3 > 2019 ~ 0)) %>%
+  relocate(year_2, .after = (year_1)) %>%
+  pivot_longer(cols = starts_with("year"), names_repair = "unique")
+
+# This is the pivoted and mutated dataset. I haven't written to csv yet, as I'm
+# not sure if it is better to use this one, or the original. Because each item covers
+# three years, I'm not sure whether this or the original is better for timeseries analysis.
 

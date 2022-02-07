@@ -1,35 +1,14 @@
 ---
-title: "Visit Scotland Final Project"
+title: "R Notebook"
 output: html_notebook
-author: "Louise Shambrook"
 ---
 
-libraries
-```{r}
-### loading in libraries
-```
-
-data
-```{r}
-
-```
-
-EDA
-```{r}
-
-```
-
-Begin to complete cleaning of each set
-```{r}
-
-```
-
-
+Visit Scotland Final Project - Plan and Notes
 
 ## Steps / questions / Plan
 - Input data
 - Complete initial EDA; find out how much data cleaning needs to be completed
-
+- Begin to complete cleaning of each set
 - Begin to complete wrangling so that each question can be answered
 - Whilst answering each question, keep an eye out for details / small points - the overall story - remember the bikes project!
 - Figure out how to predict spending for visit scotland
@@ -37,7 +16,7 @@ Begin to complete cleaning of each set
     - For these, what are my options? (linear, logistic, decision tree, forest, any others? Maybe clean and prepare the data in R, and then run the model in Python???)
 
 
-### Main questions to answer
+### Main questions to answer ---------------------------------------------------
 
 What kind of tourism activity generates the highest income for Scotland?
 
@@ -58,4 +37,8 @@ How have general tourism rates changed over time?
 Is there any way to predict spending and visits for Visit Scotland?
 
 
-### Sub-questions to answer / points to explore, as I go along:
+
+### Sub-questions to answer / points to explore, as I go along -----------------
+
+
+

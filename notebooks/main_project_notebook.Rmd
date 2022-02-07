@@ -70,11 +70,27 @@ activities_clean %>%
 # this creates a list of 16 items - so these will need to be coded using an ifelse or similar. 
 ```
 
+Cleaning demographics dataset
+```{r}
+clean_demographics <- demographics %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+
+```
+
+```{r}
+clean_demographics %>%
+  filter(gender != "All")
+
+# when completing this part of the analysis, I will have to look at each variable individually. There are too many variables with too many of them having "all" as an answer to get anything significant from them as a direct analysis.
+```
 
 
 The plan is to eventually have all cleaning in one script, but for now, do by cleaning and question.
 
-### Analysis ---------------------
+### Analysis ---------------------a
 
 What kind of tourism activity generates the highest income for Scotland?
 

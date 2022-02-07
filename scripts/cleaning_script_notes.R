@@ -13,8 +13,6 @@
 # - drop measurement
 # - there are many rows with "All" - seems to be an NA / other value.
     # Need to decide what I'll do about that. 
-# - One of the questions is "who spends the most" (and visit) - spend and visit
-# aren't features in that dataset. So I will have to think about joining, and how I do that.
 
 # Cleaning needed on location
 # - janitor

@@ -15,6 +15,7 @@ activities_clean <- activities %>%
 write_csv(activities_clean, "clean_data/activities_clean.csv")
 
 # NOTE - I still need to figure out how to sort/group this?
+# I can't clock this one - I will have to come back to it.
 
 
 # cleaning the demographics dataset --------------------------------------------

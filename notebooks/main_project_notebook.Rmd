@@ -4,6 +4,8 @@ output: html_notebook
 author: "Louise Shambrook"
 ---
 
+- note to self - structure this document/report similarly to the bikes project
+
 libraries
 ```{r}
 ### loading in libraries

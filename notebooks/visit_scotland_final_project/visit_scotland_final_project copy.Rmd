@@ -7,20 +7,10 @@ author: "Louise Shambrook"
 libraries
 ```{r}
 ### loading in libraries
-library(tidyverse)
-library(janitor)
-library(lubridate)
-
 ```
 
-reading in data
+data
 ```{r}
-domestic_tourism <- read_csv("raw_data/regional_domestic_tourism.csv")
-accomodation <- read_csv("raw_data/scottish_accomodation_occupancy.csv")
-activities <- read_csv("raw_data/tourism_day_visits_activities.csv")
-demographics <- read_csv("raw_data/tourism_day_visits_demographics.csv")
-location <- read_csv("raw_data/tourism_day_visits_location.csv")
-transport <- read_csv("raw_data/tourism_day_visits_transport.csv")
 
 ```
 

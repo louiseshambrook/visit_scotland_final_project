@@ -52,10 +52,37 @@ head(accomodation)
 
 ```
 
+Cleaning activities dataset
+```{r}
+activities_clean <- activities %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units")
+```
+
+Figuring out the categories for types of activity
+```{r}
+activities_clean %>%
+  distinct(tourism_activity) %>%
+  arrange(tourism_activity)
+
+# this creates a list of 16 items - so these will need to be coded using an ifelse or similar. 
+```
 
 
 
 The plan is to eventually have all cleaning in one script, but for now, do by cleaning and question.
+
+### Analysis ---------------------
+
+What kind of tourism activity generates the highest income for Scotland?
+
+
+
+Which kind of activity generates the most visits to sites?
+
+
 
 ## Steps / questions / Plan
 

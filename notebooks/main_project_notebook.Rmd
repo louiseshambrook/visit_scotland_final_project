@@ -15,11 +15,6 @@ library(lubridate)
 
 ```
 
-Reading in cleaned data
-```{r}
-activities_data <- read_csv("clean_data/activities_clean.csv")
-
-```
 
 Exploring the data for each dataset
 ```{r}
@@ -44,16 +39,33 @@ head(domestic_tourism)
 head(accomodation)
 ```
 
-The plan is to eventually have all cleaning in one script, but for now, do by cleaning and question.
 
-### Next to do
+### Reading in cleaned data
 
-## data wrangling and initial analysis
+```{r}
+activities <- read_csv("clean_data/activities_clean.csv")
+accomodation <- read_csv("clean_data/accomodation_clean.csv")
+demographics <- read_csv("clean_data/demographics_clean.csv")
+location <- read_csv("clean_data/location_clean.csv")
+regional_domestic <- read_csv("clean_data/regional_domestic_clean.csv")
+transport <- read_csv("clean_data/transport_clean.csv")
+
+```
+
+### Initial analysis
+
+Q1.
 
 What kind of tourism activity generates the highest income for Scotland?
 ```{r}
-
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  group_by(tourism_activity) %>%
+  summarise(highest_income = sum(value)) %>%
+  arrange(desc(highest_income))
 ```
+
+
 
 Which kind of activity generates the most visits to sites?
 ```{r}

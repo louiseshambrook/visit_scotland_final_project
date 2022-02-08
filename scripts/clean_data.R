@@ -4,6 +4,10 @@
 library(tidyverse)
 library(janitor)
 
+# note; I will be removing the feature_code from all datasets, as this is the 
+# country code for Scotland. I will also be removing measurement, as this is irrelevant
+# and duplicated information. 
+
 # cleaning the activities dataset ----------------------------------------------
 
 activities <- read_csv("raw_data/tourism_day_visits_activities.csv")
@@ -13,6 +17,8 @@ activities_clean <- activities %>%
   rename(year = "date_code",
          unit = "units")
 write_csv(activities_clean, "clean_data/activities_clean.csv")
+rm(activities)
+rm(activities_clean)
 
 activities_clean_mutated <- activities_clean %>%
   mutate(activity_type = 
@@ -47,6 +53,8 @@ demographics_clean <- demographics %>%
   rename(year = "date_code",
          unit = "units")
 write_csv(demographics_clean, "clean_data/demographics_clean.csv")
+rm(demographics)
+rm(demographics_clean)
 
 # when completing the analysis with the demographics dataset, I will have to examine
 # each variable individually. There are too many variables with "all" as an answer,
@@ -62,6 +70,8 @@ location_clean <- location %>%
   rename(year = "date_code",
          unit = "units")
 write_csv(location_clean, "clean_data/location_clean.csv")
+rm(location)
+rm(location_clean)
 
 
 # cleaning the transport dataset -----------------------------------------------
@@ -73,6 +83,8 @@ transport_clean <- transport %>%
   rename(year = "date_code",
          unit = "units")
 write_csv(transport_clean, "clean_data/transport_clean.csv")
+rm(transport)
+rm(transport_clean)
 
 
 # cleaning the accommodation dataset --------------------------------------------
@@ -84,6 +96,8 @@ accomodation_clean <- accomodation %>%
   rename(year = "date_code",
          unit = "units")
 write_csv(accomodation_clean, "clean_data/accomodation_clean.csv")
+rm(accomodation)
+rm(accomodation_clean)
 
 
 # cleaning the regional_domestic dataset ---------------------------------------
@@ -94,6 +108,8 @@ regional_domestic_clean <- regional_domestic %>%
   rename(year = "date_code",
          unit = "units")
 write_csv(regional_domestic_clean, "clean_data/regional_domestic_clean.csv")
+rm(regional_domestic)
+rm(regional_domestic_clean)
 
 
 regional_pivoted <- regional_domestic_clean %>%

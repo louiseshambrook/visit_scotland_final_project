@@ -257,7 +257,6 @@ According to my analysis, most people use a car. This is especially underpinned 
 
 Q6.
 When looking at regional tourism, what insights can we gain? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
-
 ```{r}
 
 
@@ -270,10 +269,32 @@ Where are our visitors from?
 ```
 
 Q7.
-What type of accomodation is most popular? Is there a difference by location?
+What type of accomodation is most popular? 
+
+Note to self - these are reported in percentage; this is important to note on the plots and when talking about the figures
+Second note - this is like the demographics; where there is data in one variables, the others have NA, i.e. 'All'.
+
 ```{r}
+accomodation %>%
+  group_by(accommodation_type_and_occupancy) %>%
+  summarise(popular_accomodation = sum(value)) %>%
+  arrange(desc(popular_accomodation))
 
 ```
+Taking the direct result, is hotels. But I think there are duplicates, somehow so it may need cleaning, and additionally, this is reported in percentage but I've only summed it so I can't report it like this - I'll need to do some further cleaning / wrangling.
+
+
+Q7.1
+Is there a difference by location?
+```{r}
+accomodation %>%
+  filter(location != "All") %>%
+  group_by(location, accommodation_type_and_occupancy) %>%
+  summarise(popular_accomodation = sum(value)) %>%
+  arrange(desc(popular_accomodation))
+
+```
+To do this analysis properly, I need to clean/wrangle the set. I won't do this in the initial cleaning, I'll do it separately.
 
 Q8.
 How have general tourism rates changed over time?

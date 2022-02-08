@@ -14,7 +14,7 @@ year,unit,value,method_of_travel,breakdown_of_domestic_tourism,travel_type
 2015,million pounds (GBP),117.2,Walked,Expenditure,Walked
 2013,million pounds (GBP),154.9,Walked,Expenditure,Walked
 2015,million pounds (GBP),385.4,Bus or Coach - Regular,Expenditure,Bus
-2014,million pounds (GBP),907.4,Train,Expenditure,Train/Tube/Tram
+2014,million pounds (GBP),907.4,Train,Expenditure,Train
 2018,million pounds (GBP),192.4,Taxi,Expenditure,Taxi
 2014,million pounds (GBP),219.9,Taxi,Expenditure,Taxi
 2015,million pounds (GBP),96.1,Taxi,Expenditure,Taxi
@@ -62,10 +62,10 @@ year,unit,value,method_of_travel,breakdown_of_domestic_tourism,travel_type
 2015,million pounds (GBP),9.5,Other,Expenditure,Other
 2017,million pounds (GBP),46.7,Other,Expenditure,Other
 2019,million pounds (GBP),30.7,Other,Expenditure,Other
-2016,million pounds (GBP),762.8,Train,Expenditure,Train/Tube/Tram
-2017,million pounds (GBP),10.4,Tube,Expenditure,Train/Tube/Tram
-2018,million pounds (GBP),4.3,Tube,Expenditure,Train/Tube/Tram
-2013,million pounds (GBP),40.8,Tube,Expenditure,Train/Tube/Tram
+2016,million pounds (GBP),762.8,Train,Expenditure,Train
+2017,million pounds (GBP),10.4,Tube,Expenditure,Tube
+2018,million pounds (GBP),4.3,Tube,Expenditure,Tube
+2013,million pounds (GBP),40.8,Tube,Expenditure,Tube
 2013,million pounds (GBP),0.4,Lorry/Truck/Van,Expenditure,Lorry
 2017,million pounds (GBP),9.7,Lorry/Truck/Van,Expenditure,Lorry
 2016,million pounds (GBP),4916.1,All,Expenditure,Other
@@ -78,24 +78,24 @@ year,unit,value,method_of_travel,breakdown_of_domestic_tourism,travel_type
 2019,million pounds (GBP),138.9,Car - hired,Expenditure,Car
 2015,million pounds (GBP),46,Car - hired,Expenditure,Car
 2013,million pounds (GBP),31.4,Car - hired,Expenditure,Car
-2015,million pounds (GBP),0.9,Tube,Expenditure,Train/Tube/Tram
-2014,million pounds (GBP),5.3,Tube,Expenditure,Train/Tube/Tram
-2019,million pounds (GBP),23.6,Tube,Expenditure,Train/Tube/Tram
-2019,million pounds (GBP),866.6,Train,Expenditure,Train/Tube/Tram
-2015,million pounds (GBP),581.7,Train,Expenditure,Train/Tube/Tram
-2016,million pounds (GBP),6.1,Tube,Expenditure,Train/Tube/Tram
-2013,million pounds (GBP),635.9,Train,Expenditure,Train/Tube/Tram
-2017,million pounds (GBP),1276.3,Train,Expenditure,Train/Tube/Tram
+2015,million pounds (GBP),0.9,Tube,Expenditure,Tube
+2014,million pounds (GBP),5.3,Tube,Expenditure,Tube
+2019,million pounds (GBP),23.6,Tube,Expenditure,Tube
+2019,million pounds (GBP),866.6,Train,Expenditure,Train
+2015,million pounds (GBP),581.7,Train,Expenditure,Train
+2016,million pounds (GBP),6.1,Tube,Expenditure,Tube
+2013,million pounds (GBP),635.9,Train,Expenditure,Train
+2017,million pounds (GBP),1276.3,Train,Expenditure,Train
 2014,million pounds (GBP),66,Car - hired,Expenditure,Car
-2018,million pounds (GBP),855.4,Train,Expenditure,Train/Tube/Tram
+2018,million pounds (GBP),855.4,Train,Expenditure,Train
 2017,million pounds (GBP),3324.9,Car - own/friends/family,Expenditure,Car
 2019,million pounds (GBP),3554.1,Car - own/friends/family,Expenditure,Car
 2014,million pounds (GBP),2922.2,Car - own/friends/family,Expenditure,Car
 2018,million pounds (GBP),3269.8,Car - own/friends/family,Expenditure,Car
-2019,million pounds (GBP),3.9,Tram,Expenditure,Train/Tube/Tram
+2019,million pounds (GBP),3.9,Tram,Expenditure,Tram
 2014,million pounds (GBP),2.9,Bicycle,Expenditure,Bicycle
-2013,million pounds (GBP),0,Tram,Expenditure,Train/Tube/Tram
-2015,million pounds (GBP),9.1,Tram,Expenditure,Train/Tube/Tram
+2013,million pounds (GBP),0,Tram,Expenditure,Tram
+2015,million pounds (GBP),9.1,Tram,Expenditure,Tram
 2013,million pounds (GBP),4.3,Motor cycle,Expenditure,Motorcycle
 2016,million pounds (GBP),3025.2,Car - own/friends/family,Expenditure,Car
 2017,million pounds (GBP),151.7,Taxi,Expenditure,Taxi
@@ -110,13 +110,13 @@ year,unit,value,method_of_travel,breakdown_of_domestic_tourism,travel_type
 2016,million pounds (GBP),146.3,Car - hired,Expenditure,Car
 2018,million pounds (GBP),5473.9,All,Expenditure,Other
 2019,million pounds (GBP),5777.3,All,Expenditure,Other
-2017,million pounds (GBP),10.1,Tram,Expenditure,Train/Tube/Tram
-2014,million pounds (GBP),4.4,Tram,Expenditure,Train/Tube/Tram
+2017,million pounds (GBP),10.1,Tram,Expenditure,Tram
+2014,million pounds (GBP),4.4,Tram,Expenditure,Tram
 2015,million pounds (GBP),7.9,Bicycle,Expenditure,Bicycle
-2016,million pounds (GBP),5.7,Tram,Expenditure,Train/Tube/Tram
+2016,million pounds (GBP),5.7,Tram,Expenditure,Tram
 2013,million pounds (GBP),4646.7,All,Expenditure,Other
 2014,million pounds (GBP),5020.2,All,Expenditure,Other
-2018,million pounds (GBP),46.8,Tram,Expenditure,Train/Tube/Tram
+2018,million pounds (GBP),46.8,Tram,Expenditure,Tram
 2015,Million Visits,0.6,Other,Visits,Other
 2018,Million Visits,2,Other,Visits,Other
 2014,Million Visits,1,Other,Visits,Other
@@ -126,8 +126,8 @@ year,unit,value,method_of_travel,breakdown_of_domestic_tourism,travel_type
 2019,Million Visits,1.4,Other,Visits,Other
 2017,Million Visits,1.2,Other,Visits,Other
 2013,Million Visits,1.4,Bus or Coach - Organised Tour,Visits,Bus
-2019,Million Visits,15.9,Train,Visits,Train/Tube/Tram
-2015,Million Visits,15.1,Train,Visits,Train/Tube/Tram
+2019,Million Visits,15.9,Train,Visits,Train
+2015,Million Visits,15.1,Train,Visits,Train
 2014,Million Visits,0.7,Bus or Coach - Organised Tour,Visits,Bus
 2013,Million Visits,0.8,Boat/Ship/Ferry,Visits,Boat/Ship/Ferry
 2016,Million Visits,2.1,Other,Visits,Other
@@ -149,31 +149,31 @@ year,unit,value,method_of_travel,breakdown_of_domestic_tourism,travel_type
 2013,Million Visits,0.4,Lorry/Truck/Van,Visits,Lorry
 2019,Million Visits,2.3,Car - hired,Visits,Car
 2015,Million Visits,1.7,Car - hired,Visits,Car
-2017,Million Visits,0.6,Tube,Visits,Train/Tube/Tram
-2013,Million Visits,0.2,Tube,Visits,Train/Tube/Tram
+2017,Million Visits,0.6,Tube,Visits,Tube
+2013,Million Visits,0.2,Tube,Visits,Tube
 2016,Million Visits,2.5,Car - hired,Visits,Car
 2014,Million Visits,8.2,Walked,Visits,Walked
 2017,Million Visits,6.4,Car - hired,Visits,Car
 2016,Million Visits,7.9,Walked,Visits,Walked
-2014,Million Visits,0.1,Tube,Visits,Train/Tube/Tram
-2018,Million Visits,0.6,Tube,Visits,Train/Tube/Tram
-2016,Million Visits,0.5,Tube,Visits,Train/Tube/Tram
-2015,Million Visits,0.1,Tube,Visits,Train/Tube/Tram
+2014,Million Visits,0.1,Tube,Visits,Tube
+2018,Million Visits,0.6,Tube,Visits,Tube
+2016,Million Visits,0.5,Tube,Visits,Tube
+2015,Million Visits,0.1,Tube,Visits,Tube
 2019,Million Visits,2.5,Bus or Coach - Organised Tour,Visits,Bus
-2017,Million Visits,16,Train,Visits,Train/Tube/Tram
-2019,Million Visits,1.6,Tube,Visits,Train/Tube/Tram
+2017,Million Visits,16,Train,Visits,Train
+2019,Million Visits,1.6,Tube,Visits,Tube
 2018,Million Visits,1.1,Bus or Coach - Organised Tour,Visits,Bus
 2014,Million Visits,4.3,Taxi,Visits,Taxi
 2016,Million Visits,0.5,Caravan/Campervan,Visits,Caravan
 2018,Million Visits,3.5,Taxi,Visits,Taxi
-2018,Million Visits,16.8,Train,Visits,Train/Tube/Tram
-2013,Million Visits,13.2,Train,Visits,Train/Tube/Tram
-2016,Million Visits,14.1,Train,Visits,Train/Tube/Tram
+2018,Million Visits,16.8,Train,Visits,Train
+2013,Million Visits,13.2,Train,Visits,Train
+2016,Million Visits,14.1,Train,Visits,Train
 2015,Million Visits,2.9,Taxi,Visits,Taxi
 2015,Million Visits,1.9,Bus or Coach - Organised Tour,Visits,Bus
 2019,Million Visits,7.5,Walked,Visits,Walked
 2013,Million Visits,7.4,Walked,Visits,Walked
-2014,Million Visits,14.3,Train,Visits,Train/Tube/Tram
+2014,Million Visits,14.3,Train,Visits,Train
 2017,Million Visits,3.1,Bus or Coach - Organised Tour,Visits,Bus
 2013,Million Visits,2.7,Taxi,Visits,Taxi
 2013,Million Visits,0.2,Plane,Visits,Plane
@@ -185,14 +185,14 @@ year,unit,value,method_of_travel,breakdown_of_domestic_tourism,travel_type
 2013,Million Visits,0.4,Caravan/Campervan,Visits,Caravan
 2014,Million Visits,0.5,Plane,Visits,Plane
 2019,Million Visits,1.2,Bicycle,Visits,Bicycle
-2018,Million Visits,0.3,Tram,Visits,Train/Tube/Tram
+2018,Million Visits,0.3,Tram,Visits,Tram
 2019,Million Visits,80,Car - own/friends/family,Visits,Car
 2015,Million Visits,14.2,Bus or Coach - Regular,Visits,Bus
 2018,Million Visits,0.7,Bicycle,Visits,Bicycle
 2016,Million Visits,0.7,Plane,Visits,Plane
 2019,Million Visits,12.7,Bus or Coach - Regular,Visits,Bus
 2014,Million Visits,0.3,Bus or Coach - Minibus,Visits,Bus
-2015,Million Visits,0.2,Tram,Visits,Train/Tube/Tram
+2015,Million Visits,0.2,Tram,Visits,Tram
 2015,Million Visits,76,Car - own/friends/family,Visits,Car
 2017,Million Visits,1.5,Bicycle,Visits,Bicycle
 2015,Million Visits,0.9,Plane,Visits,Plane
@@ -224,14 +224,14 @@ year,unit,value,method_of_travel,breakdown_of_domestic_tourism,travel_type
 2015,Million Visits,0.2,Motor cycle,Visits,Motorcycle
 2017,Million Visits,13.2,Bus or Coach - Regular,Visits,Bus
 2013,Million Visits,12.8,Bus or Coach - Regular,Visits,Bus
-2019,Million Visits,0.4,Tram,Visits,Train/Tube/Tram
-2017,Million Visits,0.6,Tram,Visits,Train/Tube/Tram
-2014,Million Visits,0.4,Tram,Visits,Train/Tube/Tram
-2013,Million Visits,0,Tram,Visits,Train/Tube/Tram
+2019,Million Visits,0.4,Tram,Visits,Tram
+2017,Million Visits,0.6,Tram,Visits,Tram
+2014,Million Visits,0.4,Tram,Visits,Tram
+2013,Million Visits,0,Tram,Visits,Tram
 2016,Million Visits,0.9,Bicycle,Visits,Bicycle
 2016,Million Visits,91.9,Car - own/friends/family,Visits,Car
 2018,Million Visits,12.2,Bus or Coach - Regular,Visits,Bus
 2018,Million Visits,84.2,Car - own/friends/family,Visits,Car
 2013,Million Visits,79.7,Car - own/friends/family,Visits,Car
-2016,Million Visits,0.2,Tram,Visits,Train/Tube/Tram
+2016,Million Visits,0.2,Tram,Visits,Tram
 2015,Million Visits,0.2,Caravan/Campervan,Visits,Caravan

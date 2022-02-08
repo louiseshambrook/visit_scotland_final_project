@@ -88,13 +88,21 @@ write_csv(transport, "clean_data/transport_clean.csv")
 rm(transport)
 
 
-# cleaning the accommodation dataset --------------------------------------------
+# cleaning the accommodation dataset -------------------------------------------
 
 accomodation <- read_csv("raw_data/scottish_accomodation_occupancy.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
-         unit = "units")
+         unit = "units") %>%
+  mutate(location = 
+           case_when(location == "Accessible Rural" ~ "Rural countryside",
+                     location == "Accessible Small Towns" ~ "Small town",
+                     location == "Large Urban Areas" ~ "City/large town",
+                     location == "Other Urban Areas" ~ "City/large town",
+                     location == "Remote Rural" ~ "Remote rural countryside",
+                     location == "Remote Small Towns" ~ "Remote small town",
+                     location == "All" ~ "Other"))
 write_csv(accomodation, "clean_data/accomodation_clean.csv")
 rm(accomodation)
 
@@ -121,10 +129,4 @@ regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv") %>%
   relocate(middle_year, .after = (start_year))
 write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
 rm(regional_domestic)
-
-
-
-# This is the pivoted and mutated dataset. I haven't written to csv yet, as I'm
-# not sure if it is better to use this one, or the original. Because each item covers
-# three years, I'm not sure whether this or the original is better for timeseries analysis.
 

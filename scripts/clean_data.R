@@ -13,7 +13,7 @@ activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
          unit = "units") %>%
   mutate(activity_type = 
            case_when(tourism_activity == "Shopping for items that you do not regularly buy" ~ "Shopping",
-                     tourism_activity == "Watched live sporting events (not on TV)" ~ "Watch sports",
+                     tourism_activity == "Watched live sporting events (not on TV)" ~ "Watch",
                      tourism_activity == "Night out to a bar, pub and/or club" ~ "Night out",
                      tourism_activity == "Special personal events e.g. wedding, graduation" ~ "Attend personal event",
                      tourism_activity == "Leisure activities e.g. hobbies & evening classes" ~ "Leisure activity",
@@ -100,7 +100,11 @@ rm(accomodation)
 
 
 # cleaning the regional_domestic dataset ---------------------------------------
-regional_domestic %>%
+regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv") %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units") %>%
   separate(year, into = c("start_year", "end_year"), sep = "-") %>%
   mutate(start_year = as.numeric(start_year),
          end_year = as.numeric(end_year)) %>%
@@ -117,6 +121,8 @@ regional_domestic %>%
   relocate(middle_year, .after = (start_year))
 write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
 rm(regional_domestic)
+
+
 
 # This is the pivoted and mutated dataset. I haven't written to csv yet, as I'm
 # not sure if it is better to use this one, or the original. Because each item covers

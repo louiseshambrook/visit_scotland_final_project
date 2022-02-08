@@ -13,7 +13,7 @@ activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
          unit = "units") %>%
   mutate(activity_type = 
            case_when(tourism_activity == "Shopping for items that you do not regularly buy" ~ "Shopping",
-                     tourism_activity == "Watched live sporting events (not on TV)" ~ "Watch",
+                     tourism_activity == "Watched live sporting events (not on TV)" ~ "Watch live sports",
                      tourism_activity == "Night out to a bar, pub and/or club" ~ "Night out",
                      tourism_activity == "Special personal events e.g. wedding, graduation" ~ "Attend personal event",
                      tourism_activity == "Leisure activities e.g. hobbies & evening classes" ~ "Leisure activity",
@@ -21,7 +21,7 @@ activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
                      tourism_activity == "Special public event e.g. festival, exhibition" ~ "Attend public event",
                      tourism_activity == "Went out for a meal" ~ "Eating out",
                      tourism_activity == "Day out to a beauty/health centre/spa, etc." ~ "Day out (spa)",
-                     tourism_activity == "Outdoor leisure activities e.g. walking, golf" ~ "Outdoor leisure",
+                     tourism_activity == "Outdoor leisure activities e.g. walking, golf" ~ "Outdoor leisure activity",
                      tourism_activity == "Visitor attraction e.g. theme park, museum, zoo" ~ "Visitor attraction",
                      tourism_activity == "General day out/ to explore an area" ~ "Day out",
                      tourism_activity == "Entertainment - to a cinema, concert or theatre" ~ "Entertainment - cinema",
@@ -42,10 +42,6 @@ demographics <- read_csv("raw_data/tourism_day_visits_demographics.csv") %>%
 write_csv(demographics, "clean_data/demographics_clean.csv")
 rm(demographics)
 
-# when completing the analysis with the demographics dataset, I will have to examine
-# each variable individually. There are too many variables with "all" as an answer,
-# which I cannot remove in the cleaning process.
-
 
 # cleaning the location dataset ------------------------------------------------
 
@@ -53,16 +49,7 @@ location <- read_csv("raw_data/tourism_day_visits_location.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
-         unit = "units") %>%
-  mutate(type_of_location_visited = 
-           case_when(type_of_location_visited == "City/large town" ~ "City/large town",
-                     type_of_location_visited == "Rural countryside" ~ "Rural countryside",
-                     type_of_location_visited == "Seaside - beach" ~ "Seaside",
-                     type_of_location_visited == "Seaside - other" ~ "Seaside",
-                     type_of_location_visited == "Seaside resort or town" ~ "Seaside",
-                     type_of_location_visited == "Small town" ~ "Small town/village",
-                     type_of_location_visited == "Village" ~ "Small town/village",
-                     type_of_location_visited == "All areas" ~ "Other"))
+         unit = "units")
 write_csv(location, "clean_data/location_clean.csv")
 rm(location)
 

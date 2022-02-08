@@ -64,7 +64,26 @@ transport <- read_csv("raw_data/tourism_day_visits_transport.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
-         unit = "units")
+         unit = "units") %>%
+  mutate(travel_type = 
+           case_when(method_of_travel == "Bicycle" ~ "Bicycle",
+                     method_of_travel == "Boat/Ship/Ferry" ~ "Boat/Ship/Ferry",
+                     method_of_travel == "Bus or Coach - Minibus" ~ "Bus",
+                     method_of_travel == "Bus or Coach - Organised Tour" ~ "Bus",
+                     method_of_travel == "Bus or Coach - Regular" ~ "Bus",
+                     method_of_travel == "Car - hired" ~ "Car",
+                     method_of_travel == "Car - own/friends/family" ~ "Car",
+                     method_of_travel == "Caravan/Campervan" ~ "Caravan",
+                     method_of_travel == "Lorry/Truck/Van" ~ "Lorry",
+                     method_of_travel == "Motor cycle" ~ "Motorcycle",
+                     method_of_travel == "Other" ~ "Other",
+                     method_of_travel == "Plane" ~ "Plane",
+                     method_of_travel == "Taxi" ~ "Taxi",
+                     method_of_travel == "Train" ~ "Train/Tube/Tram",
+                     method_of_travel == "Tram" ~ "Train/Tube/Tram",
+                     method_of_travel == "Tube" ~ "Train/Tube/Tram",
+                     method_of_travel == "Walked" ~ "Walked",
+                     method_of_travel == "All" ~ "Other"))
 write_csv(transport, "clean_data/transport_clean.csv")
 rm(transport)
 

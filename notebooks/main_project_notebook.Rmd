@@ -62,7 +62,6 @@ activities %>%
 ```
 The answer from this analysis, is going out for a meal. 
 
-
 Which kind of activity generates the most visits to sites?
 ```{r}
 activities %>%
@@ -75,10 +74,16 @@ activities %>%
 Q3. 
 Is there a particular key demographic of visitors we should be focusing on?
 ```{r}
-# examining age
+# as there is no inter-relating data (when you isolate one variable, there is no
+# data for the others), I will have to analyse each variable individually.
+
+# age
 
 demographics %>%
-  filter(age != "All")
+  filter(age != "All") %>%
+  group_by(age) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
 ```
 
 

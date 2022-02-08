@@ -73,29 +73,151 @@ activities %>%
 
 Q3. 
 Is there a particular key demographic of visitors we should be focusing on?
+
+as there is no inter-relating data (when you isolate one variable, there is no
+data for the others), I will have to analyse each variable individually.
+
+age
 ```{r}
-# as there is no inter-relating data (when you isolate one variable, there is no
-# data for the others), I will have to analyse each variable individually.
-
-# age
-
 demographics %>%
-  filter(age != "All") %>%
+  filter(age != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   group_by(age) %>%
   summarise(most_visits = sum(value)) %>%
   arrange(desc(most_visits))
+
+demographics %>%
+  filter(age != "All" & breakdown_of_domestic_tourism != "Visits") %>%
+  group_by(age) %>%
+  summarise(most_spend = sum(value)) %>%
+  arrange(desc(most_spend))
+
+## BREAK THIS ONE DOWN ACROSS TIME
 ```
+Note; I have split this up by visit and spend (as they are in the same column). There isn't much difference in the outcome, but it is important to remember to pick one or the other when reporting the final outcomes.
+
+```{r}
+demographics %>%
+  filter(marital_status != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(marital_status) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
+```
+This doesn't seem very relevant; it's a binary definer. Especially with the younger generation, this may not be very important?
+
+```{r}
+demographics %>%
+  filter(gender != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(gender) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
+```
+This is pretty much the same as with married. They're pretty even, and I'm not sure they'll matter too much.
+
+```{r}
+demographics %>%
+  filter(employment_status != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(employment_status) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
+```
+Most people are employed, perhaps not unexpected, as various levels of employment were not available.
+
+```{r}
+demographics %>%
+  filter(children != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(children) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
+```
+Most people report no to children.
+
+```{r}
+demographics %>%
+  filter(access_to_car != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(access_to_car) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
+```
+This is an interesting and useful one. Further down, there is a question about travel, and here by far the majority report having access to a car.
+
+```{r}
+demographics %>%
+  filter(social_grade != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(social_grade) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
+```
+This mostly speaks for itself; the biggest caveat to this is that there was no data dictionary with this dataset, so I can only assume that it goes top down, but this is not known.
 
 
 Q3.1 Who spends the most?
 ```{r}
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & age != "All") %>%
+  group_by(age) %>%
+  summarise(highest_spend = sum(value)) %>%
+  arrange(desc(highest_spend))
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status != "All") %>%
+  group_by(marital_status) %>%
+  summarise(highest_spend = sum(value)) %>%
+  arrange(desc(highest_spend))
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & gender != "All") %>%
+  group_by(gender) %>%
+  summarise(highest_spend = sum(value)) %>%
+  arrange(desc(highest_spend))
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & employment_status != "All") %>%
+  group_by(employment_status) %>%
+  summarise(highest_spend = sum(value)) %>%
+  arrange(desc(highest_spend))
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & children != "All") %>%
+  group_by(children) %>%
+  summarise(highest_spend = sum(value)) %>%
+  arrange(desc(highest_spend))
 
 ```
+The direct answer is people who identify as married - but there are some caveats to this answer. It is only possible to explore one variable at a time, and therefore, the identity of 'married' should be questioned. Additionally, because of the possible survey responses, marital_status only has two choices, whereas age is divided into decades starting at 16. So to best compare, age should be split/merged into two categories, or age is really the only identifier, as it has a range of reasonable options. 
 
 Q3.2 Who visits the most?
 ```{r}
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & age != "All") %>%
+  group_by(age) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
 
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & marital_status != "All") %>%
+  group_by(marital_status) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & gender != "All") %>%
+  group_by(gender) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & employment_status != "All") %>%
+  group_by(employment_status) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & children != "All") %>%
+  group_by(children) %>%
+  summarise(most_visits = sum(value)) %>%
+  arrange(desc(most_visits))
 ```
+Answer here is "no- without children.". But there is the same caveat as with the question above. 
 
 
 Q4.

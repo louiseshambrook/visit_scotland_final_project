@@ -52,7 +52,7 @@ transport <- read_csv("clean_data/transport_clean.csv")
 
 ```
 
-### Initial analysis
+### Initial analysis -----------------------------------------------------------
 
 Q1.
 
@@ -169,11 +169,20 @@ location %>%
   arrange(desc(total_spend))
 ```
 
+Q5.1
+Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
+```{r}
+transport %>%
+  group_by(method_of_travel) %>%
+  summarise(common_travel = sum(n()))
+
+```
+
+
+
 
 ## Steps / questions / Plan
 
-
-- Begin to complete wrangling so that each question can be answered
 - Whilst answering each question, keep an eye out for details / small points - the overall story - remember the bikes project!
 - Figure out how to predict spending for visit scotland
 - Figure out how to predict visits for visit scotland
@@ -183,10 +192,6 @@ location %>%
 ### Main questions to answer --------------------------------------------------
 
 
-
-What type of locations receive the most visits? What kinds of locations do people spend the most time in?
-
-Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
 
 When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
 

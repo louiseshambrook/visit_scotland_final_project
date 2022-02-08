@@ -4,10 +4,6 @@
 library(tidyverse)
 library(janitor)
 
-# note; I will be removing the feature_code from all datasets, as this is the 
-# country code for Scotland. I will also be removing measurement, as this is irrelevant
-# and duplicated information. 
-
 # cleaning the activities dataset ----------------------------------------------
 
 activities <- read_csv("raw_data/tourism_day_visits_activities.csv")

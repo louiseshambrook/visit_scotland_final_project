@@ -76,11 +76,19 @@ READ IN DATA
 
 #### Preparing data for visualisation (1.7)
 
+Cleaning notes
 
+I will be removing the feature_code from all datasets, as this is the 
+country code for Scotland. I will also be removing measurement, as this is irrelevant
+and duplicated information. 
 
+On all datasets, there is an "All" response. The data are survey responses, and therefore it is reasonable to assume that "all" was an actual response. Therefore, I will not drop it / change it to NA, but it also does not give any insight to my analysis and I will be removing it from my plots etc.
 
+On the activities dataset, I initially wanted to group these (maybe I still will) - but have settled on definitely simplifying them.
 
-Outline cleaning and wrangling
+On the transport dataset, I have grouped the types of travel, as there is data that is missed.
+
+Outline cleaning and wrangling code
 
 
 

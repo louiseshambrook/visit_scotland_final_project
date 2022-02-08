@@ -242,13 +242,18 @@ location %>%
 
 Q5.1
 Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
+
+NOTE TO SELF - the question / answer / analysis here from above, from demographics, with access_to_car.
+
 ```{r}
+transport %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other") %>%
+  group_by(travel_type) %>%
+  summarise(total_visits = sum(value)) %>%
+  arrange(desc(total_visits))
 
-
-how to count????
-  
-  
 ```
+According to my analysis, most people use a car. This is especially underpinned by the demographics, where xx people report having access to a car.
 
 Q6.
 When looking at regional tourism, what insights can we gain? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?

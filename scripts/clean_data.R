@@ -53,7 +53,16 @@ location <- read_csv("raw_data/tourism_day_visits_location.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
-         unit = "units")
+         unit = "units") %>%
+  mutate(type_of_location_visited = 
+           case_when(type_of_location_visited == "City/large town" ~ "City/large town",
+                     type_of_location_visited == "Rural countryside" ~ "Rural countryside",
+                     type_of_location_visited == "Seaside - beach" ~ "Seaside",
+                     type_of_location_visited == "Seaside - other" ~ "Seaside",
+                     type_of_location_visited == "Seaside resort or town" ~ "Seaside",
+                     type_of_location_visited == "Small town" ~ "Small town/village",
+                     type_of_location_visited == "Village" ~ "Small town/village",
+                     type_of_location_visited == "All areas" ~ "Other"))
 write_csv(location, "clean_data/location_clean.csv")
 rm(location)
 

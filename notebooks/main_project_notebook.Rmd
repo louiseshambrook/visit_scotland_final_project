@@ -240,6 +240,7 @@ location %>%
   arrange(desc(total_spend))
 ```
 
+
 Q5.1
 Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
 
@@ -326,13 +327,13 @@ Q7.1
 Is there a difference by location?
 ```{r}
 accomodation %>%
-  filter(location != "All") %>%
-  group_by(location, accommodation_type_and_occupancy) %>%
+  filter(location != "Other") %>%
+  group_by(location) %>%
   summarise(popular_accomodation = sum(value)) %>%
   arrange(desc(popular_accomodation))
 
 ```
-To do this analysis properly, I need to clean/wrangle the set. I won't do this in the initial cleaning, I'll do it separately.
+So, people are staying in cities.
 
 
 Q8.

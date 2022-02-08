@@ -49,35 +49,6 @@ regional_domestic <- read_csv("clean_data/regional_domestic_clean.csv")
 transport <- read_csv("clean_data/transport_clean.csv")
 ```
 
-
-```{r}
-activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
-  clean_names() %>%
-  select(-feature_code, -measurement) %>%
-  rename(year = "date_code",
-         unit = "units") %>%
-  mutate(activity_type = 
-           case_when(tourism_activity == "Shopping for items that you do not regularly buy" ~ "Shopping",
-                     tourism_activity == "Watched live sporting events (not on TV)" ~ " ",
-                     tourism_activity == "Night out to a bar, pub and/or club" ~ "Night out",
-                     tourism_activity == "Special personal events e.g. wedding, graduation" ~ "Attend personal event",
-                     tourism_activity == "Leisure activities e.g. hobbies & evening classes" ~ "Leisure activity",
-                     tourism_activity == "Sport participation, e.g. exercise classes, gym" ~ "Sports participation",
-                     tourism_activity == "Special public event e.g. festival, exhibition" ~ "Attend public event",
-                     tourism_activity == "Went out for a meal" ~ "Eating out",
-                     tourism_activity == "Day out to a beauty/health centre/spa, etc." ~ "Day out (spa)",
-                     tourism_activity == "Outdoor leisure activities e.g. walking, golf" ~ "Outdoor leisure",
-                     tourism_activity == "Visitor attraction e.g. theme park, museum, zoo" ~ "Visitor attraction",
-                     tourism_activity == "General day out/ to explore an area" ~ "Day out",
-                     tourism_activity == "Entertainment - to a cinema, concert or theatre" ~ "Entertainment - cinema",
-                     tourism_activity == "Day trips/excursions for other leisure purpose" ~ "Day trip - leisure",
-                     tourism_activity == "Visited friends or family for leisure" ~ "Visit family/friends",
-                     tourism_activity == "All" ~ "Other")) %>%
-write_csv(activities, "clean_data/activities_clean.csv")
-rm(activities)
-
-```
-
 ### Initial analysis -----------------------------------------------------------
 
 Q1.
@@ -85,7 +56,7 @@ What kind of tourism activity generates the highest income for Scotland?
 ```{r}
 activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
-  group_by(tourism_activity) %>%
+  group_by(activity_type) %>%
   summarise(highest_income = sum(value)) %>%
   arrange(desc(highest_income))
 ```
@@ -96,11 +67,10 @@ Which kind of activity generates the most visits to sites?
 ```{r}
 activities %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
-  group_by(tourism_activity) %>%
+  group_by(activity_type) %>%
   summarise(highest_income = sum(value)) %>%
   arrange(desc(highest_income))
 ```
-
 
 Q3. 
 Is there a particular key demographic of visitors we should be focusing on?
@@ -146,9 +116,36 @@ location %>%
 Q5.1
 Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
 ```{r}
-transport %>%
-  group_by(method_of_travel) %>%
-  summarise(common_travel = sum(n()))
+
+
+how to count????
+  
+  
+```
+
+Q6.
+When looking at regional tourism, what insights can we gain? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
+
+```{r}
+
+
+```
+
+Q6.1
+Where are our visitors from? 
+```{r}
+
+```
+
+Q7.
+What type of accomodation is most popular? Is there a difference by location?
+```{r}
+
+```
+
+Q8.
+How have general tourism rates changed over time?
+```{r}
 
 ```
 
@@ -166,12 +163,6 @@ transport %>%
 ### Main questions to answer --------------------------------------------------
 
 
-
-When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
-
-What type of accomodation is most popular? Is there a difference by location?
-
-How have general tourism rates changed over time?
 
 Is there any way to predict spending and visits for Visit Scotland?
 

@@ -13,7 +13,7 @@ activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
          unit = "units") %>%
   mutate(activity_type = 
            case_when(tourism_activity == "Shopping for items that you do not regularly buy" ~ "Shopping",
-                     tourism_activity == "Watched live sporting events (not on TV)" ~ " ",
+                     tourism_activity == "Watched live sporting events (not on TV)" ~ "Watch sports",
                      tourism_activity == "Night out to a bar, pub and/or club" ~ "Night out",
                      tourism_activity == "Special personal events e.g. wedding, graduation" ~ "Attend personal event",
                      tourism_activity == "Leisure activities e.g. hobbies & evening classes" ~ "Leisure activity",

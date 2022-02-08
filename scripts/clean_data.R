@@ -5,7 +5,6 @@ library(tidyverse)
 library(janitor)
 
 # cleaning the activities dataset ----------------------------------------------
-
 activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
@@ -33,7 +32,6 @@ rm(activities)
 
 
 # cleaning the demographics dataset --------------------------------------------
-
 demographics <- read_csv("raw_data/tourism_day_visits_demographics.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
@@ -44,7 +42,6 @@ rm(demographics)
 
 
 # cleaning the location dataset ------------------------------------------------
-
 location <- read_csv("raw_data/tourism_day_visits_location.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
@@ -64,7 +61,6 @@ rm(location)
 
 
 # cleaning the transport dataset -----------------------------------------------
-
 transport <- read_csv("raw_data/tourism_day_visits_transport.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
@@ -94,7 +90,6 @@ rm(transport)
 
 
 # cleaning the accommodation dataset -------------------------------------------
-
 accomodation <- read_csv("raw_data/scottish_accomodation_occupancy.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
@@ -107,7 +102,8 @@ accomodation <- read_csv("raw_data/scottish_accomodation_occupancy.csv") %>%
                      location == "Other Urban Areas" ~ "Urban area",
                      location == "Remote Rural" ~ "Remote rural",
                      location == "Remote Small Towns" ~ "Remote small town",
-                     location == "All" ~ "Other"))
+                     location == "All" ~ "Other")) %>%
+  separate(accommodation_type_and_occupancy, into = c("accommodation_type", "occupancy_type"), sep = "-")
 write_csv(accomodation, "clean_data/accomodation_clean.csv")
 rm(accomodation)
 

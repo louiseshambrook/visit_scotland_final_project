@@ -256,44 +256,55 @@ transport %>%
 According to my analysis, most people use a car. This is especially underpinned by the demographics, where xx people report having access to a car.
 
 
+Q6.
+When looking at regional tourism, what insights can we gain? How do they differ in
+the money they spend
+nights they spend in Scotland, or
+number of visits they do?
+
+NOTE TO SELF - these can and should be broken down across years
+
 ```{r}
 regional_domestic %>%
-  separate(year, into = c("start_year", "end_year"), sep = "-") %>%
-  mutate(start_year = as.numeric(start_year),
-         end_year = as.numeric(end_year)) %>%
-  mutate(middle_year = case_when(start_year == 2009 & end_year == 2011 ~ 2010,
-                                 start_year == 2010 & end_year == 2012 ~ 2011,
-                                 start_year == 2011 & end_year == 2013 ~ 2012,
-                                 start_year == 2012 & end_year == 2014 ~ 2013,
-                                 start_year == 2013 & end_year == 2015 ~ 2014,
-                                 start_year == 2014 & end_year == 2016 ~ 2015,
-                                 start_year == 2015 & end_year == 2017 ~ 2016,
-                                 start_year == 2016 & end_year == 2018 ~ 2017,
-                                 start_year == 2017 & end_year == 2019 ~ 2018,
-                                 start_year < 2009 & end_year > 2019 ~ 0)) %>%
-  relocate(middle_year, .after = (start_year))
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  group_by(region_of_residence) %>%
+  summarise(total_spend = sum(value))
 
-
-
-write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
-rm(regional_domestic)
-
-
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism == "Nights") %>%
+  group_by(region_of_residence) %>%
+  summarise(total_units = sum(value))
+  
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(region_of_residence) %>%
+  summarise(total_units = sum(value))
+  
 ```
+Results:
+by spend, england is the biggest.
+by nights, england is also the biggest - but the difference between england and scotland is less.
+by visits, scotland is bigger than england. This indicates local visiting.
 
-
-Q6.
-When looking at regional tourism, what insights can we gain? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
-```{r}
-
-
-```
 
 Q6.1
 Where are our visitors from? 
 ```{r}
-
+regional_domestic %>%
+  group_by(region_of_residence) %>%
+  summarise(breakdown_of_visit_countries = sum(value)) %>%
+  arrange(desc(breakdown_of_visit_countries))
 ```
+Most visitors come from all over GB, i.e. including Wales. (it doesn't state the UK, but GB - but in general terms GB and UK are used interchangably - however, without a data dictionary, I'll have to go by the wording).
+
+
+```{r}
+regional_domestic %>%
+  group_by(region_of_residence, breakdown_of_domestic_tourism) %>%
+  summarise(breakdown_of_visit_countries = sum(value))
+```
+This provides a nicer breakdown.
+
 
 Q7.
 What type of accomodation is most popular? 

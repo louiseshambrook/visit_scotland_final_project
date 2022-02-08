@@ -27,14 +27,9 @@ activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
                      tourism_activity == "Entertainment - to a cinema, concert or theatre" ~ "Entertainment - cinema",
                      tourism_activity == "Day trips/excursions for other leisure purpose" ~ "Day trip - leisure",
                      tourism_activity == "Visited friends or family for leisure" ~ "Visit family/friends",
-                     tourism_activity == "All" ~ "Other")) %>%
-write_csv(activities, "clean_data/activities_clean.csv") %>%
-rm(activities) %>%
-
-
-# same as with the regional dataset; this is still under development, but I have
-# saved it to a variable for now (but not to a csv as I don't know if I will use
-# it in the analysis)
+                     tourism_activity == "All" ~ "Other"))
+write_csv(activities, "clean_data/activities_clean.csv")
+rm(activities)
 
 
 # cleaning the demographics dataset --------------------------------------------

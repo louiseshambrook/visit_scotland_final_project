@@ -100,31 +100,23 @@ rm(accomodation)
 
 
 # cleaning the regional_domestic dataset ---------------------------------------
-regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv") %>%
-  clean_names() %>%
-  select(-feature_code, -measurement) %>%
-  rename(year = "date_code",
-         unit = "units")
+regional_domestic %>%
+  separate(year, into = c("start_year", "end_year"), sep = "-") %>%
+  mutate(start_year = as.numeric(start_year),
+         end_year = as.numeric(end_year)) %>%
+  mutate(middle_year = case_when(start_year == 2009 & end_year == 2011 ~ 2010,
+                                 start_year == 2010 & end_year == 2012 ~ 2011,
+                                 start_year == 2011 & end_year == 2013 ~ 2012,
+                                 start_year == 2012 & end_year == 2014 ~ 2013,
+                                 start_year == 2013 & end_year == 2015 ~ 2014,
+                                 start_year == 2014 & end_year == 2016 ~ 2015,
+                                 start_year == 2015 & end_year == 2017 ~ 2016,
+                                 start_year == 2016 & end_year == 2018 ~ 2017,
+                                 start_year == 2017 & end_year == 2019 ~ 2018,
+                                 start_year < 2009 & end_year > 2019 ~ 0)) %>%
+  relocate(middle_year, .after = (start_year))
 write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
 rm(regional_domestic)
-
-
-regional_pivoted <- regional_domestic_clean %>%
-  separate(year, into = c("year_1", "year_3"), sep = "-") %>%
-  mutate(year_1 = as.numeric(year_1),
-         year_3 = as.numeric(year_3)) %>%
-  mutate(year_2 = case_when(year_1 == 2009 & year_3 == 2011 ~ 2010,
-                            year_1 == 2010 & year_3 == 2012 ~ 2011,
-                            year_1 == 2011 & year_3 == 2013 ~ 2012,
-                            year_1 == 2012 & year_3 == 2014 ~ 2013,
-                            year_1 == 2013 & year_3 == 2015 ~ 2014,
-                            year_1 == 2014 & year_3 == 2016 ~ 2015,
-                            year_1 == 2015 & year_3 == 2017 ~ 2016,
-                            year_1 == 2016 & year_3 == 2018 ~ 2017,
-                            year_1 == 2017 & year_3 == 2019 ~ 2018,
-                            year_1 < 2009 & year_3 > 2019 ~ 0)) %>%
-  relocate(year_2, .after = (year_1)) %>%
-  pivot_longer(cols = starts_with("year"), names_repair = "unique")
 
 # This is the pivoted and mutated dataset. I haven't written to csv yet, as I'm
 # not sure if it is better to use this one, or the original. Because each item covers

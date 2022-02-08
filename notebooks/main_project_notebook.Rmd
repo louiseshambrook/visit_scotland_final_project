@@ -15,7 +15,6 @@ library(lubridate)
 
 ```
 
-
 Exploring the data for each dataset
 ```{r}
 head(domestic_tourism)
@@ -39,7 +38,6 @@ head(domestic_tourism)
 head(accomodation)
 ```
 
-
 ### Reading in cleaned data
 
 ```{r}
@@ -49,13 +47,40 @@ demographics <- read_csv("clean_data/demographics_clean.csv")
 location <- read_csv("clean_data/location_clean.csv")
 regional_domestic <- read_csv("clean_data/regional_domestic_clean.csv")
 transport <- read_csv("clean_data/transport_clean.csv")
+```
+
+
+```{r}
+activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units") %>%
+  mutate(activity_type = 
+           case_when(tourism_activity == "Shopping for items that you do not regularly buy" ~ "Shopping",
+                     tourism_activity == "Watched live sporting events (not on TV)" ~ " ",
+                     tourism_activity == "Night out to a bar, pub and/or club" ~ "Night out",
+                     tourism_activity == "Special personal events e.g. wedding, graduation" ~ "Attend personal event",
+                     tourism_activity == "Leisure activities e.g. hobbies & evening classes" ~ "Leisure activity",
+                     tourism_activity == "Sport participation, e.g. exercise classes, gym" ~ "Sports participation",
+                     tourism_activity == "Special public event e.g. festival, exhibition" ~ "Attend public event",
+                     tourism_activity == "Went out for a meal" ~ "Eating out",
+                     tourism_activity == "Day out to a beauty/health centre/spa, etc." ~ "Day out (spa)",
+                     tourism_activity == "Outdoor leisure activities e.g. walking, golf" ~ "Outdoor leisure",
+                     tourism_activity == "Visitor attraction e.g. theme park, museum, zoo" ~ "Visitor attraction",
+                     tourism_activity == "General day out/ to explore an area" ~ "Day out",
+                     tourism_activity == "Entertainment - to a cinema, concert or theatre" ~ "Entertainment - cinema",
+                     tourism_activity == "Day trips/excursions for other leisure purpose" ~ "Day trip - leisure",
+                     tourism_activity == "Visited friends or family for leisure" ~ "Visit family/friends",
+                     tourism_activity == "All" ~ "Other")) %>%
+write_csv(activities, "clean_data/activities_clean.csv")
+rm(activities)
 
 ```
 
 ### Initial analysis -----------------------------------------------------------
 
 Q1.
-
 What kind of tourism activity generates the highest income for Scotland?
 ```{r}
 activities %>%
@@ -75,58 +100,7 @@ activities %>%
   summarise(highest_income = sum(value)) %>%
   arrange(desc(highest_income))
 ```
-From this, is going out with friends/family, and then second-highest is going out for a meal.
 
-## ------------------
-I'm going to re-run these, with being grouped. They're interesting results - but the guiding question asks what "kind" - and the fact that they're not grouped isn't great.
-
-```{r}
-# mutating the dataset
-activities_mutated <- activities %>%
-  mutate(activity_type = 
-           case_when(tourism_activity == "Shopping for items that you do not regularly buy" ~ "Shopping",
-                     tourism_activity == "Watched live sporting events (not on TV)" ~ "Attend event (sports)",
-                     tourism_activity == "Night out to a bar, pub and/or club" ~ "Going out",
-                     tourism_activity == "Special personal events e.g. wedding, graduation" ~ "Attend event (personal)",
-                     tourism_activity == "Leisure activities e.g. hobbies & evening classes" ~ "Leisure",
-                     tourism_activity == "Sport participation, e.g. exercise classes, gym" ~ "Sports",
-                     tourism_activity == "Special public event e.g. festival, exhibition" ~ "Attend event",
-                     tourism_activity == "Went out for a meal" ~ "Going out",
-                     tourism_activity == "Day out to a beauty/health centre/spa, etc." ~ "Leisure",
-                     tourism_activity == "Outdoor leisure activities e.g. walking, golf" ~ "Leisure",
-                     tourism_activity == "Visitor attraction e.g. theme park, museum, zoo" ~ "Day trip (visit attractions)",
-                     tourism_activity == "General day out/ to explore an area" ~ "Day trip",
-                     tourism_activity == "Entertainment - to a cinema, concert or theatre" ~ "Going out",
-                     tourism_activity == "Day trips/excursions for other leisure purpose" ~ "Day trip",
-                     tourism_activity == "Visited friends or family for leisure" ~ "Visit family/friends",
-                     tourism_activity == "All" ~ "Other"))
-```
-
-
-
-```{r}
-# What kind of tourism activity generates the highest income for Scotland?
-
-activities_mutated %>%
-  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
-  group_by(activity_type) %>%
-  summarise(highest_income = sum(value)) %>%
-  arrange(desc(highest_income))
-
-# Here, the second highest result is "going out". It's not much different - which I guess is good? It's just a bit more readable.
-```
-
-```{r}
-#Which kind of activity generates the most visits to sites?
-
-activities_mutated %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
-  group_by(activity_type) %>%
-  summarise(highest_income = sum(value)) %>%
-  arrange(desc(highest_income))
-
-# here, the top two are swapped. This is more interesting. 
-```
 
 Q3. 
 Is there a particular key demographic of visitors we should be focusing on?

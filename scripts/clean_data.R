@@ -6,34 +6,31 @@ library(janitor)
 
 # cleaning the activities dataset ----------------------------------------------
 
-activities <- read_csv("raw_data/tourism_day_visits_activities.csv")
-activities_clean <- activities %>%
+activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
-         unit = "units")
-write_csv(activities_clean, "clean_data/activities_clean.csv")
-rm(activities)
-rm(activities_clean)
-
-activities_clean_mutated <- activities_clean %>%
+         unit = "units") %>%
   mutate(activity_type = 
            case_when(tourism_activity == "Shopping for items that you do not regularly buy" ~ "Shopping",
-                     tourism_activity == "Watched live sporting events (not on TV)" ~ "Attend events (sports)",
-                     tourism_activity == "Night out to a bar, pub and/or club" ~ "Going out",
-                     tourism_activity == "Special personal events e.g. wedding, graduation" ~ "Attend events (personal)",
-                     tourism_activity == "Leisure activities e.g. hobbies & evening classes" ~ "Leisure",
-                     tourism_activity == "Sport participation, e.g. exercise classes, gym" ~ "Sports",
-                     tourism_activity == "Special public event e.g. festival, exhibition" ~ "Attend events",
-                     tourism_activity == "Went out for a meal" ~ "Going out",
-                     tourism_activity == "Day out to a beauty/health centre/spa, etc." ~ "Leisure",
-                     tourism_activity == "Outdoor leisure activities e.g. walking, golf" ~ "Leisure",
-                     tourism_activity == "Visitor attraction e.g. theme park, museum, zoo" ~ "Day trip (visit attractions)",
-                     tourism_activity == "General day out/ to explore an area" ~ "Day trip",
-                     tourism_activity == "Entertainment - to a cinema, concert or theatre" ~ "Going out",
-                     tourism_activity == "Day trips/excursions for other leisure purpose" ~ "Day trip",
+                     tourism_activity == "Watched live sporting events (not on TV)" ~ " ",
+                     tourism_activity == "Night out to a bar, pub and/or club" ~ "Night out",
+                     tourism_activity == "Special personal events e.g. wedding, graduation" ~ "Attend personal event",
+                     tourism_activity == "Leisure activities e.g. hobbies & evening classes" ~ "Leisure activity",
+                     tourism_activity == "Sport participation, e.g. exercise classes, gym" ~ "Sports participation",
+                     tourism_activity == "Special public event e.g. festival, exhibition" ~ "Attend public event",
+                     tourism_activity == "Went out for a meal" ~ "Eating out",
+                     tourism_activity == "Day out to a beauty/health centre/spa, etc." ~ "Day out (spa)",
+                     tourism_activity == "Outdoor leisure activities e.g. walking, golf" ~ "Outdoor leisure",
+                     tourism_activity == "Visitor attraction e.g. theme park, museum, zoo" ~ "Visitor attraction",
+                     tourism_activity == "General day out/ to explore an area" ~ "Day out",
+                     tourism_activity == "Entertainment - to a cinema, concert or theatre" ~ "Entertainment - cinema",
+                     tourism_activity == "Day trips/excursions for other leisure purpose" ~ "Day trip - leisure",
                      tourism_activity == "Visited friends or family for leisure" ~ "Visit family/friends",
-                     tourism_activity == "All" ~ "Other"))
+                     tourism_activity == "All" ~ "Other")) %>%
+write_csv(activities, "clean_data/activities_clean.csv") %>%
+rm(activities) %>%
+
 
 # same as with the regional dataset; this is still under development, but I have
 # saved it to a variable for now (but not to a csv as I don't know if I will use
@@ -42,15 +39,13 @@ activities_clean_mutated <- activities_clean %>%
 
 # cleaning the demographics dataset --------------------------------------------
 
-demographics <- read_csv("raw_data/tourism_day_visits_demographics.csv")
-demographics_clean <- demographics %>%
+demographics <- read_csv("raw_data/tourism_day_visits_demographics.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
          unit = "units")
-write_csv(demographics_clean, "clean_data/demographics_clean.csv")
+write_csv(demographics, "clean_data/demographics_clean.csv")
 rm(demographics)
-rm(demographics_clean)
 
 # when completing the analysis with the demographics dataset, I will have to examine
 # each variable individually. There are too many variables with "all" as an answer,
@@ -59,53 +54,45 @@ rm(demographics_clean)
 
 # cleaning the location dataset ------------------------------------------------
 
-location <- read_csv("raw_data/tourism_day_visits_location.csv")
-location_clean <- location %>%
+location <- read_csv("raw_data/tourism_day_visits_location.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
          unit = "units")
-write_csv(location_clean, "clean_data/location_clean.csv")
+write_csv(location, "clean_data/location_clean.csv")
 rm(location)
-rm(location_clean)
 
 
 # cleaning the transport dataset -----------------------------------------------
 
-transport <- read_csv("raw_data/tourism_day_visits_transport.csv")
-transport_clean <- transport %>%
+transport <- read_csv("raw_data/tourism_day_visits_transport.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
          unit = "units")
-write_csv(transport_clean, "clean_data/transport_clean.csv")
+write_csv(transport, "clean_data/transport_clean.csv")
 rm(transport)
-rm(transport_clean)
 
 
 # cleaning the accommodation dataset --------------------------------------------
 
-accomodation <- read_csv("raw_data/scottish_accomodation_occupancy.csv")
-accomodation_clean <- accomodation %>%
+accomodation <- read_csv("raw_data/scottish_accomodation_occupancy.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
          unit = "units")
-write_csv(accomodation_clean, "clean_data/accomodation_clean.csv")
+write_csv(accomodation, "clean_data/accomodation_clean.csv")
 rm(accomodation)
-rm(accomodation_clean)
 
 
 # cleaning the regional_domestic dataset ---------------------------------------
-regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv")
-regional_domestic_clean <- regional_domestic %>%
+regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
          unit = "units")
-write_csv(regional_domestic_clean, "clean_data/regional_domestic_clean.csv")
+write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
 rm(regional_domestic)
-rm(regional_domestic_clean)
 
 
 regional_pivoted <- regional_domestic_clean %>%

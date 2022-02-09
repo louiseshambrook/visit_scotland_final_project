@@ -288,8 +288,8 @@ by nights, england is also the biggest - but the difference between england and 
 by visits, scotland is bigger than england. This indicates local visiting.
 
 
-Q6.1
-Where are our visitors from? 
+### Q6.1 Where are our visitors from? ------------------------------------------
+
 ```{r}
 regional_domestic %>%
   group_by(region_of_residence) %>%
@@ -307,8 +307,8 @@ regional_domestic %>%
 This provides a nicer breakdown.
 
 
-Q7.
-What type of accomodation is most popular? 
+### Q7. What type of accomodation is most popular?  ----------------------------
+
 
 Note to self - these are reported in percentage; this is important to note on the plots and when talking about the figures
 Second note - this is like the demographics; where there is data in one variables, the others have NA, i.e. 'All'.
@@ -324,8 +324,8 @@ Taking the direct result, is hotels. But I think there are duplicates, somehow s
 
 
 
-Q7.1
-Is there a difference by location?
+### Q7.1 Is there a difference by location? ------------------------------------
+
 ```{r}
 accomodation %>%
   filter(location != "Other") %>%
@@ -337,8 +337,8 @@ accomodation %>%
 So, people are staying in cities.
 
 
-Q8.
-How have general tourism rates changed over time?
+### Q8. How have general tourism rates changed over time? ---------------------
+
 ```{r}
 activities %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
@@ -375,13 +375,32 @@ location %>%
 ```
 Spend is more fluctuating. 
 
+### Plots ----------------------------------------------------------------------
 
-## Steps / questions / Plan
+The first plot/topic I'll include will be about transport.
 
-- Whilst answering each question, keep an eye out for details / small points - the overall story - remember the bikes project!
-- Figure out how to predict spending for visit scotland
-- Figure out how to predict visits for visit scotland
-    - For these, what are my options? (linear, logistic, decision tree, forest, any others? Maybe clean and prepare the data in R, and then run the model in Python???)
+```{r}
+# note, the question I need to answer is
+# "Is there a particular method of travel our visitors arrive by?".
+
+transport %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other" & year == 2019) %>%
+  group_by(travel_type) %>%
+  summarise(total_visits = sum(value)) %>%
+  ggplot(aes(x = ))
+
+```
+
+NOTE TO SELF - the question / answer / analysis here from above, from demographics, with access_to_car.
+
+```{r}
+transport %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other") %>%
+  group_by(travel_type) %>%
+  summarise(total_visits = sum(value)) %>%
+  arrange(desc(total_visits))
+
+```
 
 
 ### Main questions to answer --------------------------------------------------

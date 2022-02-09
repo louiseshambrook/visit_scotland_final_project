@@ -40,7 +40,10 @@ demographics <- read_csv("raw_data/tourism_day_visits_demographics.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
-         unit = "units")
+         unit = "units") %>%
+  mutate(unit = ifelse(unit == "million pounds (GBP)", "million (£)", "million")) %>%
+  relocate(value, .after = year) %>%
+  relocate(breakdown_of_domestic_tourism, .after = unit)
 write_csv(demographics, "clean_data/demographics_clean.csv")
 rm(demographics)
 
@@ -59,7 +62,10 @@ location <- read_csv("raw_data/tourism_day_visits_location.csv") %>%
                      type_of_location_visited == "Seaside resort or town" ~ "Seaside",
                      type_of_location_visited == "Small town" ~ "Small town",
                      type_of_location_visited == "Village" ~ "Village",
-                     type_of_location_visited == "All areas" ~ "Other"))
+                     type_of_location_visited == "All areas" ~ "Other")) %>%
+  mutate(unit = ifelse(unit == "million pounds (GBP)", "million (£)", "million")) %>%
+  relocate(value, .after = year) %>%
+  relocate(breakdown_of_domestic_tourism, .after = unit)
 write_csv(location, "clean_data/location_clean.csv")
 rm(location)
 

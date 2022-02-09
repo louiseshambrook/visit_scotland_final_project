@@ -26,7 +26,11 @@ activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
                      tourism_activity == "Entertainment - to a cinema, concert or theatre" ~ "Entertainment - cinema",
                      tourism_activity == "Day trips/excursions for other leisure purpose" ~ "Day trip - leisure",
                      tourism_activity == "Visited friends or family for leisure" ~ "Visit family/friends",
-                     tourism_activity == "All" ~ "Other"))
+                     tourism_activity == "All" ~ "Other")) %>%
+  mutate(unit = ifelse(unit == "million pounds (GBP)", "million (£)", "million")) %>%
+  relocate(value, .after = year) %>%
+  relocate(breakdown_of_domestic_tourism, .after = unit) %>%
+  select(-tourism_activity)
 write_csv(activities, "clean_data/activities_clean.csv")
 rm(activities)
 
@@ -112,9 +116,8 @@ rm(accomodation)
 regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
-  rename(year = "date_code",
-         unit = "units",
-         years = "year") 
+  rename(years = "date_code",
+         unit = "units")
 write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
 rm(regional_domestic)
 

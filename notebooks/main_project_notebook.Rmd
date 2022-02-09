@@ -49,6 +49,8 @@ regional_domestic <- read_csv("clean_data/regional_domestic_clean.csv")
 transport <- read_csv("clean_data/transport_clean.csv")
 ```
 
+
+
 ### Initial analysis -----------------------------------------------------------
 
 ### Q1. What kind of tourism activity generates the highest income for Scotland?
@@ -616,13 +618,55 @@ regional_domestic %>%
 ```
 
 
-### Change over time
+### Change over time ------
+
+```{r}
+accomodation %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
+
+```
+
+```{r}
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
+```
+
+```{r}
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
+```
+
+```{r}
+location %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
+```
 
 
+```{r}
+transport %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()  
+```
+
+#### Working Environment -------
+
+```{r}
+activities %>%
+  mutate(unit = ifelse(unit == "million pounds (GBP)", "million (£)", "million")) %>%
+  relocate(value, .after = year) %>%
+  relocate(breakdown_of_domestic_tourism, .after = unit) %>%
+  select(-tourism_activity)
+```
 
 
 ### Main questions to answer --------------------------------------------------
 
 Is there any way to predict spending and visits for Visit Scotland?
-
-### Sub-questions to answer / points to explore, as I go along:

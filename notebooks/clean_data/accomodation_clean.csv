@@ -1,712 +1,712 @@
-year,unit,value,accommodation_type,occupancy_type,weekday_weekend,size_of_accommodation,location
-2012,Percentage,52.32,Guest House/B&B , Room Occupancy,All,All,Small town
-2015,Percentage,49.18,Guest House/B&B , Room Occupancy,All,All,Urban area
-2018,Percentage,63.57,Guest House/B&B , Room Occupancy,All,All,Urban area
-2013,Percentage,53.35,Guest House/B&B , Room Occupancy,All,All,Rural
-2018,Percentage,40.45,Guest House/B&B , Room Occupancy,All,All,Rural
-2019,Percentage,43.93,Guest House/B&B , Room Occupancy,All,All,Small town
-2016,Percentage,38.76,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
-2017,Percentage,60.24,Guest House/B&B , Room Occupancy,All,All,Urban area
-2016,Percentage,45.44,Guest House/B&B , Room Occupancy,All,All,Urban area
-2015,Percentage,46.54,Guest House/B&B , Room Occupancy,All,All,Remote rural
-2016,Percentage,46.89,Guest House/B&B , Room Occupancy,All,All,Small town
-2017,Percentage,56.39,Guest House/B&B , Room Occupancy,All,All,Small town
-2014,Percentage,57.59,Guest House/B&B , Room Occupancy,All,All,Rural
-2011,Percentage,52.08,Guest House/B&B , Room Occupancy,All,All,Rural
-2015,Percentage,59.8,Guest House/B&B , Room Occupancy,All,All,Urban area
-2018,Percentage,42.26,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
-2015,Percentage,49.82,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
-2011,Percentage,49.63,Guest House/B&B , Room Occupancy,All,All,Remote small town
-2013,Percentage,55.21,Guest House/B&B , Room Occupancy,All,All,Small town
-2015,Percentage,47.66,Guest House/B&B , Room Occupancy,All,All,Rural
-2013,Percentage,40.28,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
-2012,Percentage,49.18,Guest House/B&B , Room Occupancy,All,All,Rural
-2017,Percentage,50.28,Guest House/B&B , Room Occupancy,All,All,Other
-2016,Percentage,41.52,Self Catering , Unit Occupancy,All,All,Remote small town
-2016,Percentage,48.02,Self Catering , Unit Occupancy,All,All,Small town
-2013,Percentage,62.49,Self Catering , Unit Occupancy,All,All,Urban area
-2011,Percentage,43.71,Self Catering , Unit Occupancy,All,All,Urban area
-2014,Percentage,48.47,Self Catering , Unit Occupancy,All,All,Urban area
-2018,Percentage,54.93,Self Catering , Unit Occupancy,All,All,Other
-2018,Percentage,43.06,Self Catering , Unit Occupancy,All,All,Urban area
-2012,Percentage,31.04,Self Catering , Unit Occupancy,All,All,Remote small town
-2016,Percentage,55.97,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
-2012,Percentage,43.89,Self Catering , Unit Occupancy,All,All,Urban area
-2017,Percentage,51.67,Self Catering , Unit Occupancy,All,All,Other
-2012,Percentage,41.85,Self Catering , Unit Occupancy,All,All,Small town
-2013,Percentage,47.3,Self Catering , Unit Occupancy,All,All,Urban area
-2017,Percentage,39.74,Self Catering , Unit Occupancy,All,All,Small town
-2018,Percentage,58.62,Self Catering , Unit Occupancy,All,All,Urban area
-2018,Percentage,46.67,Guest House/B&B , Room Occupancy,All,All,Remote rural
-2019,Percentage,34.58,Self Catering , Unit Occupancy,All,All,Urban area
-2011,Percentage,59.74,Self Catering , Unit Occupancy,All,All,Urban area
-2019,Percentage,47.61,Self Catering , Unit Occupancy,All,All,Other
-2011,Percentage,30.85,Self Catering , Unit Occupancy,All,All,Small town
-2016,Percentage,66.24,Self Catering , Unit Occupancy,All,All,Urban area
-2019,Percentage,50.65,Self Catering , Unit Occupancy,All,All,Urban area
-2013,Percentage,44.32,Guest House/B&B , Room Occupancy,All,All,Remote rural
-2019,Percentage,50.04,Guest House/B&B , Room Occupancy,All,All,Other
-2016,Percentage,43.75,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
-2016,Percentage,41.76,Guest House/B&B , Room Occupancy,All,All,Other
-2019,Percentage,54.37,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
-2011,Percentage,44.58,Guest House/B&B , Room Occupancy,All,All,Urban area
-2016,Percentage,39.89,Guest House/B&B , Room Occupancy,All,All,Remote rural
-2011,Percentage,44.08,Guest House/B&B , Room Occupancy,All,All,Other
-2018,Percentage,51.09,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
-2011,Percentage,50.13,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
-2012,Percentage,39.07,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
-2017,Percentage,44.86,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
-2016,Percentage,37.44,Guest House/B&B , Room Occupancy,All,All,Rural
-2018,Percentage,80.22,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
-2015,Percentage,40.26,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
-2019,Percentage,26.24,Guest House/B&B , Room Occupancy,All,All,Rural
-2017,Percentage,46.19,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
-2016,Percentage,53.85,Guest House/B&B , Room Occupancy,All,All,Urban area
-2012,Percentage,44.1,Guest House/B&B , Room Occupancy,All,All,Other
-2012,Percentage,43.36,Guest House/B&B , Room Occupancy,All,All,Urban area
-2018,Percentage,50.3,Guest House/B&B , Room Occupancy,All,All,Other
-2015,Percentage,48.52,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
-2014,Percentage,55.8,Guest House/B&B , Room Occupancy,All,All,Urban area
-2014,Percentage,47.16,Guest House/B&B , Room Occupancy,All,All,Urban area
-2014,Percentage,46.21,Guest House/B&B , Room Occupancy,All,All,Other
-2016,Percentage,52.16,Guest House/B&B , Room Occupancy,All,All,Remote small town
-2013,Percentage,51.56,Guest House/B&B , Room Occupancy,All,All,Urban area
-2017,Percentage,56.97,Guest House/B&B , Room Occupancy,All,All,Urban area
-2014,Percentage,45.05,Guest House/B&B , Room Occupancy,All,All,Remote rural
-2014,Percentage,39.77,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
-2012,Percentage,42.49,Guest House/B&B , Room Occupancy,All,All,Remote small town
-2015,Percentage,44.88,Guest House/B&B , Room Occupancy,All,All,Remote small town
-2012,Percentage,57.4,Guest House/B&B , Room Occupancy,All,All,Urban area
-2015,Percentage,52.6,Guest House/B&B , Room Occupancy,All,All,Small town
-2015,Percentage,45.41,Guest House/B&B , Room Occupancy,All,All,Other
-2019,Percentage,63.22,Guest House/B&B , Room Occupancy,All,All,Urban area
-2013,Percentage,48.45,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
-2017,Percentage,43.93,Guest House/B&B , Room Occupancy,All,All,Remote rural
-2018,Percentage,58.67,Guest House/B&B , Room Occupancy,All,All,Urban area
-2019,Percentage,87.93,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
-2016,Percentage,38.78,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
-2018,Percentage,49.62,Guest House/B&B , Room Occupancy,All,All,Small town
-2012,Percentage,54.86,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
-2017,Percentage,46.15,Guest House/B&B , Room Occupancy,All,All,Remote small town
-2015,Percentage,48.29,Self Catering , Unit Occupancy,All,All,Other
-2013,Percentage,53.92,Self Catering , Unit Occupancy,All,All,Rural
-2016,Percentage,48.37,Self Catering , Unit Occupancy,All,All,Other
-2019,Percentage,26.6,Self Catering , Unit Occupancy,All,All,Rural
-2017,Percentage,66.13,Self Catering , Unit Occupancy,All,All,Urban area
-2017,Percentage,51.02,Self Catering , Unit Occupancy,All,All,Remote rural
-2012,Percentage,31.4,Hostels , Bed Occupancy,All,All,Remote small town
-2015,Percentage,42.32,Guest House/B&B , Bed Occupancy,All,All,Small town
-2015,Percentage,42.06,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
-2012,Percentage,40.62,Guest House/B&B , Bed Occupancy,All,All,Small town
-2011,Percentage,39.53,Guest House/B&B , Bed Occupancy,All,All,Small town
-2019,Percentage,21.22,Guest House/B&B , Bed Occupancy,All,All,Rural
-2019,Percentage,42.18,Self Catering , Unit Occupancy,All,All,Small town
-2019,Percentage,44.28,Self Catering , Unit Occupancy,All,All,Remote small town
-2018,Percentage,50.61,Self Catering , Unit Occupancy,All,All,Small town
-2011,Percentage,37.79,Self Catering , Unit Occupancy,All,All,Remote small town
-2013,Percentage,41.95,Self Catering , Unit Occupancy,All,All,Remote rural
-2016,Percentage,44.52,Self Catering , Unit Occupancy,All,All,Urban area
-2016,Percentage,58.52,Self Catering , Unit Occupancy,All,All,Rural
-2011,Percentage,56.28,Self Catering , Unit Occupancy,All,All,Rural
-2011,Percentage,42.42,Self Catering , Unit Occupancy,All,All,Other
-2014,Percentage,44.2,Self Catering , Unit Occupancy,All,All,Remote rural
-2016,Percentage,45.62,Self Catering , Unit Occupancy,All,All,Remote rural
-2013,Percentage,39.17,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2012,Percentage,39.83,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
-2018,Percentage,54.93,Hostels , Bed Occupancy,All,All,Urban area
-2013,Percentage,42.54,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
-2017,Percentage,50.57,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2016,Percentage,39.14,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
-2014,Percentage,39.41,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2019,Percentage,65.28,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2015,Percentage,40.1,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2016,Percentage,44.25,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2011,Percentage,40.37,Guest House/B&B , Bed Occupancy,All,All,Remote rural
-2018,Percentage,55.31,Hostels , Bed Occupancy,All,All,Other
-2013,Percentage,44.91,Guest House/B&B , Bed Occupancy,All,All,Small town
-2016,Percentage,36.84,Guest House/B&B , Bed Occupancy,All,All,Rural
-2017,Percentage,46.96,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
-2014,Percentage,42.21,Guest House/B&B , Bed Occupancy,All,All,Small town
-2011,Percentage,21.66,Hostels , Bed Occupancy,All,All,Remote small town
-2018,Percentage,35.28,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
-2013,Percentage,45.38,Guest House/B&B , Bed Occupancy,All,All,Rural
-2018,Percentage,27.63,Guest House/B&B , Bed Occupancy,All,All,Rural
-2017,Percentage,35.68,Guest House/B&B , Bed Occupancy,All,All,Rural
-2012,Percentage,41.74,Guest House/B&B , Bed Occupancy,All,All,Rural
-2017,Percentage,60.18,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
-2012,Percentage,63.51,Self Catering , Unit Occupancy,All,All,Urban area
-2014,Percentage,45.31,Self Catering , Unit Occupancy,All,All,Small town
-2015,Percentage,43.81,Self Catering , Unit Occupancy,All,All,Urban area
-2017,Percentage,51.63,Self Catering , Unit Occupancy,All,All,Urban area
-2018,Percentage,54.93,Self Catering , Unit Occupancy,All,All,Remote rural
-2017,Percentage,54.49,Self Catering , Unit Occupancy,All,All,Rural
-2015,Percentage,56.53,Self Catering , Unit Occupancy,All,All,Rural
-2017,Percentage,51.66,Self Catering , Unit Occupancy,All,All,Remote small town
-2013,Percentage,41.97,Self Catering , Unit Occupancy,All,All,Small town
-2014,Percentage,31.97,Self Catering , Unit Occupancy,All,All,Remote small town
-2018,Percentage,59.26,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
-2011,Percentage,53.34,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
-2014,Percentage,51.89,Hotels , Bed Occupancy,All,All,Rural
-2013,Percentage,54.55,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
-2011,Percentage,46.54,Hotels , Bed Occupancy,All,All,Rural
-2015,Percentage,55.39,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
-2011,Percentage,42.37,Self Catering , Unit Occupancy,All,All,Remote rural
-2016,Percentage,48.57,Hotels , Bed Occupancy,All,All,Rural
-2015,Percentage,41.81,Self Catering , Unit Occupancy,All,All,Remote small town
-2018,Percentage,54.6,Hotels , Bed Occupancy,All,All,Other
-2012,Percentage,45.67,Hotels , Bed Occupancy,All,All,Rural
-2013,Percentage,49.94,Guest House/B&B , Room Occupancy,All,All,Remote small town
-2014,Percentage,53.54,Self Catering , Unit Occupancy,All,All,Rural
-2019,Percentage,70.86,Guest House/B&B , Room Occupancy,All,All,Urban area
-2011,Percentage,59.68,Guest House/B&B , Room Occupancy,All,All,Urban area
-2019,Percentage,54.65,Guest House/B&B , Room Occupancy,All,All,Remote small town
-2018,Percentage,47.67,Self Catering , Unit Occupancy,All,All,Remote small town
-2018,Percentage,64.79,Self Catering , Unit Occupancy,All,All,Rural
-2015,Percentage,45.32,Self Catering , Unit Occupancy,All,All,Remote rural
-2013,Percentage,44.18,Self Catering , Unit Occupancy,All,All,Other
-2013,Percentage,47.21,Guest House/B&B , Room Occupancy,All,All,Urban area
-2015,Percentage,68.03,Self Catering , Unit Occupancy,All,All,Urban area
-2019,Percentage,47.72,Self Catering , Unit Occupancy,All,All,Remote rural
-2012,Percentage,43.56,Self Catering , Unit Occupancy,All,All,Other
-2012,Percentage,42.07,Self Catering , Unit Occupancy,All,All,Remote rural
-2014,Percentage,45.88,Self Catering , Unit Occupancy,All,All,Other
-2015,Percentage,45.84,Self Catering , Unit Occupancy,All,All,Small town
-2013,Percentage,34.84,Self Catering , Unit Occupancy,All,All,Remote small town
-2017,Percentage,52.29,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
-2014,Percentage,50.87,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
-2012,Percentage,47.91,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
-2014,Percentage,65.48,Self Catering , Unit Occupancy,All,All,Urban area
-2012,Percentage,59.18,Self Catering , Unit Occupancy,All,All,Rural
-2014,Percentage,20.95,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
-2016,Percentage,22.45,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
-2016,Percentage,52.41,Hotels , Bed Occupancy,All,All,Remote small town
-2018,Percentage,0,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
-2015,Percentage,47.48,Hotels , Bed Occupancy,All,All,Small town
-2019,Percentage,45.18,Hotels , Bed Occupancy,All,All,Remote small town
-2012,Percentage,45.43,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
-2012,Percentage,33.81,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
-2013,Percentage,56.24,Hotels , Bed Occupancy,All,All,Urban area
-2016,Percentage,50.92,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
-2013,Percentage,48.64,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
-2015,Percentage,49.57,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
-2012,Percentage,17,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
-2013,Percentage,18.48,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
-2018,Percentage,62,Hotels , Bed Occupancy,All,All,Small town
-2017,Percentage,61.53,Hotels , Bed Occupancy,All,All,Urban area
-2018,Percentage,56.76,Hotels , Bed Occupancy,All,All,Urban area
-2015,Percentage,47.81,Hotels , Bed Occupancy,All,All,Remote small town
-2017,Percentage,57.76,Hotels , Bed Occupancy,All,All,Rural
-2014,Percentage,47.36,Hotels , Bed Occupancy,All,All,Remote small town
-2013,Percentage,48.17,Hotels , Bed Occupancy,All,All,Remote small town
-2019,Percentage,3.83,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
-2016,Percentage,50.66,Hotels , Bed Occupancy,All,All,Small town
-2014,Percentage,35.74,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
-2013,Percentage,51.46,Hotels , Bed Occupancy,All,All,Other
-2012,Percentage,38.98,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
-2015,Percentage,18.87,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
-2011,Percentage,18.78,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
-2017,Percentage,51.42,Hotels , Bed Occupancy,All,All,Remote small town
-2019,Percentage,33.99,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
-2017,Percentage,54.37,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
-2011,Percentage,39.96,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
-2018,Percentage,32.76,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
-2015,Percentage,30.98,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
-2017,Percentage,57.3,Hotels , Bed Occupancy,All,All,Other
-2011,Percentage,49.56,Hotels , Bed Occupancy,All,All,Urban area
-2017,Percentage,0,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
-2013,Percentage,51.83,Hotels , Bed Occupancy,All,All,Urban area
-2012,Percentage,49.74,Hotels , Bed Occupancy,All,All,Urban area
-2014,Percentage,52.7,Hotels , Bed Occupancy,All,All,Urban area
-2011,Percentage,49.23,Hotels , Bed Occupancy,All,All,Other
-2019,Percentage,51.61,Hotels , Bed Occupancy,All,All,Rural
-2019,Percentage,33.58,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
-2018,Percentage,46.37,Hotels , Bed Occupancy,All,All,Remote small town
-2013,Percentage,45.03,Hotels , Bed Occupancy,All,All,Rural
-2013,Percentage,42.94,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
-2019,Percentage,52.94,Hotels , Bed Occupancy,All,All,Other
-2014,Percentage,56.08,Hotels , Bed Occupancy,All,All,Urban area
-2011,Percentage,43.32,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
-2016,Percentage,51.84,Hotels , Bed Occupancy,All,All,Remote rural
-2014,Percentage,49.89,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
-2014,Percentage,49.82,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
-2017,Percentage,47.12,Hotels , Bed Occupancy,All,All,Remote rural
-2016,Percentage,49.16,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
-2013,Percentage,51.1,Hotels , Bed Occupancy,All,All,Remote rural
-2012,Percentage,48.66,Hotels , Bed Occupancy,All,All,Other
-2017,Percentage,52.89,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
-2017,Percentage,63.95,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
-2013,Percentage,55.43,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
-2014,Percentage,52.4,Hotels , Bed Occupancy,All,All,Other
-2011,Percentage,46.42,Hotels , Bed Occupancy,All,All,Remote small town
-2014,Percentage,50.13,Hotels , Bed Occupancy,All,All,Remote rural
-2017,Percentage,37.37,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
-2012,Percentage,52.77,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
-2018,Percentage,47.95,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
-2019,Percentage,60.24,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
-2018,Percentage,60.5,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
-2014,Percentage,55.57,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
-2019,Percentage,57.15,Hotels , Bed Occupancy,All,All,Urban area
-2015,Percentage,51.26,Hotels , Bed Occupancy,All,All,Urban area
-2011,Percentage,54.58,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
-2016,Percentage,58.28,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
-2018,Percentage,35.28,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
-2019,Percentage,56.75,Hotels , Bed Occupancy,All,All,Small town
-2012,Percentage,44.4,Hotels , Bed Occupancy,All,All,Remote small town
-2012,Percentage,45.78,Hotels , Bed Occupancy,All,All,Small town
-2019,Percentage,56.81,Hotels , Bed Occupancy,All,All,Urban area
-2019,Percentage,45.83,Hotels , Bed Occupancy,All,All,Remote rural
-2011,Percentage,53.19,Hotels , Bed Occupancy,All,All,Urban area
-2012,Percentage,53.41,Hotels , Bed Occupancy,All,All,Urban area
-2013,Percentage,48.9,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
-2018,Percentage,54.06,Hotels , Bed Occupancy,All,All,Rural
-2016,Percentage,55.78,Hotels , Bed Occupancy,All,All,Urban area
-2014,Percentage,44.22,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
-2017,Percentage,61.32,Hotels , Bed Occupancy,All,All,Urban area
-2015,Percentage,53.38,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
-2015,Percentage,55.77,Hotels , Bed Occupancy,All,All,Urban area
-2011,Percentage,47.39,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
-2018,Percentage,60.71,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
-2019,Percentage,41.22,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
-2012,Percentage,39.7,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
-2018,Percentage,38.4,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2018,Percentage,33.59,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
-2012,Percentage,0,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2012,Percentage,40.02,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
-2011,Percentage,42.1,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
-2019,Percentage,57.6,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
-2015,Percentage,48.98,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
-2013,Percentage,42.84,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2019,Percentage,34.3,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2014,Percentage,49.13,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2015,Percentage,49.36,Hotels , Bed Occupancy,All,All,Rural
-2014,Percentage,55.85,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
-2018,Percentage,59.02,Hotels , Bed Occupancy,All,All,Urban area
-2014,Percentage,53.15,Hotels , Bed Occupancy,All,All,Small town
-2011,Percentage,45.01,Hotels , Bed Occupancy,All,All,Small town
-2017,Percentage,63.5,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
-2016,Percentage,56.78,Hotels , Bed Occupancy,All,All,Urban area
-2016,Percentage,54.02,Hotels , Bed Occupancy,All,All,Other
-2015,Percentage,41.89,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
-2017,Percentage,65.79,Hotels , Bed Occupancy,All,All,Small town
-2013,Percentage,46.84,Hotels , Bed Occupancy,All,All,Small town
-2011,Percentage,44.16,Guest House/B&B , Room Occupancy,All,All,Remote rural
-2011,Percentage,36.11,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
-2019,Percentage,34.21,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
-2013,Percentage,55.97,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
-2014,Percentage,50.96,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
-2019,Percentage,36.07,Guest House/B&B , Room Occupancy,All,All,Remote rural
-2011,Percentage,49.27,Guest House/B&B , Room Occupancy,All,All,Small town
-2014,Percentage,53.11,Guest House/B&B , Room Occupancy,All,All,Small town
-2017,Percentage,44.71,Guest House/B&B , Room Occupancy,All,All,Rural
-2012,Percentage,43.18,Guest House/B&B , Room Occupancy,All,All,Remote rural
-2013,Percentage,45.01,Guest House/B&B , Room Occupancy,All,All,Other
-2013,Percentage,43.96,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
-2014,Percentage,42.6,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
-2019,Percentage,42.08,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2015,Percentage,52.09,Hotels , Bed Occupancy,All,All,Other
-2012,Percentage,49.08,Hotels , Bed Occupancy,All,All,Remote rural
-2017,Percentage,36.21,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2011,Percentage,63.98,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
-2014,Percentage,43.72,Guest House/B&B , Room Occupancy,All,All,Remote small town
-2018,Percentage,40.34,Guest House/B&B , Room Occupancy,All,All,Remote small town
-2011,Percentage,43,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
-2014,Percentage,44.74,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2017,Percentage,24.2,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
-2016,Percentage,53.44,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
-2012,Percentage,24.77,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
-2017,Percentage,37.83,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2017,Percentage,31.96,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
-2013,Percentage,26.46,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
-2018,Percentage,44.42,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2012,Percentage,41.47,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2013,Percentage,42.04,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
-2013,Percentage,50.17,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2015,Percentage,49.55,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
-2016,Percentage,45.46,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
-2018,Percentage,37.66,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
-2015,Percentage,57.27,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2016,Percentage,39.01,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
-2013,Percentage,38.04,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
-2014,Percentage,42.14,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
-2012,Percentage,38.13,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
-2015,Percentage,41.9,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2016,Percentage,42.66,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
-2017,Percentage,28.19,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
-2019,Percentage,47.1,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
-2012,Percentage,52.66,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
-2012,Percentage,47.69,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
-2019,Percentage,55.5,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
-2015,Percentage,50.89,Hotels , Bed Occupancy,All,All,Remote rural
-2014,Percentage,29,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
-2011,Percentage,40.5,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
-2015,Percentage,50.42,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
-2016,Percentage,52.02,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
-2019,Percentage,47.25,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
-2011,Percentage,49.58,Hotels , Bed Occupancy,All,All,Remote rural
-2018,Percentage,47.18,Hotels , Bed Occupancy,All,All,Remote rural
-2011,Percentage,36.69,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
-2013,Percentage,39.75,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
-2015,Percentage,34.83,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
-2011,Percentage,25.32,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
-2011,Percentage,45.62,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2018,Percentage,27.9,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
-2016,Percentage,29.78,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
-2016,Percentage,58.9,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2019,Percentage,30.04,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
-2017,Percentage,32.19,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
-2011,Percentage,61.31,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2018,Percentage,53.78,Hostels , Bed Occupancy,All,All,Small town
-2013,Percentage,34.06,Hostels , Bed Occupancy,All,All,Remote small town
-2016,Percentage,78.32,Hotels , Room Occupancy,All,All,Urban area
-2018,Percentage,74.32,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
-2016,Percentage,69.8,Hotels , Room Occupancy,All,Rooms: 26-50,Other
-2015,Percentage,51.36,Hostels , Bed Occupancy,All,All,Small town
-2011,Percentage,65.06,Hotels , Room Occupancy,All,All,Other
-2017,Percentage,72.75,Hotels , Room Occupancy,All,All,Other
-2014,Percentage,70.65,Hotels , Room Occupancy,All,All,Urban area
-2014,Percentage,64.47,Hotels , Room Occupancy,All,All,Small town
-2012,Percentage,65.13,Hotels , Room Occupancy,All,All,Other
-2017,Percentage,68.32,Hotels , Room Occupancy,All,All,Rural
-2011,Percentage,73.89,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
-2015,Percentage,78.25,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
-2015,Percentage,67.04,Hotels , Room Occupancy,All,Rooms: 26-50,Other
-2012,Percentage,73.69,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
-2019,Percentage,68.74,Hotels , Room Occupancy,All,All,Urban area
-2017,Percentage,79.22,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
-2013,Percentage,64.72,Hotels , Room Occupancy,All,Rooms: 26-50,Other
-2019,Percentage,78.38,Hotels , Room Occupancy,All,Rooms: 26-50,Other
-2019,Percentage,74.36,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
-2018,Percentage,48.69,Hostels , Bed Occupancy,All,All,Remote small town
-2012,Percentage,65.87,Hotels , Room Occupancy,All,All,Urban area
-2012,Percentage,44.66,Hostels , Bed Occupancy,Weekday,All,Other
-2014,Percentage,45.45,Guest House/B&B , Room Occupancy,Weekday,All,Other
-2014,Percentage,57.32,Hostels , Bed Occupancy,Weekday,All,Other
-2018,Percentage,22.44,Hostels , Bed Occupancy,Weekday,All,Other
-2011,Percentage,43.54,Guest House/B&B , Room Occupancy,Weekday,All,Other
-2012,Percentage,44.51,Guest House/B&B , Room Occupancy,Weekday,All,Other
-2018,Percentage,51,Hotels , Bed Occupancy,Weekday,All,Other
-2017,Percentage,26.98,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
-2011,Percentage,46.24,Hotels , Bed Occupancy,Weekday,All,Other
-2019,Percentage,50.93,Guest House/B&B , Room Occupancy,Weekday,All,Other
-2018,Percentage,71.98,Hotels , Room Occupancy,Weekday,All,Other
-2015,Percentage,58.04,Hostels , Bed Occupancy,Weekday,All,Other
-2015,Percentage,46.48,Guest House/B&B , Room Occupancy,Weekday,All,Other
-2011,Percentage,42.53,Hostels , Bed Occupancy,Weekday,All,Other
-2015,Percentage,62.74,Hotels , Room Occupancy,All,All,Rural
-2017,Percentage,56.39,Hostels , Bed Occupancy,All,All,Remote small town
-2019,Percentage,58.53,Hotels , Room Occupancy,All,All,Remote small town
-2013,Percentage,45.64,Guest House/B&B , Room Occupancy,Weekday,All,Other
-2019,Percentage,22,Hostels , Bed Occupancy,Weekday,All,Other
-2013,Percentage,56.4,Hostels , Bed Occupancy,Weekday,All,Other
-2017,Percentage,25.81,Hostels , Bed Occupancy,Weekday,All,Other
-2016,Percentage,69.43,Hostels , Bed Occupancy,Weekday,All,Other
-2011,Percentage,58.47,Hotels , Room Occupancy,All,All,Remote rural
-2011,Percentage,56.48,Hotels , Room Occupancy,All,All,Remote small town
-2015,Percentage,61.02,Hotels , Room Occupancy,All,All,Remote small town
-2017,Percentage,56.38,Hostels , Bed Occupancy,All,All,Rural
-2016,Percentage,63.91,Hotels , Room Occupancy,All,All,Remote rural
-2011,Percentage,56.2,Hotels , Room Occupancy,All,All,Small town
-2015,Percentage,51.44,Hostels , Bed Occupancy,All,All,Rural
-2019,Percentage,81.98,Hotels , Room Occupancy,All,All,Small town
-2012,Percentage,55.47,Hotels , Room Occupancy,All,All,Remote small town
-2015,Percentage,63.28,Hotels , Room Occupancy,All,All,Small town
-2011,Percentage,74.05,Hotels , Room Occupancy,All,All,Urban area
-2015,Percentage,62.81,Hotels , Room Occupancy,All,All,Remote rural
-2018,Percentage,75.68,Hotels , Room Occupancy,All,Rooms: 26-50,Other
-2016,Percentage,64.4,Hotels , Room Occupancy,All,All,Small town
-2014,Percentage,66.07,Hotels , Room Occupancy,All,Rooms: 26-50,Other
-2017,Percentage,63.91,Hotels , Room Occupancy,All,Rooms: 11-25,Other
-2012,Percentage,62.11,Hotels , Room Occupancy,All,Rooms: 26-50,Other
-2014,Percentage,58.26,Hotels , Room Occupancy,All,All,Remote small town
-2013,Percentage,69.36,Hotels , Room Occupancy,All,All,Urban area
-2012,Percentage,56.59,Hotels , Room Occupancy,All,All,Small town
-2012,Percentage,35.58,Hostels , Bed Occupancy,All,All,Rural
-2013,Percentage,57.85,Hotels , Room Occupancy,All,All,Rural
-2016,Percentage,57.26,Hostels , Bed Occupancy,All,All,Rural
-2018,Percentage,67.65,Hotels , Room Occupancy,All,All,Rural
-2013,Percentage,59.23,Hotels , Room Occupancy,All,All,Remote small town
-2013,Percentage,68.3,Hotels , Room Occupancy,All,All,Other
-2015,Percentage,67.13,Hotels , Room Occupancy,All,All,Urban area
-2014,Percentage,62.76,Hotels , Room Occupancy,All,All,Rural
-2016,Percentage,76.57,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
-2011,Percentage,61.13,Hotels , Room Occupancy,All,Rooms: 26-50,Other
-2014,Percentage,78.64,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
-2013,Percentage,76.19,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
-2013,Percentage,24.37,Hotels , Room Occupancy,All,Rooms: 01-03,Other
-2015,Percentage,79.92,Hotels , Room Occupancy,All,All,Urban area
-2017,Percentage,80,Hotels , Room Occupancy,All,All,Urban area
-2017,Percentage,64.58,Hotels , Room Occupancy,All,All,Remote small town
-2012,Percentage,33.44,Hostels , Bed Occupancy,All,All,Small town
-2011,Percentage,35.18,Hostels , Bed Occupancy,All,All,Rural
-2015,Percentage,70.09,Hotels , Room Occupancy,All,All,Other
-2014,Percentage,44.13,Hostels , Bed Occupancy,All,All,Rural
-2016,Percentage,70.85,Hotels , Room Occupancy,All,All,Urban area
-2013,Percentage,37.4,Hostels , Bed Occupancy,All,All,Rural
-2019,Percentage,62.96,Hostels , Bed Occupancy,All,All,Remote rural
-2019,Percentage,75.57,Hotels , Room Occupancy,All,All,Urban area
-2012,Percentage,39.57,Guest House/B&B , Bed Occupancy,Weekend,All,Other
-2011,Percentage,45.87,Guest House/B&B , Room Occupancy,Weekend,All,Other
-2018,Percentage,47.18,Guest House/B&B , Bed Occupancy,Weekend,All,Other
-2016,Percentage,76.6,Hostels , Bed Occupancy,Weekend,All,Other
-2013,Percentage,41.97,Guest House/B&B , Bed Occupancy,Weekend,All,Other
-2019,Percentage,37.09,Hostels , Bed Occupancy,Weekend,All,Other
-2018,Percentage,38.3,Hostels , Bed Occupancy,Weekend,All,Other
-2014,Percentage,42.16,Guest House/B&B , Bed Occupancy,Weekend,All,Other
-2015,Percentage,43.75,Guest House/B&B , Bed Occupancy,Weekend,All,Other
-2017,Percentage,50.56,Guest House/B&B , Bed Occupancy,Weekend,All,Other
-2016,Percentage,40.04,Guest House/B&B , Bed Occupancy,Weekend,All,Other
-2011,Percentage,54.17,Hostels , Bed Occupancy,Weekend,All,Other
-2014,Percentage,49.17,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
-2016,Percentage,46.78,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
-2017,Percentage,31.42,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
-2017,Percentage,44.86,Hostels , Bed Occupancy,Weekend,All,Other
-2014,Percentage,64.86,Hostels , Bed Occupancy,Weekend,All,Other
-2019,Percentage,38.77,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
-2015,Percentage,45.58,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
-2018,Percentage,69.36,Hotels , Room Occupancy,Weekend,All,Other
-2013,Percentage,47.1,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
-2011,Percentage,62.82,Hotels , Room Occupancy,Weekend,All,Other
-2012,Percentage,62.44,Hotels , Room Occupancy,Weekend,All,Other
-2011,Percentage,40.18,Guest House/B&B , Bed Occupancy,Weekend,All,Other
-2018,Percentage,56.22,Hotels , Bed Occupancy,Weekend,All,Other
-2019,Percentage,49.3,Guest House/B&B , Bed Occupancy,Weekend,All,Other
-2015,Percentage,50.81,Guest House/B&B , Room Occupancy,Weekend,All,Other
-2015,Percentage,67.12,Hotels , Room Occupancy,Weekend,All,Other
-2016,Percentage,57.31,Hotels , Bed Occupancy,Weekend,All,Other
-2013,Percentage,54.93,Hotels , Bed Occupancy,Weekend,All,Other
-2011,Percentage,52.97,Hotels , Bed Occupancy,Weekend,All,Other
-2019,Percentage,54.98,Hotels , Bed Occupancy,Weekend,All,Other
-2013,Percentage,46.82,Guest House/B&B , Room Occupancy,Weekend,All,Other
-2017,Percentage,60.14,Hotels , Bed Occupancy,Weekend,All,Other
-2017,Percentage,55.87,Guest House/B&B , Room Occupancy,Weekend,All,Other
-2012,Percentage,45.48,Guest House/B&B , Room Occupancy,Weekend,All,Other
-2014,Percentage,66.89,Hotels , Room Occupancy,Weekend,All,Other
-2013,Percentage,66.01,Hostels , Bed Occupancy,Weekend,All,Other
-2015,Percentage,65.03,Hostels , Bed Occupancy,Weekend,All,Other
-2018,Percentage,52.55,Guest House/B&B , Room Occupancy,Weekend,All,Other
-2014,Percentage,55.6,Hotels , Bed Occupancy,Weekend,All,Other
-2019,Percentage,56.02,Guest House/B&B , Room Occupancy,Weekend,All,Other
-2013,Percentage,65.27,Hotels , Room Occupancy,Weekend,All,Other
-2019,Percentage,70.24,Hotels , Room Occupancy,Weekend,All,Other
-2015,Percentage,54.63,Hotels , Bed Occupancy,Weekend,All,Other
-2016,Percentage,73.94,Hotels , Room Occupancy,Weekday,All,Other
-2018,Percentage,28.79,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
-2012,Percentage,46.03,Hotels , Bed Occupancy,Weekday,All,Other
-2014,Percentage,49.65,Hotels , Bed Occupancy,Weekday,All,Other
-2016,Percentage,51.72,Hotels , Bed Occupancy,Weekday,All,Other
-2017,Percentage,74.07,Hotels , Room Occupancy,Weekday,All,Other
-2018,Percentage,41.33,Guest House/B&B , Bed Occupancy,Weekday,All,Other
-2019,Percentage,72.51,Hotels , Room Occupancy,Weekday,All,Other
-2019,Percentage,41.32,Guest House/B&B , Bed Occupancy,Weekday,All,Other
-2012,Percentage,67.27,Hotels , Room Occupancy,Weekday,All,Other
-2014,Percentage,72.27,Hotels , Room Occupancy,Weekday,All,Other
-2013,Percentage,36.37,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
-2017,Percentage,41.29,Guest House/B&B , Bed Occupancy,Weekday,All,Other
-2019,Percentage,49.13,Hotels , Bed Occupancy,Weekday,All,Other
-2017,Percentage,53.96,Hotels , Bed Occupancy,Weekday,All,Other
-2014,Percentage,37.75,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
-2011,Percentage,35.32,Guest House/B&B , Bed Occupancy,Weekday,All,Other
-2015,Percentage,73.06,Hotels , Room Occupancy,Weekday,All,Other
-2015,Percentage,50.3,Hotels , Bed Occupancy,Weekday,All,Other
-2013,Percentage,70.82,Hotels , Room Occupancy,Weekday,All,Other
-2012,Percentage,37.88,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
-2013,Percentage,48.97,Hotels , Bed Occupancy,Weekday,All,Other
-2018,Percentage,36.59,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
-2011,Percentage,42.93,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
-2012,Percentage,52.29,Hotels , Bed Occupancy,Weekend,All,Other
-2015,Percentage,32.08,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
-2012,Percentage,35.91,Guest House/B&B , Bed Occupancy,Weekday,All,Other
-2012,Percentage,57.81,Hostels , Bed Occupancy,Weekend,All,Other
-2016,Percentage,45.76,Guest House/B&B , Room Occupancy,Weekend,All,Other
-2012,Percentage,48.56,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
-2016,Percentage,68.51,Hotels , Room Occupancy,Weekend,All,Other
-2017,Percentage,71.03,Hotels , Room Occupancy,Weekend,All,Other
-2014,Percentage,48.86,Guest House/B&B , Room Occupancy,Weekend,All,Other
-2016,Percentage,41.36,Guest House/B&B , Room Occupancy,Weekday,All,Other
-2011,Percentage,66.94,Hotels , Room Occupancy,Weekday,All,Other
-2014,Percentage,36.43,Guest House/B&B , Bed Occupancy,Weekday,All,Other
-2011,Percentage,33.02,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
-2016,Percentage,33.42,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
-2016,Percentage,34.09,Guest House/B&B , Bed Occupancy,Weekday,All,Other
-2013,Percentage,38.23,Guest House/B&B , Bed Occupancy,Weekday,All,Other
-2017,Percentage,50.44,Guest House/B&B , Room Occupancy,Weekday,All,Other
-2019,Percentage,30.3,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
-2015,Percentage,37.82,Guest House/B&B , Bed Occupancy,Weekday,All,Other
-2018,Percentage,49.92,Guest House/B&B , Room Occupancy,Weekday,All,Other
-2011,Percentage,30.01,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
-2011,Percentage,52.1,Hostels , Bed Occupancy,All,All,Urban area
-2013,Percentage,44.96,Hostels , Bed Occupancy,All,All,Other
-2019,Percentage,64.7,Hostels , Bed Occupancy,All,All,Urban area
-2013,Percentage,38.57,Guest House/B&B , Bed Occupancy,All,All,Other
-2018,Percentage,43.25,Guest House/B&B , Bed Occupancy,All,All,Other
-2014,Percentage,62.95,Hostels , Bed Occupancy,All,All,Urban area
-2013,Percentage,55.55,Hostels , Bed Occupancy,All,All,Urban area
-2017,Percentage,39.6,Guest House/B&B , Bed Occupancy,All,All,Remote small town
-2015,Percentage,62.47,Hostels , Bed Occupancy,All,All,Urban area
-2015,Percentage,53.17,Hostels , Bed Occupancy,All,All,Other
-2019,Percentage,60.19,Hostels , Bed Occupancy,All,All,Other
-2011,Percentage,36.48,Guest House/B&B , Bed Occupancy,All,All,Other
-2014,Percentage,38.15,Guest House/B&B , Bed Occupancy,All,All,Other
-2014,Percentage,35.24,Guest House/B&B , Bed Occupancy,All,All,Remote small town
-2012,Percentage,35.49,Hostels , Bed Occupancy,All,All,Urban area
-2011,Percentage,39.26,Hostels , Bed Occupancy,All,All,Other
-2016,Percentage,31.17,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
-2016,Percentage,58.03,Hostels , Bed Occupancy,All,All,Other
-2016,Percentage,65.52,Hostels , Bed Occupancy,All,All,Urban area
-2019,Percentage,42.21,Guest House/B&B , Bed Occupancy,All,All,Other
-2012,Percentage,36.28,Guest House/B&B , Bed Occupancy,All,All,Other
-2012,Percentage,52.36,Hostels , Bed Occupancy,All,All,Urban area
-2012,Percentage,38.69,Guest House/B&B , Bed Occupancy,All,All,Remote rural
-2016,Percentage,36.83,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2017,Percentage,53.8,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2019,Percentage,30.1,Guest House/B&B , Bed Occupancy,All,All,Remote rural
-2014,Percentage,45.23,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2013,Percentage,43.97,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
-2011,Percentage,41.65,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
-2014,Percentage,40.11,Guest House/B&B , Bed Occupancy,All,All,Remote rural
-2016,Percentage,34.72,Guest House/B&B , Bed Occupancy,All,All,Remote rural
-2018,Percentage,55.1,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2011,Percentage,49.96,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
-2014,Percentage,31.12,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
-2016,Percentage,44.84,Guest House/B&B , Bed Occupancy,All,All,Remote small town
-2019,Percentage,26.65,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
-2017,Percentage,59.7,Hostels , Bed Occupancy,All,All,Urban area
-2015,Percentage,34.79,Guest House/B&B , Bed Occupancy,All,All,Remote small town
-2017,Percentage,35.64,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
-2013,Percentage,33.56,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
-2018,Percentage,34.64,Guest House/B&B , Bed Occupancy,All,All,Remote small town
-2019,Percentage,51.71,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2011,Percentage,39.23,Guest House/B&B , Bed Occupancy,All,All,Remote small town
-2011,Percentage,44.33,Guest House/B&B , Bed Occupancy,All,All,Rural
-2018,Percentage,59.31,Hostels , Bed Occupancy,All,All,Remote rural
-2012,Percentage,58.59,Hotels , Room Occupancy,All,All,Remote rural
-2016,Percentage,64.46,Hotels , Room Occupancy,All,All,Rural
-2015,Percentage,44.95,Hostels , Bed Occupancy,All,All,Remote small town
-2019,Percentage,58.66,Hotels , Room Occupancy,All,All,Remote rural
-2018,Percentage,77.98,Hotels , Room Occupancy,All,All,Small town
-2013,Percentage,78.38,Hotels , Room Occupancy,All,All,Urban area
-2018,Percentage,74.88,Hotels , Room Occupancy,All,All,Urban area
-2017,Percentage,54.13,Hostels , Bed Occupancy,All,All,Remote rural
-2011,Percentage,59.58,Hotels , Room Occupancy,All,All,Rural
-2014,Percentage,69.68,Hotels , Room Occupancy,All,All,Other
-2012,Percentage,34.77,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2014,Percentage,43.73,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
-2019,Percentage,44.09,Guest House/B&B , Bed Occupancy,All,All,Remote small town
-2017,Percentage,39.28,Guest House/B&B , Bed Occupancy,All,All,Remote rural
-2018,Percentage,44.47,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
-2019,Percentage,44.83,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
-2019,Percentage,44.34,Hostels , Bed Occupancy,All,All,Remote small town
-2014,Percentage,80.51,Hotels , Room Occupancy,All,All,Urban area
-2017,Percentage,75.04,Hotels , Room Occupancy,All,All,Small town
-2011,Percentage,34.81,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2012,Percentage,58.43,Hotels , Room Occupancy,All,All,Rural
-2019,Percentage,63.94,Hostels , Bed Occupancy,All,All,Rural
-2012,Percentage,74.99,Hotels , Room Occupancy,All,All,Urban area
-2017,Percentage,61.5,Hotels , Room Occupancy,All,All,Remote rural
-2018,Percentage,55.76,Hostels , Bed Occupancy,All,All,Rural
-2013,Percentage,61.65,Hotels , Room Occupancy,All,All,Remote rural
-2013,Percentage,60.21,Hotels , Room Occupancy,All,All,Small town
-2012,Percentage,40.13,Hostels , Bed Occupancy,All,All,Other
-2019,Percentage,51.15,Hostels , Bed Occupancy,All,All,Small town
-2015,Percentage,32.49,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
-2016,Percentage,45.4,Hostels , Bed Occupancy,All,All,Remote small town
-2019,Percentage,65.67,Hotels , Room Occupancy,All,All,Rural
-2018,Percentage,60.77,Hotels , Room Occupancy,All,All,Remote rural
-2014,Percentage,37.05,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
-2016,Percentage,65.78,Hotels , Room Occupancy,All,All,Remote small town
-2011,Percentage,36.27,Hostels , Bed Occupancy,All,All,Remote rural
-2018,Percentage,60.77,Hotels , Room Occupancy,All,All,Remote small town
-2014,Percentage,60.58,Hotels , Room Occupancy,All,All,Remote rural
-2013,Percentage,40.99,Guest House/B&B , Bed Occupancy,All,All,Remote rural
-2015,Percentage,41.94,Guest House/B&B , Bed Occupancy,All,All,Remote rural
-2014,Percentage,47.12,Guest House/B&B , Bed Occupancy,All,All,Rural
-2014,Percentage,37.17,Hostels , Bed Occupancy,All,All,Remote small town
-2015,Percentage,43.87,Guest House/B&B , Bed Occupancy,All,All,Rural
-2013,Percentage,59.98,Hotels , Room Occupancy,All,Rooms: 11-25,Other
-2012,Percentage,56.89,Hotels , Room Occupancy,All,Rooms: 11-25,Other
-2019,Percentage,57.36,Hotels , Room Occupancy,All,Rooms: 11-25,Other
-2011,Percentage,36.7,Hostels , Bed Occupancy,All,All,Urban area
-2014,Percentage,25.87,Hotels , Room Occupancy,All,Rooms: 01-03,Other
-2014,Percentage,62.63,Hotels , Room Occupancy,All,Rooms: 11-25,Other
-2018,Percentage,76.36,Hotels , Room Occupancy,All,Rooms: 51-100,Other
-2014,Percentage,50.35,Hostels , Bed Occupancy,All,All,Other
-2015,Percentage,40.48,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
-2014,Percentage,73.35,Hotels , Room Occupancy,All,Rooms: 51-100,Other
-2013,Percentage,37.48,Hostels , Bed Occupancy,All,All,Small town
-2016,Percentage,30.46,Hotels , Room Occupancy,All,Rooms: 01-03,Other
-2014,Percentage,41.4,Hostels , Bed Occupancy,All,All,Urban area
-2017,Percentage,0,Hotels , Room Occupancy,All,Rooms: 01-03,Other
-2014,Percentage,46.44,Hostels , Bed Occupancy,All,All,Small town
-2011,Percentage,64.92,Hotels , Room Occupancy,All,All,Urban area
-2017,Percentage,53.2,Hostels , Bed Occupancy,All,All,Urban area
-2017,Percentage,74.79,Hotels , Room Occupancy,All,All,Urban area
-2016,Percentage,55.07,Hostels , Bed Occupancy,All,All,Urban area
-2019,Percentage,3.81,Hotels , Room Occupancy,All,Rooms: 01-03,Other
-2012,Percentage,21.67,Hotels , Room Occupancy,All,Rooms: 01-03,Other
-2011,Percentage,23.39,Hotels , Room Occupancy,All,Rooms: 01-03,Other
-2015,Percentage,59.35,Hotels , Room Occupancy,All,Rooms: 04-10,Other
-2018,Percentage,53.13,Hotels , Room Occupancy,All,Rooms: 04-10,Other
-2016,Percentage,60.59,Hotels , Room Occupancy,All,Rooms: 04-10,Other
-2019,Percentage,52.68,Hotels , Room Occupancy,All,Rooms: 04-10,Other
-2018,Percentage,59.64,Hotels , Room Occupancy,All,Rooms: 11-25,Other
-2011,Percentage,49.88,Hotels , Room Occupancy,All,Rooms: 04-10,Other
-2013,Percentage,41.08,Hostels , Bed Occupancy,All,All,Urban area
-2016,Percentage,64.42,Hotels , Room Occupancy,All,Rooms: 11-25,Other
-2011,Percentage,56.34,Hotels , Room Occupancy,All,Rooms: 11-25,Other
-2013,Percentage,73.83,Hotels , Room Occupancy,All,Rooms: 51-100,Other
-2017,Percentage,73.55,Hotels , Room Occupancy,All,Rooms: 26-50,Other
-2018,Percentage,69.75,Hotels , Room Occupancy,All,All,Urban area
-2012,Percentage,35.7,Hostels , Bed Occupancy,All,All,Remote rural
-2016,Percentage,46.02,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
-2014,Percentage,44.23,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
-2019,Percentage,55.05,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
-2018,Percentage,32.57,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
-2013,Percentage,54.97,Hotels , Room Occupancy,All,Rooms: 04-10,Other
-2012,Percentage,48.06,Hotels , Room Occupancy,All,Rooms: 04-10,Other
-2015,Percentage,62.42,Hotels , Room Occupancy,All,Rooms: 11-25,Other
-2019,Percentage,70.61,Hotels , Room Occupancy,All,All,Other
-2017,Percentage,56.02,Hostels , Bed Occupancy,All,All,Small town
-2017,Percentage,37.22,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
-2011,Percentage,49.14,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2015,Percentage,48.8,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2019,Percentage,33.17,Guest House/B&B , Bed Occupancy,All,All,Small town
-2012,Percentage,31.85,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
-2015,Percentage,38.2,Guest House/B&B , Bed Occupancy,All,All,Other
-2013,Percentage,39.81,Guest House/B&B , Bed Occupancy,All,All,Remote small town
-2018,Percentage,48.34,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2012,Percentage,32.41,Guest House/B&B , Bed Occupancy,All,All,Remote small town
-2018,Percentage,80.48,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
-2016,Percentage,35.87,Guest House/B&B , Bed Occupancy,All,All,Other
-2015,Percentage,33.59,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
-2016,Percentage,31.78,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
-2016,Percentage,37.44,Guest House/B&B , Bed Occupancy,All,All,Small town
-2018,Percentage,43.97,Guest House/B&B , Bed Occupancy,All,All,Remote rural
-2012,Percentage,40.01,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
-2019,Percentage,80.83,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
-2017,Percentage,43.72,Guest House/B&B , Bed Occupancy,All,All,Small town
-2014,Percentage,42.15,Hostels , Bed Occupancy,All,All,Remote rural
-2017,Percentage,43.41,Guest House/B&B , Bed Occupancy,All,All,Other
-2018,Percentage,40.73,Guest House/B&B , Bed Occupancy,All,All,Small town
-2013,Percentage,44,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2016,Percentage,50.53,Hostels , Bed Occupancy,All,All,Remote rural
-2014,Percentage,53.95,Hotels , Room Occupancy,All,Rooms: 04-10,Other
-2017,Percentage,79.6,Hotels , Room Occupancy,All,Rooms: 51-100,Other
-2019,Percentage,74.35,Hotels , Room Occupancy,All,Rooms: 51-100,Other
-2017,Percentage,54.83,Hotels , Room Occupancy,All,Rooms: 04-10,Other
-2016,Percentage,76.01,Hotels , Room Occupancy,All,Rooms: 51-100,Other
-2015,Percentage,47.47,Hostels , Bed Occupancy,All,All,Urban area
-2016,Percentage,71.24,Hotels , Room Occupancy,All,All,Other
-2018,Percentage,69.91,Hotels , Room Occupancy,All,All,Other
-2012,Percentage,70.24,Hotels , Room Occupancy,All,Rooms: 51-100,Other
-2019,Percentage,53.62,Hostels , Bed Occupancy,All,All,Urban area
-2018,Percentage,0,Hotels , Room Occupancy,All,Rooms: 01-03,Other
-2011,Percentage,70.53,Hotels , Room Occupancy,All,Rooms: 51-100,Other
-2018,Percentage,55.46,Hostels , Bed Occupancy,All,All,Urban area
-2015,Percentage,44.28,Hostels , Bed Occupancy,All,All,Remote rural
-2012,Percentage,45.26,Guest House/B&B , Bed Occupancy,All,All,Urban area
-2016,Percentage,53.12,Hostels , Bed Occupancy,All,All,Small town
-2015,Percentage,73.47,Hotels , Room Occupancy,All,Rooms: 51-100,Other
-2013,Percentage,35.69,Hostels , Bed Occupancy,All,All,Remote rural
-2011,Percentage,38.62,Hostels , Bed Occupancy,All,All,Small town
-2015,Percentage,24.37,Hotels , Room Occupancy,All,Rooms: 01-03,Other
-2017,Percentage,56.37,Hostels , Bed Occupancy,All,All,Other
+year,value,unit,accommodation_type,occupancy_type,weekday_weekend,size_of_accommodation,location
+2012,52.32,percentage,Guest House/B&B , Room Occupancy,All,All,Small town
+2015,49.18,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2018,63.57,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2013,53.35,percentage,Guest House/B&B , Room Occupancy,All,All,Rural
+2018,40.45,percentage,Guest House/B&B , Room Occupancy,All,All,Rural
+2019,43.93,percentage,Guest House/B&B , Room Occupancy,All,All,Small town
+2016,38.76,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
+2017,60.24,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2016,45.44,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2015,46.54,percentage,Guest House/B&B , Room Occupancy,All,All,Remote rural
+2016,46.89,percentage,Guest House/B&B , Room Occupancy,All,All,Small town
+2017,56.39,percentage,Guest House/B&B , Room Occupancy,All,All,Small town
+2014,57.59,percentage,Guest House/B&B , Room Occupancy,All,All,Rural
+2011,52.08,percentage,Guest House/B&B , Room Occupancy,All,All,Rural
+2015,59.8,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2018,42.26,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
+2015,49.82,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
+2011,49.63,percentage,Guest House/B&B , Room Occupancy,All,All,Remote small town
+2013,55.21,percentage,Guest House/B&B , Room Occupancy,All,All,Small town
+2015,47.66,percentage,Guest House/B&B , Room Occupancy,All,All,Rural
+2013,40.28,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
+2012,49.18,percentage,Guest House/B&B , Room Occupancy,All,All,Rural
+2017,50.28,percentage,Guest House/B&B , Room Occupancy,All,All,Other
+2016,41.52,percentage,Self Catering , Unit Occupancy,All,All,Remote small town
+2016,48.02,percentage,Self Catering , Unit Occupancy,All,All,Small town
+2013,62.49,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2011,43.71,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2014,48.47,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2018,54.93,percentage,Self Catering , Unit Occupancy,All,All,Other
+2018,43.06,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2012,31.04,percentage,Self Catering , Unit Occupancy,All,All,Remote small town
+2016,55.97,percentage,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
+2012,43.89,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2017,51.67,percentage,Self Catering , Unit Occupancy,All,All,Other
+2012,41.85,percentage,Self Catering , Unit Occupancy,All,All,Small town
+2013,47.3,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2017,39.74,percentage,Self Catering , Unit Occupancy,All,All,Small town
+2018,58.62,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2018,46.67,percentage,Guest House/B&B , Room Occupancy,All,All,Remote rural
+2019,34.58,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2011,59.74,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2019,47.61,percentage,Self Catering , Unit Occupancy,All,All,Other
+2011,30.85,percentage,Self Catering , Unit Occupancy,All,All,Small town
+2016,66.24,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2019,50.65,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2013,44.32,percentage,Guest House/B&B , Room Occupancy,All,All,Remote rural
+2019,50.04,percentage,Guest House/B&B , Room Occupancy,All,All,Other
+2016,43.75,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
+2016,41.76,percentage,Guest House/B&B , Room Occupancy,All,All,Other
+2019,54.37,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
+2011,44.58,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2016,39.89,percentage,Guest House/B&B , Room Occupancy,All,All,Remote rural
+2011,44.08,percentage,Guest House/B&B , Room Occupancy,All,All,Other
+2018,51.09,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
+2011,50.13,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
+2012,39.07,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
+2017,44.86,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
+2016,37.44,percentage,Guest House/B&B , Room Occupancy,All,All,Rural
+2018,80.22,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
+2015,40.26,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
+2019,26.24,percentage,Guest House/B&B , Room Occupancy,All,All,Rural
+2017,46.19,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
+2016,53.85,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2012,44.1,percentage,Guest House/B&B , Room Occupancy,All,All,Other
+2012,43.36,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2018,50.3,percentage,Guest House/B&B , Room Occupancy,All,All,Other
+2015,48.52,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
+2014,55.8,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2014,47.16,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2014,46.21,percentage,Guest House/B&B , Room Occupancy,All,All,Other
+2016,52.16,percentage,Guest House/B&B , Room Occupancy,All,All,Remote small town
+2013,51.56,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2017,56.97,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2014,45.05,percentage,Guest House/B&B , Room Occupancy,All,All,Remote rural
+2014,39.77,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
+2012,42.49,percentage,Guest House/B&B , Room Occupancy,All,All,Remote small town
+2015,44.88,percentage,Guest House/B&B , Room Occupancy,All,All,Remote small town
+2012,57.4,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2015,52.6,percentage,Guest House/B&B , Room Occupancy,All,All,Small town
+2015,45.41,percentage,Guest House/B&B , Room Occupancy,All,All,Other
+2019,63.22,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2013,48.45,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
+2017,43.93,percentage,Guest House/B&B , Room Occupancy,All,All,Remote rural
+2018,58.67,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2019,87.93,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
+2016,38.78,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
+2018,49.62,percentage,Guest House/B&B , Room Occupancy,All,All,Small town
+2012,54.86,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
+2017,46.15,percentage,Guest House/B&B , Room Occupancy,All,All,Remote small town
+2015,48.29,percentage,Self Catering , Unit Occupancy,All,All,Other
+2013,53.92,percentage,Self Catering , Unit Occupancy,All,All,Rural
+2016,48.37,percentage,Self Catering , Unit Occupancy,All,All,Other
+2019,26.6,percentage,Self Catering , Unit Occupancy,All,All,Rural
+2017,66.13,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2017,51.02,percentage,Self Catering , Unit Occupancy,All,All,Remote rural
+2012,31.4,percentage,Hostels , Bed Occupancy,All,All,Remote small town
+2015,42.32,percentage,Guest House/B&B , Bed Occupancy,All,All,Small town
+2015,42.06,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
+2012,40.62,percentage,Guest House/B&B , Bed Occupancy,All,All,Small town
+2011,39.53,percentage,Guest House/B&B , Bed Occupancy,All,All,Small town
+2019,21.22,percentage,Guest House/B&B , Bed Occupancy,All,All,Rural
+2019,42.18,percentage,Self Catering , Unit Occupancy,All,All,Small town
+2019,44.28,percentage,Self Catering , Unit Occupancy,All,All,Remote small town
+2018,50.61,percentage,Self Catering , Unit Occupancy,All,All,Small town
+2011,37.79,percentage,Self Catering , Unit Occupancy,All,All,Remote small town
+2013,41.95,percentage,Self Catering , Unit Occupancy,All,All,Remote rural
+2016,44.52,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2016,58.52,percentage,Self Catering , Unit Occupancy,All,All,Rural
+2011,56.28,percentage,Self Catering , Unit Occupancy,All,All,Rural
+2011,42.42,percentage,Self Catering , Unit Occupancy,All,All,Other
+2014,44.2,percentage,Self Catering , Unit Occupancy,All,All,Remote rural
+2016,45.62,percentage,Self Catering , Unit Occupancy,All,All,Remote rural
+2013,39.17,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2012,39.83,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
+2018,54.93,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2013,42.54,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
+2017,50.57,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2016,39.14,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
+2014,39.41,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2019,65.28,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2015,40.1,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2016,44.25,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2011,40.37,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote rural
+2018,55.31,percentage,Hostels , Bed Occupancy,All,All,Other
+2013,44.91,percentage,Guest House/B&B , Bed Occupancy,All,All,Small town
+2016,36.84,percentage,Guest House/B&B , Bed Occupancy,All,All,Rural
+2017,46.96,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
+2014,42.21,percentage,Guest House/B&B , Bed Occupancy,All,All,Small town
+2011,21.66,percentage,Hostels , Bed Occupancy,All,All,Remote small town
+2018,35.28,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
+2013,45.38,percentage,Guest House/B&B , Bed Occupancy,All,All,Rural
+2018,27.63,percentage,Guest House/B&B , Bed Occupancy,All,All,Rural
+2017,35.68,percentage,Guest House/B&B , Bed Occupancy,All,All,Rural
+2012,41.74,percentage,Guest House/B&B , Bed Occupancy,All,All,Rural
+2017,60.18,percentage,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
+2012,63.51,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2014,45.31,percentage,Self Catering , Unit Occupancy,All,All,Small town
+2015,43.81,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2017,51.63,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2018,54.93,percentage,Self Catering , Unit Occupancy,All,All,Remote rural
+2017,54.49,percentage,Self Catering , Unit Occupancy,All,All,Rural
+2015,56.53,percentage,Self Catering , Unit Occupancy,All,All,Rural
+2017,51.66,percentage,Self Catering , Unit Occupancy,All,All,Remote small town
+2013,41.97,percentage,Self Catering , Unit Occupancy,All,All,Small town
+2014,31.97,percentage,Self Catering , Unit Occupancy,All,All,Remote small town
+2018,59.26,percentage,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
+2011,53.34,percentage,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
+2014,51.89,percentage,Hotels , Bed Occupancy,All,All,Rural
+2013,54.55,percentage,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
+2011,46.54,percentage,Hotels , Bed Occupancy,All,All,Rural
+2015,55.39,percentage,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
+2011,42.37,percentage,Self Catering , Unit Occupancy,All,All,Remote rural
+2016,48.57,percentage,Hotels , Bed Occupancy,All,All,Rural
+2015,41.81,percentage,Self Catering , Unit Occupancy,All,All,Remote small town
+2018,54.6,percentage,Hotels , Bed Occupancy,All,All,Other
+2012,45.67,percentage,Hotels , Bed Occupancy,All,All,Rural
+2013,49.94,percentage,Guest House/B&B , Room Occupancy,All,All,Remote small town
+2014,53.54,percentage,Self Catering , Unit Occupancy,All,All,Rural
+2019,70.86,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2011,59.68,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2019,54.65,percentage,Guest House/B&B , Room Occupancy,All,All,Remote small town
+2018,47.67,percentage,Self Catering , Unit Occupancy,All,All,Remote small town
+2018,64.79,percentage,Self Catering , Unit Occupancy,All,All,Rural
+2015,45.32,percentage,Self Catering , Unit Occupancy,All,All,Remote rural
+2013,44.18,percentage,Self Catering , Unit Occupancy,All,All,Other
+2013,47.21,percentage,Guest House/B&B , Room Occupancy,All,All,Urban area
+2015,68.03,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2019,47.72,percentage,Self Catering , Unit Occupancy,All,All,Remote rural
+2012,43.56,percentage,Self Catering , Unit Occupancy,All,All,Other
+2012,42.07,percentage,Self Catering , Unit Occupancy,All,All,Remote rural
+2014,45.88,percentage,Self Catering , Unit Occupancy,All,All,Other
+2015,45.84,percentage,Self Catering , Unit Occupancy,All,All,Small town
+2013,34.84,percentage,Self Catering , Unit Occupancy,All,All,Remote small town
+2017,52.29,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
+2014,50.87,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
+2012,47.91,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 04-10,Other
+2014,65.48,percentage,Self Catering , Unit Occupancy,All,All,Urban area
+2012,59.18,percentage,Self Catering , Unit Occupancy,All,All,Rural
+2014,20.95,percentage,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
+2016,22.45,percentage,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
+2016,52.41,percentage,Hotels , Bed Occupancy,All,All,Remote small town
+2018,0,percentage,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
+2015,47.48,percentage,Hotels , Bed Occupancy,All,All,Small town
+2019,45.18,percentage,Hotels , Bed Occupancy,All,All,Remote small town
+2012,45.43,percentage,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
+2012,33.81,percentage,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
+2013,56.24,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2016,50.92,percentage,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
+2013,48.64,percentage,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
+2015,49.57,percentage,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
+2012,17,percentage,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
+2013,18.48,percentage,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
+2018,62,percentage,Hotels , Bed Occupancy,All,All,Small town
+2017,61.53,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2018,56.76,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2015,47.81,percentage,Hotels , Bed Occupancy,All,All,Remote small town
+2017,57.76,percentage,Hotels , Bed Occupancy,All,All,Rural
+2014,47.36,percentage,Hotels , Bed Occupancy,All,All,Remote small town
+2013,48.17,percentage,Hotels , Bed Occupancy,All,All,Remote small town
+2019,3.83,percentage,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
+2016,50.66,percentage,Hotels , Bed Occupancy,All,All,Small town
+2014,35.74,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
+2013,51.46,percentage,Hotels , Bed Occupancy,All,All,Other
+2012,38.98,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
+2015,18.87,percentage,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
+2011,18.78,percentage,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
+2017,51.42,percentage,Hotels , Bed Occupancy,All,All,Remote small town
+2019,33.99,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
+2017,54.37,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
+2011,39.96,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
+2018,32.76,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
+2015,30.98,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
+2017,57.3,percentage,Hotels , Bed Occupancy,All,All,Other
+2011,49.56,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2017,0,percentage,Hotels , Bed Occupancy,All,Rooms: 01-03,Other
+2013,51.83,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2012,49.74,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2014,52.7,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2011,49.23,percentage,Hotels , Bed Occupancy,All,All,Other
+2019,51.61,percentage,Hotels , Bed Occupancy,All,All,Rural
+2019,33.58,percentage,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
+2018,46.37,percentage,Hotels , Bed Occupancy,All,All,Remote small town
+2013,45.03,percentage,Hotels , Bed Occupancy,All,All,Rural
+2013,42.94,percentage,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
+2019,52.94,percentage,Hotels , Bed Occupancy,All,All,Other
+2014,56.08,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2011,43.32,percentage,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
+2016,51.84,percentage,Hotels , Bed Occupancy,All,All,Remote rural
+2014,49.89,percentage,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
+2014,49.82,percentage,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
+2017,47.12,percentage,Hotels , Bed Occupancy,All,All,Remote rural
+2016,49.16,percentage,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
+2013,51.1,percentage,Hotels , Bed Occupancy,All,All,Remote rural
+2012,48.66,percentage,Hotels , Bed Occupancy,All,All,Other
+2017,52.89,percentage,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
+2017,63.95,percentage,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
+2013,55.43,percentage,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
+2014,52.4,percentage,Hotels , Bed Occupancy,All,All,Other
+2011,46.42,percentage,Hotels , Bed Occupancy,All,All,Remote small town
+2014,50.13,percentage,Hotels , Bed Occupancy,All,All,Remote rural
+2017,37.37,percentage,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
+2012,52.77,percentage,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
+2018,47.95,percentage,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
+2019,60.24,percentage,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
+2018,60.5,percentage,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
+2014,55.57,percentage,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
+2019,57.15,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2015,51.26,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2011,54.58,percentage,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
+2016,58.28,percentage,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
+2018,35.28,percentage,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
+2019,56.75,percentage,Hotels , Bed Occupancy,All,All,Small town
+2012,44.4,percentage,Hotels , Bed Occupancy,All,All,Remote small town
+2012,45.78,percentage,Hotels , Bed Occupancy,All,All,Small town
+2019,56.81,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2019,45.83,percentage,Hotels , Bed Occupancy,All,All,Remote rural
+2011,53.19,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2012,53.41,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2013,48.9,percentage,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
+2018,54.06,percentage,Hotels , Bed Occupancy,All,All,Rural
+2016,55.78,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2014,44.22,percentage,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
+2017,61.32,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2015,53.38,percentage,Hotels , Bed Occupancy,All,Rooms: 51-100,Other
+2015,55.77,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2011,47.39,percentage,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
+2018,60.71,percentage,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
+2019,41.22,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
+2012,39.7,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
+2018,38.4,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2018,33.59,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
+2012,0,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2012,40.02,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
+2011,42.1,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
+2019,57.6,percentage,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
+2015,48.98,percentage,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
+2013,42.84,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2019,34.3,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2014,49.13,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2015,49.36,percentage,Hotels , Bed Occupancy,All,All,Rural
+2014,55.85,percentage,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
+2018,59.02,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2014,53.15,percentage,Hotels , Bed Occupancy,All,All,Small town
+2011,45.01,percentage,Hotels , Bed Occupancy,All,All,Small town
+2017,63.5,percentage,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
+2016,56.78,percentage,Hotels , Bed Occupancy,All,All,Urban area
+2016,54.02,percentage,Hotels , Bed Occupancy,All,All,Other
+2015,41.89,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
+2017,65.79,percentage,Hotels , Bed Occupancy,All,All,Small town
+2013,46.84,percentage,Hotels , Bed Occupancy,All,All,Small town
+2011,44.16,percentage,Guest House/B&B , Room Occupancy,All,All,Remote rural
+2011,36.11,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
+2019,34.21,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 01-03,Other
+2013,55.97,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
+2014,50.96,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
+2019,36.07,percentage,Guest House/B&B , Room Occupancy,All,All,Remote rural
+2011,49.27,percentage,Guest House/B&B , Room Occupancy,All,All,Small town
+2014,53.11,percentage,Guest House/B&B , Room Occupancy,All,All,Small town
+2017,44.71,percentage,Guest House/B&B , Room Occupancy,All,All,Rural
+2012,43.18,percentage,Guest House/B&B , Room Occupancy,All,All,Remote rural
+2013,45.01,percentage,Guest House/B&B , Room Occupancy,All,All,Other
+2013,43.96,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
+2014,42.6,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
+2019,42.08,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2015,52.09,percentage,Hotels , Bed Occupancy,All,All,Other
+2012,49.08,percentage,Hotels , Bed Occupancy,All,All,Remote rural
+2017,36.21,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2011,63.98,percentage,Guest House/B&B , Room Occupancy,All,Rooms: 11-25,Other
+2014,43.72,percentage,Guest House/B&B , Room Occupancy,All,All,Remote small town
+2018,40.34,percentage,Guest House/B&B , Room Occupancy,All,All,Remote small town
+2011,43,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
+2014,44.74,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2017,24.2,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
+2016,53.44,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
+2012,24.77,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
+2017,37.83,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2017,31.96,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
+2013,26.46,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
+2018,44.42,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2012,41.47,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2013,42.04,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
+2013,50.17,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2015,49.55,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
+2016,45.46,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
+2018,37.66,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
+2015,57.27,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2016,39.01,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
+2013,38.04,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
+2014,42.14,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
+2012,38.13,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
+2015,41.9,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2016,42.66,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
+2017,28.19,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
+2019,47.1,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
+2012,52.66,percentage,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
+2012,47.69,percentage,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
+2019,55.5,percentage,Hotels , Bed Occupancy,All,Rooms: greater than 100,Other
+2015,50.89,percentage,Hotels , Bed Occupancy,All,All,Remote rural
+2014,29,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
+2011,40.5,percentage,Hotels , Bed Occupancy,All,Rooms: 04-10,Other
+2015,50.42,percentage,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
+2016,52.02,percentage,Hotels , Bed Occupancy,All,Rooms: 26-50,Other
+2019,47.25,percentage,Hotels , Bed Occupancy,All,Rooms: 11-25,Other
+2011,49.58,percentage,Hotels , Bed Occupancy,All,All,Remote rural
+2018,47.18,percentage,Hotels , Bed Occupancy,All,All,Remote rural
+2011,36.69,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
+2013,39.75,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote rural
+2015,34.83,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
+2011,25.32,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
+2011,45.62,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2018,27.9,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Rural
+2016,29.78,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
+2016,58.9,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2019,30.04,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
+2017,32.19,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
+2011,61.31,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2018,53.78,percentage,Hostels , Bed Occupancy,All,All,Small town
+2013,34.06,percentage,Hostels , Bed Occupancy,All,All,Remote small town
+2016,78.32,percentage,Hotels , Room Occupancy,All,All,Urban area
+2018,74.32,percentage,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
+2016,69.8,percentage,Hotels , Room Occupancy,All,Rooms: 26-50,Other
+2015,51.36,percentage,Hostels , Bed Occupancy,All,All,Small town
+2011,65.06,percentage,Hotels , Room Occupancy,All,All,Other
+2017,72.75,percentage,Hotels , Room Occupancy,All,All,Other
+2014,70.65,percentage,Hotels , Room Occupancy,All,All,Urban area
+2014,64.47,percentage,Hotels , Room Occupancy,All,All,Small town
+2012,65.13,percentage,Hotels , Room Occupancy,All,All,Other
+2017,68.32,percentage,Hotels , Room Occupancy,All,All,Rural
+2011,73.89,percentage,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
+2015,78.25,percentage,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
+2015,67.04,percentage,Hotels , Room Occupancy,All,Rooms: 26-50,Other
+2012,73.69,percentage,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
+2019,68.74,percentage,Hotels , Room Occupancy,All,All,Urban area
+2017,79.22,percentage,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
+2013,64.72,percentage,Hotels , Room Occupancy,All,Rooms: 26-50,Other
+2019,78.38,percentage,Hotels , Room Occupancy,All,Rooms: 26-50,Other
+2019,74.36,percentage,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
+2018,48.69,percentage,Hostels , Bed Occupancy,All,All,Remote small town
+2012,65.87,percentage,Hotels , Room Occupancy,All,All,Urban area
+2012,44.66,percentage,Hostels , Bed Occupancy,Weekday,All,Other
+2014,45.45,percentage,Guest House/B&B , Room Occupancy,Weekday,All,Other
+2014,57.32,percentage,Hostels , Bed Occupancy,Weekday,All,Other
+2018,22.44,percentage,Hostels , Bed Occupancy,Weekday,All,Other
+2011,43.54,percentage,Guest House/B&B , Room Occupancy,Weekday,All,Other
+2012,44.51,percentage,Guest House/B&B , Room Occupancy,Weekday,All,Other
+2018,51,percentage,Hotels , Bed Occupancy,Weekday,All,Other
+2017,26.98,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
+2011,46.24,percentage,Hotels , Bed Occupancy,Weekday,All,Other
+2019,50.93,percentage,Guest House/B&B , Room Occupancy,Weekday,All,Other
+2018,71.98,percentage,Hotels , Room Occupancy,Weekday,All,Other
+2015,58.04,percentage,Hostels , Bed Occupancy,Weekday,All,Other
+2015,46.48,percentage,Guest House/B&B , Room Occupancy,Weekday,All,Other
+2011,42.53,percentage,Hostels , Bed Occupancy,Weekday,All,Other
+2015,62.74,percentage,Hotels , Room Occupancy,All,All,Rural
+2017,56.39,percentage,Hostels , Bed Occupancy,All,All,Remote small town
+2019,58.53,percentage,Hotels , Room Occupancy,All,All,Remote small town
+2013,45.64,percentage,Guest House/B&B , Room Occupancy,Weekday,All,Other
+2019,22,percentage,Hostels , Bed Occupancy,Weekday,All,Other
+2013,56.4,percentage,Hostels , Bed Occupancy,Weekday,All,Other
+2017,25.81,percentage,Hostels , Bed Occupancy,Weekday,All,Other
+2016,69.43,percentage,Hostels , Bed Occupancy,Weekday,All,Other
+2011,58.47,percentage,Hotels , Room Occupancy,All,All,Remote rural
+2011,56.48,percentage,Hotels , Room Occupancy,All,All,Remote small town
+2015,61.02,percentage,Hotels , Room Occupancy,All,All,Remote small town
+2017,56.38,percentage,Hostels , Bed Occupancy,All,All,Rural
+2016,63.91,percentage,Hotels , Room Occupancy,All,All,Remote rural
+2011,56.2,percentage,Hotels , Room Occupancy,All,All,Small town
+2015,51.44,percentage,Hostels , Bed Occupancy,All,All,Rural
+2019,81.98,percentage,Hotels , Room Occupancy,All,All,Small town
+2012,55.47,percentage,Hotels , Room Occupancy,All,All,Remote small town
+2015,63.28,percentage,Hotels , Room Occupancy,All,All,Small town
+2011,74.05,percentage,Hotels , Room Occupancy,All,All,Urban area
+2015,62.81,percentage,Hotels , Room Occupancy,All,All,Remote rural
+2018,75.68,percentage,Hotels , Room Occupancy,All,Rooms: 26-50,Other
+2016,64.4,percentage,Hotels , Room Occupancy,All,All,Small town
+2014,66.07,percentage,Hotels , Room Occupancy,All,Rooms: 26-50,Other
+2017,63.91,percentage,Hotels , Room Occupancy,All,Rooms: 11-25,Other
+2012,62.11,percentage,Hotels , Room Occupancy,All,Rooms: 26-50,Other
+2014,58.26,percentage,Hotels , Room Occupancy,All,All,Remote small town
+2013,69.36,percentage,Hotels , Room Occupancy,All,All,Urban area
+2012,56.59,percentage,Hotels , Room Occupancy,All,All,Small town
+2012,35.58,percentage,Hostels , Bed Occupancy,All,All,Rural
+2013,57.85,percentage,Hotels , Room Occupancy,All,All,Rural
+2016,57.26,percentage,Hostels , Bed Occupancy,All,All,Rural
+2018,67.65,percentage,Hotels , Room Occupancy,All,All,Rural
+2013,59.23,percentage,Hotels , Room Occupancy,All,All,Remote small town
+2013,68.3,percentage,Hotels , Room Occupancy,All,All,Other
+2015,67.13,percentage,Hotels , Room Occupancy,All,All,Urban area
+2014,62.76,percentage,Hotels , Room Occupancy,All,All,Rural
+2016,76.57,percentage,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
+2011,61.13,percentage,Hotels , Room Occupancy,All,Rooms: 26-50,Other
+2014,78.64,percentage,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
+2013,76.19,percentage,Hotels , Room Occupancy,All,Rooms: greater than 100,Other
+2013,24.37,percentage,Hotels , Room Occupancy,All,Rooms: 01-03,Other
+2015,79.92,percentage,Hotels , Room Occupancy,All,All,Urban area
+2017,80,percentage,Hotels , Room Occupancy,All,All,Urban area
+2017,64.58,percentage,Hotels , Room Occupancy,All,All,Remote small town
+2012,33.44,percentage,Hostels , Bed Occupancy,All,All,Small town
+2011,35.18,percentage,Hostels , Bed Occupancy,All,All,Rural
+2015,70.09,percentage,Hotels , Room Occupancy,All,All,Other
+2014,44.13,percentage,Hostels , Bed Occupancy,All,All,Rural
+2016,70.85,percentage,Hotels , Room Occupancy,All,All,Urban area
+2013,37.4,percentage,Hostels , Bed Occupancy,All,All,Rural
+2019,62.96,percentage,Hostels , Bed Occupancy,All,All,Remote rural
+2019,75.57,percentage,Hotels , Room Occupancy,All,All,Urban area
+2012,39.57,percentage,Guest House/B&B , Bed Occupancy,Weekend,All,Other
+2011,45.87,percentage,Guest House/B&B , Room Occupancy,Weekend,All,Other
+2018,47.18,percentage,Guest House/B&B , Bed Occupancy,Weekend,All,Other
+2016,76.6,percentage,Hostels , Bed Occupancy,Weekend,All,Other
+2013,41.97,percentage,Guest House/B&B , Bed Occupancy,Weekend,All,Other
+2019,37.09,percentage,Hostels , Bed Occupancy,Weekend,All,Other
+2018,38.3,percentage,Hostels , Bed Occupancy,Weekend,All,Other
+2014,42.16,percentage,Guest House/B&B , Bed Occupancy,Weekend,All,Other
+2015,43.75,percentage,Guest House/B&B , Bed Occupancy,Weekend,All,Other
+2017,50.56,percentage,Guest House/B&B , Bed Occupancy,Weekend,All,Other
+2016,40.04,percentage,Guest House/B&B , Bed Occupancy,Weekend,All,Other
+2011,54.17,percentage,Hostels , Bed Occupancy,Weekend,All,Other
+2014,49.17,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
+2016,46.78,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
+2017,31.42,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
+2017,44.86,percentage,Hostels , Bed Occupancy,Weekend,All,Other
+2014,64.86,percentage,Hostels , Bed Occupancy,Weekend,All,Other
+2019,38.77,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
+2015,45.58,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
+2018,69.36,percentage,Hotels , Room Occupancy,Weekend,All,Other
+2013,47.1,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
+2011,62.82,percentage,Hotels , Room Occupancy,Weekend,All,Other
+2012,62.44,percentage,Hotels , Room Occupancy,Weekend,All,Other
+2011,40.18,percentage,Guest House/B&B , Bed Occupancy,Weekend,All,Other
+2018,56.22,percentage,Hotels , Bed Occupancy,Weekend,All,Other
+2019,49.3,percentage,Guest House/B&B , Bed Occupancy,Weekend,All,Other
+2015,50.81,percentage,Guest House/B&B , Room Occupancy,Weekend,All,Other
+2015,67.12,percentage,Hotels , Room Occupancy,Weekend,All,Other
+2016,57.31,percentage,Hotels , Bed Occupancy,Weekend,All,Other
+2013,54.93,percentage,Hotels , Bed Occupancy,Weekend,All,Other
+2011,52.97,percentage,Hotels , Bed Occupancy,Weekend,All,Other
+2019,54.98,percentage,Hotels , Bed Occupancy,Weekend,All,Other
+2013,46.82,percentage,Guest House/B&B , Room Occupancy,Weekend,All,Other
+2017,60.14,percentage,Hotels , Bed Occupancy,Weekend,All,Other
+2017,55.87,percentage,Guest House/B&B , Room Occupancy,Weekend,All,Other
+2012,45.48,percentage,Guest House/B&B , Room Occupancy,Weekend,All,Other
+2014,66.89,percentage,Hotels , Room Occupancy,Weekend,All,Other
+2013,66.01,percentage,Hostels , Bed Occupancy,Weekend,All,Other
+2015,65.03,percentage,Hostels , Bed Occupancy,Weekend,All,Other
+2018,52.55,percentage,Guest House/B&B , Room Occupancy,Weekend,All,Other
+2014,55.6,percentage,Hotels , Bed Occupancy,Weekend,All,Other
+2019,56.02,percentage,Guest House/B&B , Room Occupancy,Weekend,All,Other
+2013,65.27,percentage,Hotels , Room Occupancy,Weekend,All,Other
+2019,70.24,percentage,Hotels , Room Occupancy,Weekend,All,Other
+2015,54.63,percentage,Hotels , Bed Occupancy,Weekend,All,Other
+2016,73.94,percentage,Hotels , Room Occupancy,Weekday,All,Other
+2018,28.79,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
+2012,46.03,percentage,Hotels , Bed Occupancy,Weekday,All,Other
+2014,49.65,percentage,Hotels , Bed Occupancy,Weekday,All,Other
+2016,51.72,percentage,Hotels , Bed Occupancy,Weekday,All,Other
+2017,74.07,percentage,Hotels , Room Occupancy,Weekday,All,Other
+2018,41.33,percentage,Guest House/B&B , Bed Occupancy,Weekday,All,Other
+2019,72.51,percentage,Hotels , Room Occupancy,Weekday,All,Other
+2019,41.32,percentage,Guest House/B&B , Bed Occupancy,Weekday,All,Other
+2012,67.27,percentage,Hotels , Room Occupancy,Weekday,All,Other
+2014,72.27,percentage,Hotels , Room Occupancy,Weekday,All,Other
+2013,36.37,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
+2017,41.29,percentage,Guest House/B&B , Bed Occupancy,Weekday,All,Other
+2019,49.13,percentage,Hotels , Bed Occupancy,Weekday,All,Other
+2017,53.96,percentage,Hotels , Bed Occupancy,Weekday,All,Other
+2014,37.75,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
+2011,35.32,percentage,Guest House/B&B , Bed Occupancy,Weekday,All,Other
+2015,73.06,percentage,Hotels , Room Occupancy,Weekday,All,Other
+2015,50.3,percentage,Hotels , Bed Occupancy,Weekday,All,Other
+2013,70.82,percentage,Hotels , Room Occupancy,Weekday,All,Other
+2012,37.88,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
+2013,48.97,percentage,Hotels , Bed Occupancy,Weekday,All,Other
+2018,36.59,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
+2011,42.93,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
+2012,52.29,percentage,Hotels , Bed Occupancy,Weekend,All,Other
+2015,32.08,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
+2012,35.91,percentage,Guest House/B&B , Bed Occupancy,Weekday,All,Other
+2012,57.81,percentage,Hostels , Bed Occupancy,Weekend,All,Other
+2016,45.76,percentage,Guest House/B&B , Room Occupancy,Weekend,All,Other
+2012,48.56,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekend,All,Other
+2016,68.51,percentage,Hotels , Room Occupancy,Weekend,All,Other
+2017,71.03,percentage,Hotels , Room Occupancy,Weekend,All,Other
+2014,48.86,percentage,Guest House/B&B , Room Occupancy,Weekend,All,Other
+2016,41.36,percentage,Guest House/B&B , Room Occupancy,Weekday,All,Other
+2011,66.94,percentage,Hotels , Room Occupancy,Weekday,All,Other
+2014,36.43,percentage,Guest House/B&B , Bed Occupancy,Weekday,All,Other
+2011,33.02,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
+2016,33.42,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
+2016,34.09,percentage,Guest House/B&B , Bed Occupancy,Weekday,All,Other
+2013,38.23,percentage,Guest House/B&B , Bed Occupancy,Weekday,All,Other
+2017,50.44,percentage,Guest House/B&B , Room Occupancy,Weekday,All,Other
+2019,30.3,percentage,Caravan & Camping Parks , Pitch Occupancy,Weekday,All,Other
+2015,37.82,percentage,Guest House/B&B , Bed Occupancy,Weekday,All,Other
+2018,49.92,percentage,Guest House/B&B , Room Occupancy,Weekday,All,Other
+2011,30.01,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
+2011,52.1,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2013,44.96,percentage,Hostels , Bed Occupancy,All,All,Other
+2019,64.7,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2013,38.57,percentage,Guest House/B&B , Bed Occupancy,All,All,Other
+2018,43.25,percentage,Guest House/B&B , Bed Occupancy,All,All,Other
+2014,62.95,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2013,55.55,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2017,39.6,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote small town
+2015,62.47,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2015,53.17,percentage,Hostels , Bed Occupancy,All,All,Other
+2019,60.19,percentage,Hostels , Bed Occupancy,All,All,Other
+2011,36.48,percentage,Guest House/B&B , Bed Occupancy,All,All,Other
+2014,38.15,percentage,Guest House/B&B , Bed Occupancy,All,All,Other
+2014,35.24,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote small town
+2012,35.49,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2011,39.26,percentage,Hostels , Bed Occupancy,All,All,Other
+2016,31.17,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
+2016,58.03,percentage,Hostels , Bed Occupancy,All,All,Other
+2016,65.52,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2019,42.21,percentage,Guest House/B&B , Bed Occupancy,All,All,Other
+2012,36.28,percentage,Guest House/B&B , Bed Occupancy,All,All,Other
+2012,52.36,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2012,38.69,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote rural
+2016,36.83,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2017,53.8,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2019,30.1,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote rural
+2014,45.23,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2013,43.97,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
+2011,41.65,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
+2014,40.11,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote rural
+2016,34.72,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote rural
+2018,55.1,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2011,49.96,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
+2014,31.12,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
+2016,44.84,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote small town
+2019,26.65,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
+2017,59.7,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2015,34.79,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote small town
+2017,35.64,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
+2013,33.56,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
+2018,34.64,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote small town
+2019,51.71,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2011,39.23,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote small town
+2011,44.33,percentage,Guest House/B&B , Bed Occupancy,All,All,Rural
+2018,59.31,percentage,Hostels , Bed Occupancy,All,All,Remote rural
+2012,58.59,percentage,Hotels , Room Occupancy,All,All,Remote rural
+2016,64.46,percentage,Hotels , Room Occupancy,All,All,Rural
+2015,44.95,percentage,Hostels , Bed Occupancy,All,All,Remote small town
+2019,58.66,percentage,Hotels , Room Occupancy,All,All,Remote rural
+2018,77.98,percentage,Hotels , Room Occupancy,All,All,Small town
+2013,78.38,percentage,Hotels , Room Occupancy,All,All,Urban area
+2018,74.88,percentage,Hotels , Room Occupancy,All,All,Urban area
+2017,54.13,percentage,Hostels , Bed Occupancy,All,All,Remote rural
+2011,59.58,percentage,Hotels , Room Occupancy,All,All,Rural
+2014,69.68,percentage,Hotels , Room Occupancy,All,All,Other
+2012,34.77,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2014,43.73,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
+2019,44.09,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote small town
+2017,39.28,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote rural
+2018,44.47,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
+2019,44.83,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 04-10,Other
+2019,44.34,percentage,Hostels , Bed Occupancy,All,All,Remote small town
+2014,80.51,percentage,Hotels , Room Occupancy,All,All,Urban area
+2017,75.04,percentage,Hotels , Room Occupancy,All,All,Small town
+2011,34.81,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2012,58.43,percentage,Hotels , Room Occupancy,All,All,Rural
+2019,63.94,percentage,Hostels , Bed Occupancy,All,All,Rural
+2012,74.99,percentage,Hotels , Room Occupancy,All,All,Urban area
+2017,61.5,percentage,Hotels , Room Occupancy,All,All,Remote rural
+2018,55.76,percentage,Hostels , Bed Occupancy,All,All,Rural
+2013,61.65,percentage,Hotels , Room Occupancy,All,All,Remote rural
+2013,60.21,percentage,Hotels , Room Occupancy,All,All,Small town
+2012,40.13,percentage,Hostels , Bed Occupancy,All,All,Other
+2019,51.15,percentage,Hostels , Bed Occupancy,All,All,Small town
+2015,32.49,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
+2016,45.4,percentage,Hostels , Bed Occupancy,All,All,Remote small town
+2019,65.67,percentage,Hotels , Room Occupancy,All,All,Rural
+2018,60.77,percentage,Hotels , Room Occupancy,All,All,Remote rural
+2014,37.05,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
+2016,65.78,percentage,Hotels , Room Occupancy,All,All,Remote small town
+2011,36.27,percentage,Hostels , Bed Occupancy,All,All,Remote rural
+2018,60.77,percentage,Hotels , Room Occupancy,All,All,Remote small town
+2014,60.58,percentage,Hotels , Room Occupancy,All,All,Remote rural
+2013,40.99,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote rural
+2015,41.94,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote rural
+2014,47.12,percentage,Guest House/B&B , Bed Occupancy,All,All,Rural
+2014,37.17,percentage,Hostels , Bed Occupancy,All,All,Remote small town
+2015,43.87,percentage,Guest House/B&B , Bed Occupancy,All,All,Rural
+2013,59.98,percentage,Hotels , Room Occupancy,All,Rooms: 11-25,Other
+2012,56.89,percentage,Hotels , Room Occupancy,All,Rooms: 11-25,Other
+2019,57.36,percentage,Hotels , Room Occupancy,All,Rooms: 11-25,Other
+2011,36.7,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2014,25.87,percentage,Hotels , Room Occupancy,All,Rooms: 01-03,Other
+2014,62.63,percentage,Hotels , Room Occupancy,All,Rooms: 11-25,Other
+2018,76.36,percentage,Hotels , Room Occupancy,All,Rooms: 51-100,Other
+2014,50.35,percentage,Hostels , Bed Occupancy,All,All,Other
+2015,40.48,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Other
+2014,73.35,percentage,Hotels , Room Occupancy,All,Rooms: 51-100,Other
+2013,37.48,percentage,Hostels , Bed Occupancy,All,All,Small town
+2016,30.46,percentage,Hotels , Room Occupancy,All,Rooms: 01-03,Other
+2014,41.4,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2017,0,percentage,Hotels , Room Occupancy,All,Rooms: 01-03,Other
+2014,46.44,percentage,Hostels , Bed Occupancy,All,All,Small town
+2011,64.92,percentage,Hotels , Room Occupancy,All,All,Urban area
+2017,53.2,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2017,74.79,percentage,Hotels , Room Occupancy,All,All,Urban area
+2016,55.07,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2019,3.81,percentage,Hotels , Room Occupancy,All,Rooms: 01-03,Other
+2012,21.67,percentage,Hotels , Room Occupancy,All,Rooms: 01-03,Other
+2011,23.39,percentage,Hotels , Room Occupancy,All,Rooms: 01-03,Other
+2015,59.35,percentage,Hotels , Room Occupancy,All,Rooms: 04-10,Other
+2018,53.13,percentage,Hotels , Room Occupancy,All,Rooms: 04-10,Other
+2016,60.59,percentage,Hotels , Room Occupancy,All,Rooms: 04-10,Other
+2019,52.68,percentage,Hotels , Room Occupancy,All,Rooms: 04-10,Other
+2018,59.64,percentage,Hotels , Room Occupancy,All,Rooms: 11-25,Other
+2011,49.88,percentage,Hotels , Room Occupancy,All,Rooms: 04-10,Other
+2013,41.08,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2016,64.42,percentage,Hotels , Room Occupancy,All,Rooms: 11-25,Other
+2011,56.34,percentage,Hotels , Room Occupancy,All,Rooms: 11-25,Other
+2013,73.83,percentage,Hotels , Room Occupancy,All,Rooms: 51-100,Other
+2017,73.55,percentage,Hotels , Room Occupancy,All,Rooms: 26-50,Other
+2018,69.75,percentage,Hotels , Room Occupancy,All,All,Urban area
+2012,35.7,percentage,Hostels , Bed Occupancy,All,All,Remote rural
+2016,46.02,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Urban area
+2014,44.23,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
+2019,55.05,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Remote small town
+2018,32.57,percentage,Caravan & Camping Parks , Pitch Occupancy,All,All,Small town
+2013,54.97,percentage,Hotels , Room Occupancy,All,Rooms: 04-10,Other
+2012,48.06,percentage,Hotels , Room Occupancy,All,Rooms: 04-10,Other
+2015,62.42,percentage,Hotels , Room Occupancy,All,Rooms: 11-25,Other
+2019,70.61,percentage,Hotels , Room Occupancy,All,All,Other
+2017,56.02,percentage,Hostels , Bed Occupancy,All,All,Small town
+2017,37.22,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
+2011,49.14,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2015,48.8,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2019,33.17,percentage,Guest House/B&B , Bed Occupancy,All,All,Small town
+2012,31.85,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 01-03,Other
+2015,38.2,percentage,Guest House/B&B , Bed Occupancy,All,All,Other
+2013,39.81,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote small town
+2018,48.34,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2012,32.41,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote small town
+2018,80.48,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
+2016,35.87,percentage,Guest House/B&B , Bed Occupancy,All,All,Other
+2015,33.59,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
+2016,31.78,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
+2016,37.44,percentage,Guest House/B&B , Bed Occupancy,All,All,Small town
+2018,43.97,percentage,Guest House/B&B , Bed Occupancy,All,All,Remote rural
+2012,40.01,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
+2019,80.83,percentage,Guest House/B&B , Bed Occupancy,All,Rooms: 11-25,Other
+2017,43.72,percentage,Guest House/B&B , Bed Occupancy,All,All,Small town
+2014,42.15,percentage,Hostels , Bed Occupancy,All,All,Remote rural
+2017,43.41,percentage,Guest House/B&B , Bed Occupancy,All,All,Other
+2018,40.73,percentage,Guest House/B&B , Bed Occupancy,All,All,Small town
+2013,44,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2016,50.53,percentage,Hostels , Bed Occupancy,All,All,Remote rural
+2014,53.95,percentage,Hotels , Room Occupancy,All,Rooms: 04-10,Other
+2017,79.6,percentage,Hotels , Room Occupancy,All,Rooms: 51-100,Other
+2019,74.35,percentage,Hotels , Room Occupancy,All,Rooms: 51-100,Other
+2017,54.83,percentage,Hotels , Room Occupancy,All,Rooms: 04-10,Other
+2016,76.01,percentage,Hotels , Room Occupancy,All,Rooms: 51-100,Other
+2015,47.47,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2016,71.24,percentage,Hotels , Room Occupancy,All,All,Other
+2018,69.91,percentage,Hotels , Room Occupancy,All,All,Other
+2012,70.24,percentage,Hotels , Room Occupancy,All,Rooms: 51-100,Other
+2019,53.62,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2018,0,percentage,Hotels , Room Occupancy,All,Rooms: 01-03,Other
+2011,70.53,percentage,Hotels , Room Occupancy,All,Rooms: 51-100,Other
+2018,55.46,percentage,Hostels , Bed Occupancy,All,All,Urban area
+2015,44.28,percentage,Hostels , Bed Occupancy,All,All,Remote rural
+2012,45.26,percentage,Guest House/B&B , Bed Occupancy,All,All,Urban area
+2016,53.12,percentage,Hostels , Bed Occupancy,All,All,Small town
+2015,73.47,percentage,Hotels , Room Occupancy,All,Rooms: 51-100,Other
+2013,35.69,percentage,Hostels , Bed Occupancy,All,All,Remote rural
+2011,38.62,percentage,Hostels , Bed Occupancy,All,All,Small town
+2015,24.37,percentage,Hotels , Room Occupancy,All,Rooms: 01-03,Other
+2017,56.37,percentage,Hostels , Bed Occupancy,All,All,Other

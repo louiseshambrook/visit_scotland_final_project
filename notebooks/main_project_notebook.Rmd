@@ -49,15 +49,6 @@ regional_domestic <- read_csv("clean_data/regional_domestic_clean.csv")
 transport <- read_csv("clean_data/transport_clean.csv")
 ```
 
-```{r}
-
-
-  mutate(unit = ifelse(unit == "million pounds (GBP)", "million (£)", "million")) %>%
-  relocate(value, .after = year) %>%
-  relocate(breakdown_of_domestic_tourism, .after = unit)
-
-  
-```
 
 
 

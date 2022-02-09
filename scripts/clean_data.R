@@ -117,7 +117,14 @@ regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(years = "date_code",
-         unit = "units")
+         unit = "units")%>%
+  mutate(spend_unit = case_when(unit == "million pounds (GBP)" ~ "million (£)"),
+         visit_night_unit = case_when(unit == "Thousand Nights" ~ "Thousand",
+                                      unit == "Thousand Visits" ~ "Thousand")) %>%
+  select(-unit) %>%
+  relocate(spend_unit, .after = value) %>%
+  relocate(visit_night_unit, .after = spend_unit) %>%
+  relocate(breakdown_of_domestic_tourism, .after = visit_night_unit)
 write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
 rm(regional_domestic)
 

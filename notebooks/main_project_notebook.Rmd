@@ -659,12 +659,9 @@ transport %>%
 #### Working Environment -------
 
 ```{r}
-activities %>%
-  mutate(unit = ifelse(unit == "million pounds (GBP)", "million (£)", "million")) %>%
-  relocate(value, .after = year) %>%
-  relocate(breakdown_of_domestic_tourism, .after = unit) %>%
-  select(-tourism_activity)
+regional_domestic
 ```
+
 
 
 ### Main questions to answer --------------------------------------------------

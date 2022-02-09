@@ -113,21 +113,8 @@ regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv") %>%
   clean_names() %>%
   select(-feature_code, -measurement) %>%
   rename(year = "date_code",
-         unit = "units") %>%
-  separate(year, into = c("start_year", "end_year"), sep = "-") %>%
-  mutate(start_year = as.numeric(start_year),
-         end_year = as.numeric(end_year)) %>%
-  mutate(middle_year = case_when(start_year == 2009 & end_year == 2011 ~ 2010,
-                                 start_year == 2010 & end_year == 2012 ~ 2011,
-                                 start_year == 2011 & end_year == 2013 ~ 2012,
-                                 start_year == 2012 & end_year == 2014 ~ 2013,
-                                 start_year == 2013 & end_year == 2015 ~ 2014,
-                                 start_year == 2014 & end_year == 2016 ~ 2015,
-                                 start_year == 2015 & end_year == 2017 ~ 2016,
-                                 start_year == 2016 & end_year == 2018 ~ 2017,
-                                 start_year == 2017 & end_year == 2019 ~ 2018,
-                                 start_year < 2009 & end_year > 2019 ~ 0)) %>%
-  relocate(middle_year, .after = (start_year))
+         unit = "units",
+         years = "year") 
 write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
 rm(regional_domestic)
 

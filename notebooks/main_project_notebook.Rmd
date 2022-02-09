@@ -502,6 +502,106 @@ activities %>%
 ```
 2013-2019, sum of million visits. Highest is visits with family/friends. Eating out coming in second, and outdoor leisure in third.
 
+### Demographics
+
+So, with all of that information - who are the people visiting Scotland?
+
+
+These are difficult to compare, as most of the questions/options are binary (married/not), whereas age has multiple options, so they can't really be fairly compared.
+```{r}
+# Who spends the most?
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status != "All") %>%
+  group_by(marital_status) %>%
+  summarise(highest_spend = sum(value)) %>%
+  ggplot(aes(x = marital_status, y = highest_spend)) +
+  geom_col()
+
+```
+2013 - 2019, sum of spend in millions.
+
+Note: I should really change this to a facet_wrap of the sum of all of the variables, or something.
+
+Same as above, not really possible to compare.
+```{r}
+# Who visits the most?
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & children != "All") %>%
+  group_by(children) %>%
+  summarise(most_visits = sum(value)) %>%
+  ggplot(aes(x = children, y = most_visits)) +
+  geom_col()
+
+```
+2013-2019, sum of visits, in millions. 
+
+
+```{r}
+# question to answer:
+# Is there a particular key demographic of visitors we should be focusing on?
+
+demographics %>%
+  filter(age != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(age) %>%
+  summarise(most_visits = sum(value)) %>%
+  ggplot(aes(x = age, y = most_visits)) +
+  geom_col()
+
+
+```
+While the two above have a skewed perspective, they do give insights into the data.
+The other key demographic to focus on, is age. As reflected in the graph (visits, sum millions), it is the younger generations that are visiting Scotland.
+
+### Regional Demographics
+
+```{r}
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism != "Expenditure") %>%
+  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
+  geom_col(position = "dodge")
+
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
+  geom_col(position = "dodge")
+```
+These two graphs kinda answer everything, but can also be a bit confusing to look at. I'll break them down a bit more.
+
+
+```{r}
+# answers the question:
+# Where are our visitors from?
+
+regional_domestic %>%
+  select(start_year, unit, value, region_of_residence, breakdown_of_domestic_tourism) %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  ggplot(aes(x = region_of_residence, y = value)) +
+  geom_col()
+
+regional_domestic %>%
+  select(start_year, unit, value, region_of_residence, breakdown_of_domestic_tourism) %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = region_of_residence, y = value)) +
+  geom_col()
+
+```
+These are answering "where are visitors from".
+
+```{r}
+# answering Q's:
+# How do they differ in the money they spend?
+# Nights they spend in Scotland?
+# Number of visits they do?
+
+regional_domestic %>%
+  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
+  geom_col(position = "dodge")
+```
+
+
+
+
 
 ### Main questions to answer --------------------------------------------------
 

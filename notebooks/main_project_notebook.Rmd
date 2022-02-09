@@ -403,15 +403,21 @@ demographics %>%
 ```
 This is underpinned by the finding that across the the (unit) million visits between 2013 and 2019, the majority of visitors report having access to a car.
 
-
-NOTE TO SELF - the question / answer / analysis here from above, from demographics, with access_to_car.
+### Locations
 
 ```{r}
-transport %>%
-  filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other") %>%
-  group_by(travel_type) %>%
+# The question that I'm looking to answer with this is:
+# "what type of locations receive the most visits?"
+# "what kinds of locations do people spend the most in?"
+
+location %>%
+  filter(breakdown_of_domestic_tourism == "Visits"
+         & type_of_location_visited != "Other"& year == 2019) %>%
+  group_by(type_of_location_visited) %>%
   summarise(total_visits = sum(value)) %>%
-  arrange(desc(total_visits))
+  ggplot(aes(x = type_of_location_visited, y = total_visits)) +
+  geom_col()
+
 
 ```
 

@@ -418,8 +418,34 @@ location %>%
   ggplot(aes(x = type_of_location_visited, y = total_visits)) +
   geom_col()
 
-
 ```
+The sum of million visits in 2019 by location. 
+
+```{r}
+location %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure"
+         & type_of_location_visited != "Other"& year == 2019) %>%
+  group_by(type_of_location_visited) %>%
+  summarise(total_visits = sum(value)) %>%
+  ggplot(aes(x = type_of_location_visited, y = total_visits)) +
+  geom_col()
+```
+Sum of spend in 2019 in millions, by location.
+
+
+```{r}
+accomodation %>%
+  filter(location != "Other" & year == 2019) %>%
+  group_by(location, accommodation_type) %>%
+  summarise(popular_accomodation = sum(value)) %>%
+  arrange(desc(popular_accomodation)) %>%
+  ggplot(aes(x = location, y = popular_accomodation)) +
+  geom_col()
+```
+This lines up with accommodation choices; in 2019, most people chose to visit urban areas.
+
+
+
 
 
 ### Main questions to answer --------------------------------------------------

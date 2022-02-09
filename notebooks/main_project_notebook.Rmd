@@ -51,8 +51,8 @@ transport <- read_csv("clean_data/transport_clean.csv")
 
 ### Initial analysis -----------------------------------------------------------
 
-Q1.
-What kind of tourism activity generates the highest income for Scotland?
+### Q1. What kind of tourism activity generates the highest income for Scotland?
+
 ```{r}
 activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
@@ -71,8 +71,8 @@ activities %>%
   arrange(desc(highest_income))
 ```
 
-Q3. 
-Is there a particular key demographic of visitors we should be focusing on?
+### Q3. Is there a particular key demographic of visitors we should be focusing on?
+
 
 as there is no inter-relating data (when you isolate one variable, there is no
 data for the others), I will have to analyse each variable individually.
@@ -150,7 +150,7 @@ demographics %>%
 This mostly speaks for itself; the biggest caveat to this is that there was no data dictionary with this dataset, so I can only assume that it goes top down, but this is not known.
 
 
-Q3.1 Who spends the most?
+### Q3.1 Who spends the most? ---------------------------------------------------
 ```{r}
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & age != "All") %>%
@@ -185,7 +185,7 @@ demographics %>%
 ```
 The direct answer is people who identify as married - but there are some caveats to this answer. It is only possible to explore one variable at a time, and therefore, the identity of 'married' should be questioned. Additionally, because of the possible survey responses, marital_status only has two choices, whereas age is divided into decades starting at 16. So to best compare, age should be split/merged into two categories, or age is really the only identifier, as it has a range of reasonable options. 
 
-Q3.2 Who visits the most?
+### Q3.2 Who visits the most? ---------------------------------------------------
 ```{r}
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Visits" & age != "All") %>%
@@ -220,8 +220,8 @@ demographics %>%
 Answer here is "no- without children.". But there is the same caveat as with the question above. 
 
 
-Q4.
-What type of locations receive the most visits? 
+### Q4. What type of locations receive the most visits? ------------------------
+
 ```{r}
 location %>%
   filter(type_of_location_visited != "Other") %>%
@@ -230,8 +230,8 @@ location %>%
   arrange(desc(total_visits))
 ```
 
-Q4.1
-What kinds of locations do people spend the most in?
+### Q4.1 What kinds of locations do people spend the most in? ------------------
+
 ```{r}
 location %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
@@ -241,8 +241,8 @@ location %>%
 ```
 
 
-Q5.1
-Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
+### Q5.1 s there a particular method of travel our visitors arrive by? ---------
+ Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
 
 NOTE TO SELF - the question / answer / analysis here from above, from demographics, with access_to_car.
 
@@ -257,8 +257,8 @@ transport %>%
 According to my analysis, most people use a car. This is especially underpinned by the demographics, where xx people report having access to a car.
 
 
-Q6.
-When looking at regional tourism, what insights can we gain? How do they differ in
+### Q6.When looking at regional tourism, what insights can we gain? ------------
+ How do they differ in
 the money they spend
 nights they spend in Scotland, or
 number of visits they do?
@@ -379,6 +379,7 @@ Spend is more fluctuating.
 
 The first plot/topic I'll include will be about transport.
 
+### Transport
 ```{r}
 # note, the question I need to answer is
 # "Is there a particular method of travel our visitors arrive by?".
@@ -387,9 +388,21 @@ transport %>%
   filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other" & year == 2019) %>%
   group_by(travel_type) %>%
   summarise(total_visits = sum(value)) %>%
-  ggplot(aes(x = ))
+  ggplot(aes(x = travel_type, y = total_visits)) +
+  geom_col()
 
 ```
+These are the sum of million visits in 2019, where visitors reported travelling by X.
+
+
+```{r}
+demographics %>%
+  filter(access_to_car != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = year, y = value, fill = access_to_car)) +
+  geom_col()
+```
+This is underpinned by the finding that across the the (unit) million visits between 2013 and 2019, the majority of visitors report having access to a car.
+
 
 NOTE TO SELF - the question / answer / analysis here from above, from demographics, with access_to_car.
 

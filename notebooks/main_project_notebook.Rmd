@@ -340,11 +340,40 @@ So, people are staying in cities.
 Q8.
 How have general tourism rates changed over time?
 ```{r}
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
 
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
+
+location %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
 ```
+There's a trend of visits increasing in 2017, and declining again.
 
+```{r}
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
 
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
 
+location %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_col()
+```
+Spend is more fluctuating. 
 
 
 ## Steps / questions / Plan

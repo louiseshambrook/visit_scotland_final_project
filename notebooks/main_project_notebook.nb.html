@@ -262,15 +262,15 @@ head(accomodation)</code></pre>
 <h3>Reading in cleaned data</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWNjb21vZGF0aW9uIDwtIHJlYWRfY3N2KFwiY2xlYW5fZGF0YS9hY2NvbW9kYXRpb25fY2xlYW4uY3N2XCIpXG5cbmBgYCJ9 -->
-<pre class="r"><code>accomodation &lt;- read_csv(&quot;clean_data/accomodation_clean.csv&quot;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGVtb2dyYXBoaWNzIDwtIHJlYWRfY3N2KFwiY2xlYW5fZGF0YS9kZW1vZ3JhcGhpY3NfY2xlYW4uY3N2XCIpXG5cbmBgYCJ9 -->
+<pre class="r"><code>demographics &lt;- read_csv(&quot;clean_data/demographics_clean.csv&quot;)
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUm93czogNzExIENvbHVtbnM6IDhcbuKUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmNociAoNik6IHVuaXQsIGFjY29tbW9kYXRpb25fdHlwZSwgb2NjdXBhbmN5X3R5cGUsIHdlZWtkYXlfd2Vla2VuZCwgc2l6ZV9vZl9hY2NvbW1vZGF0aW9uLCBsb2NhdGlvblxuZGJsICgyKTogeWVhciwgdmFsdWVcblxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
-<pre><code>Rows: 711 Columns: 8
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMzA4IENvbHVtbnM6IDExXG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5EZWxpbWl0ZXI6IFwiLFwiXG5jaHIgKDkpOiB1bml0LCBicmVha2Rvd25fb2ZfZG9tZXN0aWNfdG91cmlzbSwgYWdlLCBtYXJpdGFsX3N0YXR1cywgZ2VuZGVyLCBlbXBsb3ltZW50X3N0YXR1cywgY2hpbGRyZW4sIGFjY2Vzc190b18uLi5cbmRibCAoMik6IHllYXIsIHZhbHVlXG5cbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 308 Columns: 11
 ── Column specification ──────────────────────────────────────────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
-chr (6): unit, accommodation_type, occupancy_type, weekday_weekend, size_of_accommodation, location
+chr (9): unit, breakdown_of_domestic_tourism, age, marital_status, gender, employment_status, children, access_to_...
 dbl (2): year, value
 
 ℹ Use `spec()` to retrieve the full column specification for this data.

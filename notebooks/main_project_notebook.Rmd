@@ -561,10 +561,7 @@ regional_domestic %>%
   ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
   geom_col(position = "dodge")
 
-regional_domestic %>%
-  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
-  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
-  geom_col(position = "dodge")
+
 ```
 These two graphs kinda answer everything, but can also be a bit confusing to look at. I'll break them down a bit more.
 
@@ -591,14 +588,35 @@ These are answering "where are visitors from".
 ```{r}
 # answering Q's:
 # How do they differ in the money they spend?
-# Nights they spend in Scotland?
-# Number of visits they do?
 
 regional_domestic %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
+  geom_col(position = "dodge")
+
+```
+
+
+```{r}
+# Nights they spend in Scotland?
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism == "Nights") %>%
   ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
   geom_col(position = "dodge")
 ```
 
+
+```{r}
+# Number of visits they do?
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
+  geom_col(position = "dodge")
+
+```
+
+
+### Change over time
 
 
 

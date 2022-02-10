@@ -403,7 +403,7 @@ transport %>%
         legend.position = "none") +
   labs(x = "Type of transport",
        y = "Total visits (million)",
-       title = "Most popular method of travel for visits") +
+       title = "Most popular method of travel for visits 2013-2019") +
   scale_fill_manual(values = "#af006e")
 
 ```
@@ -415,9 +415,9 @@ demographics %>%
   filter(access_to_car != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   ggplot(aes(x = year, y = value, fill = access_to_car)) +
   geom_col(position = "dodge") +
-  labs(x = "Type of transport",
+  labs(x = "Year",
        y = "Total visits (million)",
-       title = "Visitors reporting having access to a car",
+       title = "Visitors reporting having access to a car 2013-2019",
        fill = "Access to car") +
   scale_fill_manual(values = c("Access to car (1+)" = "#af006e",
                                "No access to car (0)" = "#63003e"))
@@ -428,40 +428,56 @@ This is underpinned by the finding that across the the (unit) million visits bet
 ## Plot set # 2 - Locations
 ```{r}
 # "what type of locations receive the most visits?"
-# "what kinds of locations do people spend the most in?"
 
 location %>%
   filter(breakdown_of_domestic_tourism == "Visits"
-         & type_of_location_visited != "Other"& year == 2019) %>%
+         & type_of_location_visited != "Other") %>%
   group_by(type_of_location_visited) %>%
   summarise(total_visits = sum(value)) %>%
-  ggplot(aes(x = type_of_location_visited, y = total_visits)) +
-  geom_col()
+  ggplot(aes(x = type_of_location_visited, y = total_visits, fill = "blue")) +
+  geom_col() +
+  theme(legend.position = "none") +
+  labs(x = "Type of location",
+       y = "Total visits (million)",
+       title = "Types of location and frequency of visits 2013-2019") +
+  scale_fill_manual(values = "#af006e")
 ```
 The sum of million visits in 2019 by location. 
 
 ```{r}
+# "what kinds of locations do people spend the most in?"
 location %>%
   filter(breakdown_of_domestic_tourism == "Expenditure"
-         & type_of_location_visited != "Other"& year == 2019) %>%
+         & type_of_location_visited != "Other") %>%
   group_by(type_of_location_visited) %>%
   summarise(total_visits = sum(value)) %>%
-  ggplot(aes(x = type_of_location_visited, y = total_visits)) +
-  geom_col()
+  ggplot(aes(x = type_of_location_visited, y = total_visits, fill = "blue")) +
+  geom_col() +
+  theme(legend.position = "none") +
+  labs(x = "Type of location",
+       y = "Total spend (million £)",
+       title = "Types of location with highest spend 2013-2019") +
+  scale_fill_manual(values = "#af006e")
 ```
 Sum of spend in 2019 in millions, by location.
 
 ```{r}
 accomodation %>%
-  filter(location != "Other" & year == 2019) %>%
+  filter(location != "Other") %>%
   group_by(location, accommodation_type) %>%
-  summarise(popular_accomodation = sum(value)) %>%
+  summarise(popular_accomodation = sum(value)/100) %>%
   arrange(desc(popular_accomodation)) %>%
-  ggplot(aes(x = location, y = popular_accomodation)) +
-  geom_col()
+  ggplot(aes(x = location, y = popular_accomodation, fill = "blue")) +
+  geom_col() +
+  theme(legend.position = "none") +
+  labs(x = "Type of location",
+       y = "Percentage",
+       title = "Types of location by average occupancy (accommodation) 2013-2019") +
+  scale_fill_manual(values = "#af006e")
 ```
 This lines up with accommodation choices; in 2019, most people chose to visit urban areas.
 (note to self: this also answers 'Is there a difference (in accommodation) by location?')
+NOTE - this is the one where it's broken down by percentage.
 
 
 ## Plot set # 3 - accommodation

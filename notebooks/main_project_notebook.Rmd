@@ -389,31 +389,8 @@ location %>%
 
 
 
-
-
-
-### Conclusions
-
-
-
-
-
-### Reading in cleaned data
-
-
-
-
-
-
-### Initial analysis -----------------------------------------------------------
-
-### Plots ----------------------------------------------------------------------
-
-The first plot/topic I'll include will be about transport.
-
-### Transport
+## Plot set # 1 - transport
 ```{r}
-# note, the question I need to answer is
 # "Is there a particular method of travel our visitors arrive by?".
 
 transport %>%
@@ -422,10 +399,8 @@ transport %>%
   summarise(total_visits = sum(value)) %>%
   ggplot(aes(x = travel_type, y = total_visits)) +
   geom_col()
-
 ```
 These are the sum of million visits in 2019, where visitors reported travelling by X.
-
 
 ```{r}
 demographics %>%
@@ -435,10 +410,9 @@ demographics %>%
 ```
 This is underpinned by the finding that across the the (unit) million visits between 2013 and 2019, the majority of visitors report having access to a car.
 
-### Locations
 
+## Plot set # 2 - Locations
 ```{r}
-# The question that I'm looking to answer with this is:
 # "what type of locations receive the most visits?"
 # "what kinds of locations do people spend the most in?"
 
@@ -449,7 +423,6 @@ location %>%
   summarise(total_visits = sum(value)) %>%
   ggplot(aes(x = type_of_location_visited, y = total_visits)) +
   geom_col()
-
 ```
 The sum of million visits in 2019 by location. 
 
@@ -464,7 +437,6 @@ location %>%
 ```
 Sum of spend in 2019 in millions, by location.
 
-
 ```{r}
 accomodation %>%
   filter(location != "Other" & year == 2019) %>%
@@ -478,10 +450,8 @@ This lines up with accommodation choices; in 2019, most people chose to visit ur
 (note to self: this also answers 'Is there a difference (in accommodation) by location?')
 
 
-### Accommodation
-
+## Plot set # 3 - accommodation
 ```{r}
-# question to answer:
 # "What type of accomodation is most popular?"
 
 accomodation %>%
@@ -489,10 +459,8 @@ accomodation %>%
   summarise(popular_accomodation = sum(value)) %>%
   ggplot(aes(x = accommodation_type, y = popular_accomodation)) +
   geom_col()
-
 ```
 2012-2019; percentage occupancy.. ? hotel is by far the highest.
-
 
 ```{r}
 accomodation %>%
@@ -505,10 +473,9 @@ accomodation %>%
 ```
 2019 data, from location set. When breaking down by location (as above), an interesting finding is that in the urban area, B&B's are just as popular as hotels. Maybe down to a certain B&B site?
 
-### Activities
 
+## Plot set # 4 - activities
 ```{r}
-# question to answer: 
 # What kind of tourism activity generates the highest income?
 # Which kind of activity generates the most visits?
 
@@ -519,7 +486,6 @@ activities %>%
   ggplot(aes(x = activity_type, y = highest_income)) +
   geom_col() +
   coord_flip()
-
 ```
 2013-2019, sum of value in million pounds. Highest is eating out (with shopping and visiting family/friends following)
 
@@ -534,28 +500,23 @@ activities %>%
 ```
 2013-2019, sum of million visits. Highest is visits with family/friends. Eating out coming in second, and outdoor leisure in third.
 
-### Demographics
 
-So, with all of that information - who are the people visiting Scotland?
-
+## Plot set # 5 - demographics 
 
 These are difficult to compare, as most of the questions/options are binary (married/not), whereas age has multiple options, so they can't really be fairly compared.
 ```{r}
 # Who spends the most?
-
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status != "All") %>%
   group_by(marital_status) %>%
   summarise(highest_spend = sum(value)) %>%
   ggplot(aes(x = marital_status, y = highest_spend)) +
   geom_col()
-
 ```
-2013 - 2019, sum of spend in millions.
-
 Note: I should really change this to a facet_wrap of the sum of all of the variables, or something.
 
 Same as above, not really possible to compare.
+
 ```{r}
 # Who visits the most?
 demographics %>%
@@ -564,13 +525,10 @@ demographics %>%
   summarise(most_visits = sum(value)) %>%
   ggplot(aes(x = children, y = most_visits)) +
   geom_col()
-
 ```
 2013-2019, sum of visits, in millions. 
 
-
 ```{r}
-# question to answer:
 # Is there a particular key demographic of visitors we should be focusing on?
 
 demographics %>%
@@ -579,27 +537,23 @@ demographics %>%
   summarise(most_visits = sum(value)) %>%
   ggplot(aes(x = age, y = most_visits)) +
   geom_col()
-
-
 ```
 While the two above have a skewed perspective, they do give insights into the data.
 The other key demographic to focus on, is age. As reflected in the graph (visits, sum millions), it is the younger generations that are visiting Scotland.
 
-### Regional Demographics
 
+## Plot set # 6 - regional demographics
 ```{r}
+
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism != "Expenditure") %>%
   ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
   geom_col(position = "dodge")
 
-
 ```
 These two graphs kinda answer everything, but can also be a bit confusing to look at. I'll break them down a bit more.
 
-
 ```{r}
-# answers the question:
 # Where are our visitors from?
 
 regional_domestic %>%
@@ -613,21 +567,16 @@ regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   ggplot(aes(x = region_of_residence, y = value)) +
   geom_col()
-
 ```
-These are answering "where are visitors from".
 
 ```{r}
-# answering Q's:
 # How do they differ in the money they spend?
 
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
   geom_col(position = "dodge")
-
 ```
-
 
 ```{r}
 # Nights they spend in Scotland?
@@ -637,41 +586,31 @@ regional_domestic %>%
   geom_col(position = "dodge")
 ```
 
-
 ```{r}
 # Number of visits they do?
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
   geom_col(position = "dodge")
-
 ```
 
 
-### Change over time ------
-
-Comparing all the datasets for change over time
-
+## Plot set # 7 - change over time
 ```{r}
+
 accomodation %>%
   group_by(year) %>%
   summarise(total_year = sum(value)) %>%
   ggplot(aes(x = year, y = total_year)) +
   geom_line()
 
-```
-
-```{r}
 transport %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   group_by(year) %>%
   summarise(total_year = sum(value)) %>%
   ggplot(aes(x = year, y = total_year)) +
   geom_line()
-```
 
-
-```{r}
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   group_by(year) %>%
@@ -679,12 +618,13 @@ demographics %>%
   ggplot(aes(x = year, y = total_year)) +
   geom_line()
 ```
-
 The *general* picture over time, is that for visits, it increases until 2017, and then declines (some more than others).
 For expenditure, it increases until 2017, declines in 2018, and increases again in 2019.
 
 
+## Plot set # 8 - How to predict change (TO BE ADDED)
 
-### Main questions to answer --------------------------------------------------
 
-Is there any way to predict spending and visits for Visit Scotland?
+### Conclusions
+
+

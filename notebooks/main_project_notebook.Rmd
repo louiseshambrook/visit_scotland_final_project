@@ -621,40 +621,79 @@ regional_domestic %>%
 
 ### Change over time ------
 
+Comparing all the datasets for change over time
+
 ```{r}
 accomodation %>%
-  ggplot(aes(x = year, y = value)) +
-  geom_col()
+  group_by(year) %>%
+  summarise(total_year = sum(value)) %>%
+  ggplot(aes(x = year, y = total_year)) +
+  geom_line()
 
 ```
 
 ```{r}
 activities %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
-  ggplot(aes(x = year, y = value)) +
-  geom_col()
+  group_by(year) %>%
+  summarise(total_year = sum(value)) %>%
+  ggplot(aes(x = year, y = total_year)) +
+  geom_line()
 ```
 
 ```{r}
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
-  ggplot(aes(x = year, y = value)) +
-  geom_col()
+  group_by(year) %>%
+  summarise(total_year = sum(value)) %>%
+  ggplot(aes(x = year, y = total_year)) +
+  geom_line()
 ```
 
 ```{r}
 location %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
-  ggplot(aes(x = year, y = value)) +
-  geom_col()
+  group_by(year) %>%
+  summarise(total_year = sum(value)) %>%
+  ggplot(aes(x = year, y = total_year)) +
+  geom_line()
 ```
 
 ```{r}
 transport %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
-  ggplot(aes(x = year, y = value)) +
-  geom_col()  
+  group_by(year) %>%
+  summarise(total_year = sum(value)) %>%
+  ggplot(aes(x = year, y = total_year)) +
+  geom_line()
 ```
+
+```{r}
+regional_domestic %>%
+  select(-spend_unit) %>%
+  group_by(years) %>%
+  summarise(total_year = sum(value)) %>%
+  ggplot(aes(x = years, y = total_year)) +
+  geom_col()
+
+# this is for nights and visits
+```
+```{r}
+regional_domestic %>%
+  select(-visit_night_unit) %>%
+  group_by(years) %>%
+  summarise(total_year = sum(value)) %>%
+  ggplot(aes(x = years, y = total_year)) +
+  geom_col()
+```
+
+The picture over time, is generally increasing until 2017 - and then declining.
+
+```{r}
+
+```
+
+
 
 #### Working Environment -------
 

@@ -394,19 +394,33 @@ location %>%
 # "Is there a particular method of travel our visitors arrive by?".
 
 transport %>%
-  filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other" & year == 2019) %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other") %>%
   group_by(travel_type) %>%
   summarise(total_visits = sum(value)) %>%
-  ggplot(aes(x = travel_type, y = total_visits)) +
-  geom_col()
+  ggplot(aes(x = travel_type, y = total_visits, fill = "blue")) +
+  geom_col() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none") +
+  labs(x = "Type of transport",
+       y = "Total visits (million)",
+       title = "Most popular method of travel for visits") +
+  scale_fill_manual(values = "#af006e")
+
 ```
 These are the sum of million visits in 2019, where visitors reported travelling by X.
+
 
 ```{r}
 demographics %>%
   filter(access_to_car != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   ggplot(aes(x = year, y = value, fill = access_to_car)) +
-  geom_col()
+  geom_col(position = "dodge") +
+  labs(x = "Type of transport",
+       y = "Total visits (million)",
+       title = "Visitors reporting having access to a car",
+       fill = "Access to car") +
+  scale_fill_manual(values = c("Access to car (1+)" = "#af006e",
+                               "No access to car (0)" = "#63003e"))
 ```
 This is underpinned by the finding that across the the (unit) million visits between 2013 and 2019, the majority of visitors report having access to a car.
 

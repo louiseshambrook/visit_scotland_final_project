@@ -527,7 +527,7 @@ activities %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "none") +
   labs(x = "Type of activity",
-       y = "Sum of spend",
+       y = "Sum of spend (million £)",
        title = "Sum of spend on types of activity 2013-2019") +
   scale_fill_manual(values = "#af006e")
 ```
@@ -566,7 +566,7 @@ demographics %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "none") +
   labs(x = "Age group",
-       y = "Sum of visits",
+       y = "Sum of visits (millions)",
        title = "Sum of vists distributed across age groups 2013-2019") +
   scale_fill_manual(values = "#af006e")
 ```
@@ -587,7 +587,7 @@ demographics %>%
   geom_col() +
   theme(legend.position = "none") +
   labs(x = "Age group",
-       y = "Sum of spend",
+       y = "Sum of spend (million £)",
        title = "Sum of spend distributed across age groups 2013-2019") +
   scale_fill_manual(values = "#af006e")
 ```
@@ -604,7 +604,7 @@ demographics %>%
   geom_col() +
   theme(legend.position = "none") +
   labs(x = "Age group",
-       y = "Sum of visits",
+       y = "Sum of visits (millions)",
        title = "Sum of vists distributed across age groups 2013-2019") +
   scale_fill_manual(values = "#af006e")
 ```
@@ -668,30 +668,34 @@ regional_domestic %>%
 
 ## Plot set # 7 - change over time
 ```{r}
-
-accomodation %>%
-  group_by(year) %>%
-  summarise(total_year = sum(value)) %>%
-  ggplot(aes(x = year, y = total_year)) +
-  geom_line()
+# How have general tourism rates changed over time?
 
 transport %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   group_by(year) %>%
   summarise(total_year = sum(value)) %>%
   ggplot(aes(x = year, y = total_year)) +
-  geom_line()
+  geom_line() +
+  theme(legend.position = "none") +
+  labs(x = "Year",
+       y = "Sum of visits (millions)",
+       title = "Tourism rates (visits) 2013-2019")
 
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   group_by(year) %>%
   summarise(total_year = sum(value)) %>%
   ggplot(aes(x = year, y = total_year)) +
-  geom_line()
+  geom_line() +
+  theme(legend.position = "none") +
+  labs(x = "Year",
+       y = "Sum of spend (million £)",
+       title = "Tourism rates (spend) 2013-2019")
 ```
 The *general* picture over time, is that for visits, it increases until 2017, and then declines (some more than others).
 For expenditure, it increases until 2017, declines in 2018, and increases again in 2019.
 
+NOTE TO SELF - I should dig into the individual datasets and see if there are any other developments to highlight, if I have time.
 
 ## Plot set # 8 - How to predict change (TO BE ADDED)
 

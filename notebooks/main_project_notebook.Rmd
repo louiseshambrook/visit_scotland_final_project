@@ -4,42 +4,14 @@ output: html_notebook
 author: "Louise Shambrook"
 ---
 
-- note to self - structure this document/report similarly to the bikes project
-
-libraries
+### Loading required libraries
 ```{r}
-### loading in libraries
 library(tidyverse)
 library(janitor)
 library(lubridate)
-
 ```
 
-Exploring the data for each dataset
-```{r}
-head(domestic_tourism)
-
-domestic_tourism %>%
-  filter(Units == "million pounds (GBP)")
-
-# checking for NA values
-
-summary(accomodation)
-summary(activities)
-summary(demographics)
-summary(domestic_tourism)
-summary(location)
-summary(transport)
-
-head(activities)
-head(location)
-head(transport)
-head(domestic_tourism)
-head(accomodation)
-```
-
-### Reading in cleaned data
-
+### Loading cleaned data
 ```{r}
 activities <- read_csv("clean_data/activities_clean.csv")
 accomodation <- read_csv("clean_data/accomodation_clean.csv")
@@ -49,24 +21,66 @@ regional_domestic <- read_csv("clean_data/regional_domestic_clean.csv")
 transport <- read_csv("clean_data/transport_clean.csv")
 ```
 
+### Notes on data cleaning
+I will be removing the feature_code from all datasets, as this is the country code for Scotland. I will also be removing the column measurement, as this is irrelevant and duplicated information. 
+
+On all datasets, there is an "All" response. The data are survey responses, and therefore it is reasonable to assume that "all" was an actual response. Therefore, I will not drop it / change it to NA, but it also does not give any insight to my analysis and I will be removing it from my plots etc.
+
+For most of the datasets, I have simplified the units and reordered the columns, so the datasets are easier to interpret.
+
+For the activities dataset, I have simplified the responses, and dropped the original column.
+
+For the transport dataset, I have grouped the types, and dropped the original column.
+
+For the regional_domestic dataset, I have split the unit column into the nights/visits, and pounds, as the nights/visits are measured in thousands, and the pounds are measured in millions.
+
+For the location dataset, I have also simplified the responses, and dropped the original column. 
 
 
+### Business questions / main questions
 
-### Initial analysis -----------------------------------------------------------
+- What kind of tourism activity generates the highest income for Scotland?
+- Which kind of activity generates the most visits to sites?
+- Is there a particular key demographic of visitors we should be focusing on? Who spends the most? Who visits the most?
+- What type of locations receive the most visits? What kinds of locations do people spend the most in?
+- Is there a particular method of travel our visitors arrive by? Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
+- When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
+- What type of accomodation is most popular? Is there a difference by location?
+- How have general tourism rates changed over time?
+- Is there any way to predict spending and visits for Visit Scotland?
 
-### Q1. What kind of tourism activity generates the highest income for Scotland?
+### Data wrangling / Exploratory data analysis
 
 ```{r}
+summary(accomodation)
+summary(activities)
+summary(demographics)
+summary(domestic_tourism)
+summary(location)
+summary(transport)
+# checking for NA values (aside from the "all" values)
+
+head(activities)
+head(location)
+head(transport)
+head(domestic_tourism)
+head(accomodation)
+```
+
+Q1.
+```{r}
+# What kind of tourism activity generates the highest income for Scotland?
 activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   group_by(activity_type) %>%
   summarise(highest_income = sum(value)) %>%
   arrange(desc(highest_income))
-```
-The answer from this analysis, is going out for a meal. 
 
-Which kind of activity generates the most visits to sites?
+```
+
+Q2.
 ```{r}
+# Which kind of activity generates the most visits to sites?
 activities %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   group_by(activity_type) %>%
@@ -74,9 +88,22 @@ activities %>%
   arrange(desc(highest_income))
 ```
 
-### Q3. Is there a particular key demographic of visitors we should be focusing on?
 
 
+
+
+
+
+### Data visualisations / Plots
+
+
+
+
+
+### Notes on Visit Scotland
+
+
+Q3. Is there a particular key demographic of visitors we should be focusing on?
 as there is no inter-relating data (when you isolate one variable, there is no
 data for the others), I will have to analyse each variable individually.
 
@@ -153,7 +180,7 @@ demographics %>%
 This mostly speaks for itself; the biggest caveat to this is that there was no data dictionary with this dataset, so I can only assume that it goes top down, but this is not known.
 
 
-### Q3.1 Who spends the most? ---------------------------------------------------
+Q3.1 Who spends the most? ---------------------------------------------------
 ```{r}
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & age != "All") %>%
@@ -188,7 +215,7 @@ demographics %>%
 ```
 The direct answer is people who identify as married - but there are some caveats to this answer. It is only possible to explore one variable at a time, and therefore, the identity of 'married' should be questioned. Additionally, because of the possible survey responses, marital_status only has two choices, whereas age is divided into decades starting at 16. So to best compare, age should be split/merged into two categories, or age is really the only identifier, as it has a range of reasonable options. 
 
-### Q3.2 Who visits the most? ---------------------------------------------------
+Q3.2 Who visits the most? ---------------------------------------------------
 ```{r}
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Visits" & age != "All") %>%
@@ -223,7 +250,7 @@ demographics %>%
 Answer here is "no- without children.". But there is the same caveat as with the question above. 
 
 
-### Q4. What type of locations receive the most visits? ------------------------
+Q4. What type of locations receive the most visits? ------------------------
 
 ```{r}
 location %>%
@@ -233,7 +260,7 @@ location %>%
   arrange(desc(total_visits))
 ```
 
-### Q4.1 What kinds of locations do people spend the most in? ------------------
+Q4.1 What kinds of locations do people spend the most in? ------------------
 
 ```{r}
 location %>%
@@ -244,7 +271,7 @@ location %>%
 ```
 
 
-### Q5.1 s there a particular method of travel our visitors arrive by? ---------
+Q5.1 s there a particular method of travel our visitors arrive by? ---------
  Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
 
 NOTE TO SELF - the question / answer / analysis here from above, from demographics, with access_to_car.
@@ -260,7 +287,7 @@ transport %>%
 According to my analysis, most people use a car. This is especially underpinned by the demographics, where xx people report having access to a car.
 
 
-### Q6.When looking at regional tourism, what insights can we gain? ------------
+Q6.When looking at regional tourism, what insights can we gain? ------------
  How do they differ in
 the money they spend
 nights they spend in Scotland, or
@@ -291,7 +318,7 @@ by nights, england is also the biggest - but the difference between england and 
 by visits, scotland is bigger than england. This indicates local visiting.
 
 
-### Q6.1 Where are our visitors from? ------------------------------------------
+Q6.1 Where are our visitors from? ------------------------------------------
 
 ```{r}
 regional_domestic %>%
@@ -310,7 +337,7 @@ regional_domestic %>%
 This provides a nicer breakdown.
 
 
-### Q7. What type of accomodation is most popular?  ----------------------------
+Q7. What type of accomodation is most popular?  ----------------------------
 
 
 Note to self - these are reported in percentage; this is important to note on the plots and when talking about the figures
@@ -327,7 +354,7 @@ Taking the direct result, is hotels. But I think there are duplicates, somehow s
 
 
 
-### Q7.1 Is there a difference by location? ------------------------------------
+Q7.1 Is there a difference by location? ------------------------------------
 
 ```{r}
 accomodation %>%
@@ -340,7 +367,7 @@ accomodation %>%
 So, people are staying in cities.
 
 
-### Q8. How have general tourism rates changed over time? ---------------------
+Q8. How have general tourism rates changed over time? ---------------------
 
 ```{r}
 activities %>%
@@ -377,6 +404,45 @@ location %>%
   geom_col()
 ```
 Spend is more fluctuating. 
+
+
+
+
+
+# 3. Data visualisation
+#### Introduction to dataset and data ethics
+
+
+
+
+#### Process and design 
+
+
+
+
+
+#### Visualisations
+
+Note to self - pick 5-10 plots to put in here and describe what they show
+
+
+
+
+
+### Conclusions
+
+
+
+
+
+### Reading in cleaned data
+
+
+
+
+
+
+### Initial analysis -----------------------------------------------------------
 
 ### Plots ----------------------------------------------------------------------
 
@@ -653,17 +719,6 @@ demographics %>%
 
 The *general* picture over time, is that for visits, it increases until 2017, and then declines (some more than others).
 For expenditure, it increases until 2017, declines in 2018, and increases again in 2019.
-
-
-
-```{r}
-
-```
-
-
-
-#### Working Environment -------
-
 
 
 

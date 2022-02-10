@@ -553,31 +553,6 @@ activities %>%
 
 ## Plot set # 5 - demographics 
 
-These are difficult to compare, as most of the questions/options are binary (married/not), whereas age has multiple options, so they can't really be fairly compared.
-```{r}
-# Who spends the most?
-demographics %>%
-  filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status != "All") %>%
-  group_by(marital_status) %>%
-  summarise(highest_spend = sum(value)) %>%
-  ggplot(aes(x = marital_status, y = highest_spend)) +
-  geom_col()
-```
-Note: I should really change this to a facet_wrap of the sum of all of the variables, or something.
-
-
-Same as above, not really possible to compare.
-
-```{r}
-# Who visits the most?
-demographics %>%
-  filter(breakdown_of_domestic_tourism == "Visits" & children != "All") %>%
-  group_by(children) %>%
-  summarise(most_visits = sum(value)) %>%
-  ggplot(aes(x = children, y = most_visits)) +
-  geom_col()
-```
-2013-2019, sum of visits, in millions. 
 
 ```{r}
 # Is there a particular key demographic of visitors we should be focusing on?
@@ -586,19 +561,61 @@ demographics %>%
   filter(age != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   group_by(age) %>%
   summarise(most_visits = sum(value)) %>%
-  ggplot(aes(x = age, y = most_visits)) +
-  geom_col()
+  ggplot(aes(x = age, y = most_visits, fill = "blue")) +
+  geom_col() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none") +
+  labs(x = "Age group",
+       y = "Sum of visits",
+       title = "Sum of vists distributed across age groups 2013-2019") +
+  scale_fill_manual(values = "#af006e")
 ```
-While the two above have a skewed perspective, they do give insights into the data.
-The other key demographic to focus on, is age. As reflected in the graph (visits, sum millions), it is the younger generations that are visiting Scotland.
+Yes, and no. The data from this dataset isn't great for analysis, because a lot of inferences have to be drawn. A key insight to be drawn from this is to complete further research / get better data.
 
+With that said - age is a good variable and gives good insights. Across pretty much everything, the reflection from the data is that the younger generations are the ones attending and spending money.
+
+NOTE TO MYSELF - if I have time, dig further into this, across the different years / visits / spends.
 
 
 ```{r}
-# code to group the age column into two groups for analysin
+# Who spends the most?
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status != "All") %>%
+  group_by(marital_status) %>%
+  summarise(highest_spend = sum(value)) %>%
+  ggplot(aes(x = marital_status, y = highest_spend, fill = "blue")) +
+  geom_col() +
+  theme(legend.position = "none") +
+  labs(x = "Age group",
+       y = "Sum of spend",
+       title = "Sum of spend distributed across age groups 2013-2019") +
+  scale_fill_manual(values = "#af006e")
+```
+This is where the data is limited, because the survey / options for respondents was limited, so marital_status can't really be fairly compared. However, going by the data strictly (because this does still reflect something, and even when grouping age so that they could be compared, the "married" response comes out higher).
+
+
+```{r}
+# Who visits the most?
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & children != "All") %>%
+  group_by(children) %>%
+  summarise(most_visits = sum(value)) %>%
+  ggplot(aes(x = children, y = most_visits, fill = "blue")) +
+  geom_col() +
+  theme(legend.position = "none") +
+  labs(x = "Age group",
+       y = "Sum of visits",
+       title = "Sum of vists distributed across age groups 2013-2019") +
+  scale_fill_manual(values = "#af006e")
+```
+This is the same issue, but also response / relevance, as the above.
+
+
+```{r}
+# code to group the age column into two groups for analysing
 demographics %>%
   select(year, value, unit, breakdown_of_domestic_tourism, age) %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   mutate(age_category = case_when(age == "16-24 years" ~ "low",
                              age == "25-34 years" ~ "low",
                              age == "35-44 years" ~ "low",
@@ -606,8 +623,8 @@ demographics %>%
                               age == "54-64 years" ~ "high",
                               age == "65 years and over" ~ "high",
                               age == "All" ~ "Other")) %>%
-  filter(age_category == "high") %>%
-  summarise(most_visits = sum(value)) %>%
+  filter(age_category == "low") %>%
+  summarise(most_visits = sum(value))
   
 ```
 498 (lower half) vs 290 (higher half)

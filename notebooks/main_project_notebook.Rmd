@@ -49,6 +49,9 @@ For the location dataset, I have also simplified the responses, and dropped the 
 - How have general tourism rates changed over time?
 - Is there any way to predict spending and visits for Visit Scotland?
 
+### Notes on Visit Scotland
+
+
 ### Data wrangling / Exploratory data analysis
 
 ```{r}
@@ -88,27 +91,12 @@ activities %>%
   arrange(desc(highest_income))
 ```
 
-
-
-
-
-
-
-### Data visualisations / Plots
-
-
-
-
-
-### Notes on Visit Scotland
-
-
-Q3. Is there a particular key demographic of visitors we should be focusing on?
-as there is no inter-relating data (when you isolate one variable, there is no
-data for the others), I will have to analyse each variable individually.
-
-age
+Q3. 
 ```{r}
+# Is there a particular key demographic of visitors we should be focusing on?
+# as there is no inter-relating data (when you isolate one variable, there is no
+# data for the others), I will have to analyse each variable individually.
+
 demographics %>%
   filter(age != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   group_by(age) %>%
@@ -121,67 +109,61 @@ demographics %>%
   summarise(most_spend = sum(value)) %>%
   arrange(desc(most_spend))
 
-## BREAK THIS ONE DOWN ACROSS TIME
-```
-Note; I have split this up by visit and spend (as they are in the same column). There isn't much difference in the outcome, but it is important to remember to pick one or the other when reporting the final outcomes.
-
-```{r}
 demographics %>%
   filter(marital_status != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   group_by(marital_status) %>%
   summarise(most_visits = sum(value)) %>%
   arrange(desc(most_visits))
-```
-This doesn't seem very relevant; it's a binary definer. Especially with the younger generation, this may not be very important?
 
-```{r}
+# This doesn't seem very relevant; it's a binary definer. Especially with the younger generation, this may not be very important?
+
 demographics %>%
   filter(gender != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   group_by(gender) %>%
   summarise(most_visits = sum(value)) %>%
   arrange(desc(most_visits))
-```
-This is pretty much the same as with married. They're pretty even, and I'm not sure they'll matter too much.
 
-```{r}
+# This is pretty much the same as with married. They're pretty even, and I'm not sure they'll matter too much.
+
 demographics %>%
   filter(employment_status != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   group_by(employment_status) %>%
   summarise(most_visits = sum(value)) %>%
   arrange(desc(most_visits))
-```
-Most people are employed, perhaps not unexpected, as various levels of employment were not available.
 
-```{r}
+# Most people are employed, perhaps not unexpected, as various levels of employment were not available.
+
 demographics %>%
   filter(children != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   group_by(children) %>%
   summarise(most_visits = sum(value)) %>%
   arrange(desc(most_visits))
-```
-Most people report no to children.
 
-```{r}
+# Most people report no to children.
+
 demographics %>%
   filter(access_to_car != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   group_by(access_to_car) %>%
   summarise(most_visits = sum(value)) %>%
   arrange(desc(most_visits))
-```
-This is an interesting and useful one. Further down, there is a question about travel, and here by far the majority report having access to a car.
 
-```{r}
+# This is an interesting and useful one. Further down, there is a question about travel, and here by far the majority report having access to a car.
+
 demographics %>%
   filter(social_grade != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   group_by(social_grade) %>%
   summarise(most_visits = sum(value)) %>%
   arrange(desc(most_visits))
+
+# This mostly speaks for itself; the biggest caveat to this is that there was no data dictionary with this dataset, so I can only assume that it goes top down, but this is not known.
+
+
+
 ```
-This mostly speaks for itself; the biggest caveat to this is that there was no data dictionary with this dataset, so I can only assume that it goes top down, but this is not known.
 
-
-Q3.1 Who spends the most? ---------------------------------------------------
+Q 3.2
 ```{r}
+# Who spends the most?
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & age != "All") %>%
   group_by(age) %>%
@@ -212,11 +194,12 @@ demographics %>%
   summarise(highest_spend = sum(value)) %>%
   arrange(desc(highest_spend))
 
+# The direct answer is people who identify as married - but there are some caveats to this answer. It is only possible to explore one variable at a time, and therefore, the identity of 'married' should be questioned. Additionally, because of the possible survey responses, marital_status only has two choices, whereas age is divided into decades starting at 16. So to best compare, age should be split/merged into two categories, or age is really the only identifier, as it has a range of reasonable options. 
 ```
-The direct answer is people who identify as married - but there are some caveats to this answer. It is only possible to explore one variable at a time, and therefore, the identity of 'married' should be questioned. Additionally, because of the possible survey responses, marital_status only has two choices, whereas age is divided into decades starting at 16. So to best compare, age should be split/merged into two categories, or age is really the only identifier, as it has a range of reasonable options. 
 
-Q3.2 Who visits the most? ---------------------------------------------------
+Q 3.3
 ```{r}
+# Who visits the most?
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Visits" & age != "All") %>%
   group_by(age) %>%
@@ -246,23 +229,24 @@ demographics %>%
   group_by(children) %>%
   summarise(most_visits = sum(value)) %>%
   arrange(desc(most_visits))
+
+# Answer here is "no- without children.". But there is the same caveat as with the question above. 
 ```
-Answer here is "no- without children.". But there is the same caveat as with the question above. 
 
-
-Q4. What type of locations receive the most visits? ------------------------
-
+Q4.
 ```{r}
+# What type of locations receive the most visits?
 location %>%
   filter(type_of_location_visited != "Other") %>%
   group_by(type_of_location_visited) %>%
   summarise(total_visits = sum(value)) %>%
   arrange(desc(total_visits))
+
 ```
 
-Q4.1 What kinds of locations do people spend the most in? ------------------
-
+Q4.2
 ```{r}
+# What kinds of locations do people spend the most in?
 location %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   group_by(type_of_location_visited) %>%
@@ -270,32 +254,29 @@ location %>%
   arrange(desc(total_spend))
 ```
 
-
-Q5.1 s there a particular method of travel our visitors arrive by? ---------
- Some of our locations are remote and not easily accessible by public transport, so this would be good information to have.
-
-NOTE TO SELF - the question / answer / analysis here from above, from demographics, with access_to_car.
-
+Q 5
 ```{r}
+# Is there a particular method of travel our visitors arrive by?
 transport %>%
   filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other") %>%
   group_by(travel_type) %>%
   summarise(total_visits = sum(value)) %>%
   arrange(desc(total_visits))
 
+# According to my analysis, most people use a car. This is especially underpinned by the demographics, where xx people report having access to a car.
+
+# Note: the question / answer / analysis here from above, from demographics, with access_to_car, would be good to cover under transport.
+
 ```
-According to my analysis, most people use a car. This is especially underpinned by the demographics, where xx people report having access to a car.
 
-
-Q6.When looking at regional tourism, what insights can we gain? ------------
- How do they differ in
-the money they spend
-nights they spend in Scotland, or
-number of visits they do?
-
-NOTE TO SELF - these can and should be broken down across years
-
+Q6
 ```{r}
+# When looking at regional tourism, what insights can we gain? 
+# How do they differ in
+# the money they spend
+# nights they spend in Scotland, or
+# number of visits they do?
+
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   group_by(region_of_residence) %>%
@@ -310,66 +291,60 @@ regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   group_by(region_of_residence) %>%
   summarise(total_units = sum(value))
-  
+
+# by spend, england is the biggest.
+# by nights, england is also the biggest - but the difference between england and scotland is less.
+# by visits, scotland is bigger than england. This indicates local visiting.
 ```
-Results:
-by spend, england is the biggest.
-by nights, england is also the biggest - but the difference between england and scotland is less.
-by visits, scotland is bigger than england. This indicates local visiting.
 
-
-Q6.1 Where are our visitors from? ------------------------------------------
-
+Q 6.1 
 ```{r}
+# Where are our visitors from?
 regional_domestic %>%
   group_by(region_of_residence) %>%
   summarise(breakdown_of_visit_countries = sum(value)) %>%
   arrange(desc(breakdown_of_visit_countries))
-```
-Most visitors come from all over GB, i.e. including Wales. (it doesn't state the UK, but GB - but in general terms GB and UK are used interchangably - however, without a data dictionary, I'll have to go by the wording).
 
+# Most visitors come from all over GB, i.e. including Wales. (it doesn't state the UK, but GB - but in general terms GB and UK are used interchangably - however, without a data dictionary, I'll have to go by the wording).
 
-```{r}
 regional_domestic %>%
   group_by(region_of_residence, breakdown_of_domestic_tourism) %>%
   summarise(breakdown_of_visit_countries = sum(value))
+
+# This provides a nicer breakdown.
 ```
-This provides a nicer breakdown.
 
-
-Q7. What type of accomodation is most popular?  ----------------------------
-
-
-Note to self - these are reported in percentage; this is important to note on the plots and when talking about the figures
-Second note - this is like the demographics; where there is data in one variables, the others have NA, i.e. 'All'.
-
+Q7.
 ```{r}
+# What type of accomodation is most popular?
 accomodation %>%
   group_by(accommodation_type_and_occupancy) %>%
   summarise(popular_accomodation = sum(value)) %>%
   arrange(desc(popular_accomodation))
 
+# Taking the direct result, is hotels. But I think there are duplicates, somehow so it may need cleaning, and additionally, this is reported in percentage but I've only summed it so I can't report it like this - I'll need to do some further cleaning / wrangling.
+
+# Note: these are reported in percentage; this is important to note on the plots and when talking about the figures
+
+# Note: this is like the demographics; where there is data in one variables, the others have NA, i.e. 'All'.
 ```
-Taking the direct result, is hotels. But I think there are duplicates, somehow so it may need cleaning, and additionally, this is reported in percentage but I've only summed it so I can't report it like this - I'll need to do some further cleaning / wrangling.
 
-
-
-Q7.1 Is there a difference by location? ------------------------------------
-
+Q 7.1
 ```{r}
+# Is there a difference by location?
 accomodation %>%
   filter(location != "Other") %>%
   group_by(location, accommodation_type) %>%
   summarise(popular_accomodation = sum(value)) %>%
   arrange(desc(popular_accomodation))
 
+# So, people are staying in cities.
+
 ```
-So, people are staying in cities.
 
-
-Q8. How have general tourism rates changed over time? ---------------------
-
+Q8.
 ```{r}
+# How have general tourism rates changed over time?
 activities %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   ggplot(aes(x = year, y = value)) +
@@ -384,10 +359,9 @@ location %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   ggplot(aes(x = year, y = value)) +
   geom_col()
-```
-There's a trend of visits increasing in 2017, and declining again.
 
-```{r}
+# There's a trend of visits increasing in 2017, and declining again.
+
 activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   ggplot(aes(x = year, y = value)) +
@@ -402,28 +376,17 @@ location %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   ggplot(aes(x = year, y = value)) +
   geom_col()
+
+# Spend is more fluctuating. 
+
 ```
-Spend is more fluctuating. 
+
+
+### Data visualisations / Plots
 
 
 
 
-
-# 3. Data visualisation
-#### Introduction to dataset and data ethics
-
-
-
-
-#### Process and design 
-
-
-
-
-
-#### Visualisations
-
-Note to self - pick 5-10 plots to put in here and describe what they show
 
 
 

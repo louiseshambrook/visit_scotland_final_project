@@ -632,54 +632,37 @@ demographics %>%
 
 ## Plot set # 6 - regional demographics
 ```{r}
+# When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
 
-regional_domestic %>%
-  filter(breakdown_of_domestic_tourism != "Expenditure") %>%
-  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
-  geom_col(position = "dodge")
-
-```
-These two graphs kinda answer everything, but can also be a bit confusing to look at. I'll break them down a bit more.
-
-```{r}
-# Where are our visitors from?
-
-regional_domestic %>%
-  select(start_year, unit, value, region_of_residence, breakdown_of_domestic_tourism) %>%
-  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
-  ggplot(aes(x = region_of_residence, y = value)) +
-  geom_col()
-
-regional_domestic %>%
-  select(start_year, unit, value, region_of_residence, breakdown_of_domestic_tourism) %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
-  ggplot(aes(x = region_of_residence, y = value)) +
-  geom_col()
-```
-
-```{r}
-# How do they differ in the money they spend?
-
-regional_domestic %>%
-  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
-  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
-  geom_col(position = "dodge")
-```
-
-```{r}
-# Nights they spend in Scotland?
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Nights") %>%
-  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
-  geom_col(position = "dodge")
-```
+  ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
+  geom_col(position = "dodge") +
+  theme(legend.position = "none") +
+  labs(x = "Age group",
+       y = "Sum of visits",
+       title = "Sum of vists distributed across age groups 2013-2019") +
+  scale_fill_manual(values = "#af006e")
 
-```{r}
-# Number of visits they do?
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
+  geom_col(position = "dodge") +
+  theme(legend.position = "none") +
+  labs(x = "Age group",
+       y = "Sum of visits",
+       title = "Sum of vists distributed across age groups 2013-2019") +
+  scale_fill_manual(values = "#af006e")
+
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
-  ggplot(aes(x = breakdown_of_domestic_tourism, y = value, fill = region_of_residence)) +
-  geom_col(position = "dodge")
+  ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
+  geom_col(position = "dodge") +
+  theme(legend.position = "none") +
+  labs(x = "Age group",
+       y = "Sum of visits",
+       title = "Sum of vists distributed across age groups 2013-2019") +
+  scale_fill_manual(values = "#af004e")
 ```
 
 

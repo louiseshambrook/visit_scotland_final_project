@@ -70,7 +70,7 @@ head(domestic_tourism)
 head(accomodation)
 ```
 
-Q1.
+## Q1.
 ```{r}
 # What kind of tourism activity generates the highest income for Scotland?
 activities %>%
@@ -81,7 +81,7 @@ activities %>%
 
 ```
 
-Q2.
+## Q2.
 ```{r}
 # Which kind of activity generates the most visits to sites?
 activities %>%
@@ -91,7 +91,7 @@ activities %>%
   arrange(desc(highest_income))
 ```
 
-Q3. 
+## Q3. 
 ```{r}
 # Is there a particular key demographic of visitors we should be focusing on?
 # as there is no inter-relating data (when you isolate one variable, there is no
@@ -233,7 +233,7 @@ demographics %>%
 # Answer here is "no- without children.". But there is the same caveat as with the question above. 
 ```
 
-Q4.
+## Q4.
 ```{r}
 # What type of locations receive the most visits?
 location %>%
@@ -254,7 +254,7 @@ location %>%
   arrange(desc(total_spend))
 ```
 
-Q 5
+## Q 5
 ```{r}
 # Is there a particular method of travel our visitors arrive by?
 transport %>%
@@ -269,7 +269,7 @@ transport %>%
 
 ```
 
-Q6
+## Q6
 ```{r}
 # When looking at regional tourism, what insights can we gain? 
 # How do they differ in
@@ -314,7 +314,7 @@ regional_domestic %>%
 # This provides a nicer breakdown.
 ```
 
-Q7.
+## Q7.
 ```{r}
 # What type of accomodation is most popular?
 accomodation %>%
@@ -342,7 +342,7 @@ accomodation %>%
 
 ```
 
-Q8.
+## Q8.
 ```{r}
 # How have general tourism rates changed over time?
 activities %>%
@@ -515,6 +515,7 @@ demographics %>%
 ```
 Note: I should really change this to a facet_wrap of the sum of all of the variables, or something.
 
+
 Same as above, not really possible to compare.
 
 ```{r}
@@ -540,6 +541,26 @@ demographics %>%
 ```
 While the two above have a skewed perspective, they do give insights into the data.
 The other key demographic to focus on, is age. As reflected in the graph (visits, sum millions), it is the younger generations that are visiting Scotland.
+
+
+
+```{r}
+# code to group the age column into two groups for analysin
+demographics %>%
+  select(year, value, unit, breakdown_of_domestic_tourism, age) %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  mutate(age_category = case_when(age == "16-24 years" ~ "low",
+                             age == "25-34 years" ~ "low",
+                             age == "35-44 years" ~ "low",
+                             age == "45-54 years" ~ "high",
+                              age == "54-64 years" ~ "high",
+                              age == "65 years and over" ~ "high",
+                              age == "All" ~ "Other")) %>%
+  filter(age_category == "high") %>%
+  summarise(most_visits = sum(value)) %>%
+  
+```
+498 (lower half) vs 290 (higher half)
 
 
 ## Plot set # 6 - regional demographics

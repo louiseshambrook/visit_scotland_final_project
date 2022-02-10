@@ -254,7 +254,7 @@ location %>%
   arrange(desc(total_spend))
 ```
 
-## Q 5
+## Q5
 ```{r}
 # Is there a particular method of travel our visitors arrive by?
 transport %>%

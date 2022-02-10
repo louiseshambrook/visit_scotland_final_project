@@ -633,33 +633,6 @@ accomodation %>%
 ```
 
 ```{r}
-activities %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
-  group_by(year) %>%
-  summarise(total_year = sum(value)) %>%
-  ggplot(aes(x = year, y = total_year)) +
-  geom_line()
-```
-
-```{r}
-demographics %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
-  group_by(year) %>%
-  summarise(total_year = sum(value)) %>%
-  ggplot(aes(x = year, y = total_year)) +
-  geom_line()
-```
-
-```{r}
-location %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
-  group_by(year) %>%
-  summarise(total_year = sum(value)) %>%
-  ggplot(aes(x = year, y = total_year)) +
-  geom_line()
-```
-
-```{r}
 transport %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   group_by(year) %>%
@@ -668,26 +641,20 @@ transport %>%
   geom_line()
 ```
 
-```{r}
-regional_domestic %>%
-  select(-spend_unit) %>%
-  group_by(years) %>%
-  summarise(total_year = sum(value)) %>%
-  ggplot(aes(x = years, y = total_year)) +
-  geom_col()
 
-# this is for nights and visits
-```
 ```{r}
-regional_domestic %>%
-  select(-visit_night_unit) %>%
-  group_by(years) %>%
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  group_by(year) %>%
   summarise(total_year = sum(value)) %>%
-  ggplot(aes(x = years, y = total_year)) +
-  geom_col()
+  ggplot(aes(x = year, y = total_year)) +
+  geom_line()
 ```
 
-The picture over time, is generally increasing until 2017 - and then declining.
+The *general* picture over time, is that for visits, it increases until 2017, and then declines (some more than others).
+For expenditure, it increases until 2017, declines in 2018, and increases again in 2019.
+
+
 
 ```{r}
 

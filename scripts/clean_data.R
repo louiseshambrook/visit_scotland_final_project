@@ -245,6 +245,6 @@ transport_spend <- read_csv("clean_data/transport_clean.csv") %>%
          visit_unit = case_when(unit == "million" ~ "million")) %>%
   select(-unit, -breakdown_of_domestic_tourism, -visit_unit) %>%
   filter(!is.na(spend_unit))
-write_csv(transport_spend, "clean_data/transport_visits.csv")
+write_csv(transport_spend, "clean_data/transport_spend.csv")
 rm(transport_spend)
 

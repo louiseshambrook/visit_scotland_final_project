@@ -207,7 +207,7 @@ rm(demographics_visits)
 demographics_spend <- read_csv("clean_data/demographics_clean.csv") %>%
   mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
          visit_unit = case_when(unit == "million" ~ "million")) %>%
-  select(-unit, -breakdown_of_domestic_tourism, -visit_unit) %>%
+  select(-unit, -breakdown_of_domestic_tourism, -visit_unit, -year) %>%
   filter(!is.na(spend_unit))
 write_csv(demographics_spend, "clean_data/demographics_spend.csv")
 rm(demographics_spend)

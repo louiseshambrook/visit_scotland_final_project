@@ -1,155 +1,155 @@
-year,value,age,marital_status,gender,employment_status,children,access_to_car,social_grade,visit_unit
-2013,22,45-54 years,All,All,All,All,All,All,million
-2013,58,All,All,Male,All,All,All,All,million
-2016,23,25-34 years,All,All,All,All,All,All,million
-2019,56,All,Not Married,All,All,All,All,All,million
-2015,52,All,Not Married,All,All,All,All,All,million
-2015,15,45-54 years,All,All,All,All,All,All,million
-2018,23,65 years and over,All,All,All,All,All,All,million
-2018,59,All,Not Married,All,All,All,All,All,million
-2014,73,All,Married,All,All,All,All,All,million
-2016,142,All,All,All,All,All,All,All,million
-2017,34,16-24 years,All,All,All,All,All,All,million
-2013,19,55-64 years,All,All,All,All,All,All,million
-2015,20,65 years and over,All,All,All,All,All,All,million
-2018,23,55-64 years,All,All,All,All,All,All,million
-2017,31,25-34 years,All,All,All,All,All,All,million
-2015,73,All,Married,All,All,All,All,All,million
-2018,30,25-34 years,All,All,All,All,All,All,million
-2017,82,All,Married,All,All,All,All,All,million
-2015,19,35-44 years,All,All,All,All,All,All,million
-2014,23,65 years and over,All,All,All,All,All,All,million
-2013,23,65 years and over,All,All,All,All,All,All,million
-2013,18,35-44 years,All,All,All,All,All,All,million
-2013,21,25-34 years,All,All,All,All,All,All,million
-2014,47,All,All,All,All,All,All,AB,million
-2016,42,All,All,All,All,All,All,C1,million
-2014,18,45-54 years,All,All,All,All,All,All,million
-2018,45,All,All,All,All,All,All,AB,million
-2018,28,16-24 years,All,All,All,All,All,All,million
-2013,75,All,Married,All,All,All,All,All,million
-2018,79,All,Married,All,All,All,All,All,million
-2015,20,55-64 years,All,All,All,All,All,All,million
-2014,21,35-44 years,All,All,All,All,All,All,million
-2015,25,25-34 years,All,All,All,All,All,All,million
-2019,78,All,Married,All,All,All,All,All,million
-2017,20,45-54 years,All,All,All,All,All,All,million
-2015,124,All,All,All,All,All,All,All,million
-2019,25,16-24 years,All,All,All,All,All,All,million
-2014,18,25-34 years,All,All,All,All,All,All,million
-2014,23,55-64 years,All,All,All,All,All,All,million
-2013,48,All,Not Married,All,All,All,All,All,million
-2019,24,65 years and over,All,All,All,All,All,All,million
-2019,20,35-44 years,All,All,All,All,All,All,million
-2015,62,All,All,Female,All,All,All,All,million
-2019,23,55-64 years,All,All,All,All,All,All,million
-2016,26,55-64 years,All,All,All,All,All,All,million
-2014,54,All,Not Married,All,All,All,All,All,million
-2017,69,All,Not Married,All,All,All,All,All,million
-2016,57,All,Not Married,All,All,All,All,All,million
-2016,25,35-44 years,All,All,All,All,All,All,million
-2013,124,All,All,All,All,All,All,All,million
-2016,28,65 years and over,All,All,All,All,All,All,million
-2016,17,45-54 years,All,All,All,All,All,All,million
-2019,27,All,All,All,All,All,All,C2,million
-2014,127,All,All,All,All,All,All,All,million
-2018,40,All,All,All,All,All,All,C1,million
-2014,67,All,All,Female,All,All,All,All,million
-2015,46,All,All,All,All,All,All,C1,million
-2013,66,All,All,Female,All,All,All,All,million
-2017,20,35-44 years,All,All,All,All,All,All,million
-2016,24,16-24 years,All,All,All,All,All,All,million
-2016,62,All,All,Male,All,All,All,All,million
-2017,151,All,All,All,All,All,All,All,million
-2018,29,All,All,All,All,All,All,C2,million
-2017,73,All,All,Male,All,All,All,All,million
-2017,78,All,All,Female,All,All,All,All,million
-2014,61,All,All,Male,All,All,All,All,million
-2016,25,All,All,All,All,All,All,DE,million
-2013,40,All,All,All,All,All,All,C1,million
-2013,22,All,All,All,All,All,All,DE,million
-2019,35,All,All,All,All,All,All,DE,million
-2018,70,All,All,Female,All,All,All,All,million
-2017,31,All,All,All,All,All,All,C2,million
-2016,80,All,All,Female,All,All,All,All,million
-2019,36,All,All,All,All,All,All,AB,million
-2018,68,All,All,Male,All,All,All,All,million
-2014,22,All,All,All,All,All,All,DE,million
-2015,19,All,All,All,All,All,All,DE,million
-2017,29,All,All,All,All,All,All,DE,million
-2017,107,All,All,All,All,No - Children,All,All,million
-2018,97,All,All,All,All,No - Children,All,All,million
-2018,138,All,All,All,All,All,All,All,million
-2018,18,35-44 years,All,All,All,All,All,All,million
-2018,17,45-54 years,All,All,All,All,All,All,million
-2013,92,All,All,All,All,No - Children,All,All,million
-2016,108,All,All,All,All,No - Children,All,All,million
-2015,92,All,All,All,All,No - Children,All,All,million
-2014,96,All,All,All,All,No - Children,All,All,million
-2017,24,55-64 years,All,All,All,All,All,All,million
-2015,62,All,All,Male,All,All,All,All,million
-2019,62,All,All,Male,All,All,All,All,million
-2014,18,All,All,All,All,All,All,C2,million
-2016,25,All,All,All,All,All,All,C2,million
-2013,32,All,All,All,All,Yes - Children,All,All,million
-2018,41,All,All,All,All,Yes - Children,All,All,million
-2017,23,65 years and over,All,All,All,All,All,All,million
-2019,134,All,All,All,All,All,All,All,million
-2019,17,45-54 years,All,All,All,All,All,All,million
-2014,24,16-24 years,All,All,All,All,All,All,million
-2019,71,All,All,Female,All,All,All,All,million
-2019,25,25-34 years,All,All,All,All,All,All,million
-2013,22,16-24 years,All,All,All,All,All,All,million
-2013,23,All,All,All,All,All,All,C2,million
-2015,16,All,All,All,All,All,All,C2,million
-2015,27,16-24 years,All,All,All,All,All,All,million
-2016,85,All,Married,All,All,All,All,All,million
-2019,36,All,All,All,All,All,All,C1,million
-2017,42,All,All,All,All,All,All,C1,million
-2019,43,All,All,All,All,Yes - Children,All,All,million
-2015,32,All,All,All,All,Yes - Children,All,All,million
-2014,41,All,All,All,All,All,All,C1,million
-2013,39,All,All,All,All,All,All,AB,million
-2015,44,All,All,All,All,All,All,AB,million
-2016,50,All,All,All,All,All,All,AB,million
-2017,44,All,All,All,All,Yes - Children,All,All,million
-2017,50,All,All,All,All,All,All,AB,million
-2018,24,All,All,All,All,All,All,DE,million
-2019,91,All,All,All,All,No - Children,All,All,million
-2016,34,All,All,All,All,Yes - Children,All,All,million
-2014,31,All,All,All,All,Yes - Children,All,All,million
-2013,24,All,All,All,All,All,No access to car (0),All,million
-2015,30,All,All,All,All,All,No access to car (0),All,million
-2017,24,All,All,All,All,All,No access to car (0),All,million
-2018,23,All,All,All,All,All,No access to car (0),All,million
-2019,110,All,All,All,All,All,Access to car (1+),All,million
-2015,95,All,All,All,All,All,Access to car (1+),All,million
-2014,101,All,All,All,All,All,Access to car (1+),All,million
-2013,100,All,All,All,All,All,Access to car (1+),All,million
-2016,22,All,All,All,All,All,No access to car (0),All,million
-2019,23,All,All,All,All,All,No access to car (0),All,million
-2014,26,All,All,All,All,All,No access to car (0),All,million
-2018,115,All,All,All,All,All,Access to car (1+),All,million
-2016,120,All,All,All,All,All,Access to car (1+),All,million
-2017,127,All,All,All,All,All,Access to car (1+),All,million
-2019,14,All,All,All,In full or part time education,All,All,All,million
-2016,17,All,All,All,In full or part time education,All,All,All,million
-2014,11,All,All,All,In full or part time education,All,All,All,million
-2018,15,All,All,All,In full or part time education,All,All,All,million
-2013,13,All,All,All,In full or part time education,All,All,All,million
-2017,16,All,All,All,In full or part time education,All,All,All,million
-2015,14,All,All,All,In full or part time education,All,All,All,million
-2017,88,All,All,All,Employed/self-employed (full or part time),All,All,All,million
-2019,74,All,All,All,Employed/self-employed (full or part time),All,All,All,million
-2018,77,All,All,All,Employed/self-employed (full or part time),All,All,All,million
-2015,67,All,All,All,Employed/self-employed (full or part time),All,All,All,million
-2016,78,All,All,All,Employed/self-employed (full or part time),All,All,All,million
-2014,72,All,All,All,Employed/self-employed (full or part time),All,All,All,million
-2013,68,All,All,All,Employed/self-employed (full or part time),All,All,All,million
-2017,16,All,All,All,Unemployed/not working,All,All,All,million
-2014,11,All,All,All,Unemployed/not working,All,All,All,million
-2019,17,All,All,All,Unemployed/not working,All,All,All,million
-2018,15,All,All,All,Unemployed/not working,All,All,All,million
-2015,15,All,All,All,Unemployed/not working,All,All,All,million
-2013,46,All,All,All,Unemployed/not working,All,All,All,million
-2016,11,All,All,All,Unemployed/not working,All,All,All,million
+value,age,marital_status,gender,employment_status,children,access_to_car,social_grade,visit_unit
+22,45-54 years,All,All,All,All,All,All,million
+58,All,All,Male,All,All,All,All,million
+23,25-34 years,All,All,All,All,All,All,million
+56,All,Not Married,All,All,All,All,All,million
+52,All,Not Married,All,All,All,All,All,million
+15,45-54 years,All,All,All,All,All,All,million
+23,65 years and over,All,All,All,All,All,All,million
+59,All,Not Married,All,All,All,All,All,million
+73,All,Married,All,All,All,All,All,million
+142,All,All,All,All,All,All,All,million
+34,16-24 years,All,All,All,All,All,All,million
+19,55-64 years,All,All,All,All,All,All,million
+20,65 years and over,All,All,All,All,All,All,million
+23,55-64 years,All,All,All,All,All,All,million
+31,25-34 years,All,All,All,All,All,All,million
+73,All,Married,All,All,All,All,All,million
+30,25-34 years,All,All,All,All,All,All,million
+82,All,Married,All,All,All,All,All,million
+19,35-44 years,All,All,All,All,All,All,million
+23,65 years and over,All,All,All,All,All,All,million
+23,65 years and over,All,All,All,All,All,All,million
+18,35-44 years,All,All,All,All,All,All,million
+21,25-34 years,All,All,All,All,All,All,million
+47,All,All,All,All,All,All,AB,million
+42,All,All,All,All,All,All,C1,million
+18,45-54 years,All,All,All,All,All,All,million
+45,All,All,All,All,All,All,AB,million
+28,16-24 years,All,All,All,All,All,All,million
+75,All,Married,All,All,All,All,All,million
+79,All,Married,All,All,All,All,All,million
+20,55-64 years,All,All,All,All,All,All,million
+21,35-44 years,All,All,All,All,All,All,million
+25,25-34 years,All,All,All,All,All,All,million
+78,All,Married,All,All,All,All,All,million
+20,45-54 years,All,All,All,All,All,All,million
+124,All,All,All,All,All,All,All,million
+25,16-24 years,All,All,All,All,All,All,million
+18,25-34 years,All,All,All,All,All,All,million
+23,55-64 years,All,All,All,All,All,All,million
+48,All,Not Married,All,All,All,All,All,million
+24,65 years and over,All,All,All,All,All,All,million
+20,35-44 years,All,All,All,All,All,All,million
+62,All,All,Female,All,All,All,All,million
+23,55-64 years,All,All,All,All,All,All,million
+26,55-64 years,All,All,All,All,All,All,million
+54,All,Not Married,All,All,All,All,All,million
+69,All,Not Married,All,All,All,All,All,million
+57,All,Not Married,All,All,All,All,All,million
+25,35-44 years,All,All,All,All,All,All,million
+124,All,All,All,All,All,All,All,million
+28,65 years and over,All,All,All,All,All,All,million
+17,45-54 years,All,All,All,All,All,All,million
+27,All,All,All,All,All,All,C2,million
+127,All,All,All,All,All,All,All,million
+40,All,All,All,All,All,All,C1,million
+67,All,All,Female,All,All,All,All,million
+46,All,All,All,All,All,All,C1,million
+66,All,All,Female,All,All,All,All,million
+20,35-44 years,All,All,All,All,All,All,million
+24,16-24 years,All,All,All,All,All,All,million
+62,All,All,Male,All,All,All,All,million
+151,All,All,All,All,All,All,All,million
+29,All,All,All,All,All,All,C2,million
+73,All,All,Male,All,All,All,All,million
+78,All,All,Female,All,All,All,All,million
+61,All,All,Male,All,All,All,All,million
+25,All,All,All,All,All,All,DE,million
+40,All,All,All,All,All,All,C1,million
+22,All,All,All,All,All,All,DE,million
+35,All,All,All,All,All,All,DE,million
+70,All,All,Female,All,All,All,All,million
+31,All,All,All,All,All,All,C2,million
+80,All,All,Female,All,All,All,All,million
+36,All,All,All,All,All,All,AB,million
+68,All,All,Male,All,All,All,All,million
+22,All,All,All,All,All,All,DE,million
+19,All,All,All,All,All,All,DE,million
+29,All,All,All,All,All,All,DE,million
+107,All,All,All,All,No - Children,All,All,million
+97,All,All,All,All,No - Children,All,All,million
+138,All,All,All,All,All,All,All,million
+18,35-44 years,All,All,All,All,All,All,million
+17,45-54 years,All,All,All,All,All,All,million
+92,All,All,All,All,No - Children,All,All,million
+108,All,All,All,All,No - Children,All,All,million
+92,All,All,All,All,No - Children,All,All,million
+96,All,All,All,All,No - Children,All,All,million
+24,55-64 years,All,All,All,All,All,All,million
+62,All,All,Male,All,All,All,All,million
+62,All,All,Male,All,All,All,All,million
+18,All,All,All,All,All,All,C2,million
+25,All,All,All,All,All,All,C2,million
+32,All,All,All,All,Yes - Children,All,All,million
+41,All,All,All,All,Yes - Children,All,All,million
+23,65 years and over,All,All,All,All,All,All,million
+134,All,All,All,All,All,All,All,million
+17,45-54 years,All,All,All,All,All,All,million
+24,16-24 years,All,All,All,All,All,All,million
+71,All,All,Female,All,All,All,All,million
+25,25-34 years,All,All,All,All,All,All,million
+22,16-24 years,All,All,All,All,All,All,million
+23,All,All,All,All,All,All,C2,million
+16,All,All,All,All,All,All,C2,million
+27,16-24 years,All,All,All,All,All,All,million
+85,All,Married,All,All,All,All,All,million
+36,All,All,All,All,All,All,C1,million
+42,All,All,All,All,All,All,C1,million
+43,All,All,All,All,Yes - Children,All,All,million
+32,All,All,All,All,Yes - Children,All,All,million
+41,All,All,All,All,All,All,C1,million
+39,All,All,All,All,All,All,AB,million
+44,All,All,All,All,All,All,AB,million
+50,All,All,All,All,All,All,AB,million
+44,All,All,All,All,Yes - Children,All,All,million
+50,All,All,All,All,All,All,AB,million
+24,All,All,All,All,All,All,DE,million
+91,All,All,All,All,No - Children,All,All,million
+34,All,All,All,All,Yes - Children,All,All,million
+31,All,All,All,All,Yes - Children,All,All,million
+24,All,All,All,All,All,No access to car (0),All,million
+30,All,All,All,All,All,No access to car (0),All,million
+24,All,All,All,All,All,No access to car (0),All,million
+23,All,All,All,All,All,No access to car (0),All,million
+110,All,All,All,All,All,Access to car (1+),All,million
+95,All,All,All,All,All,Access to car (1+),All,million
+101,All,All,All,All,All,Access to car (1+),All,million
+100,All,All,All,All,All,Access to car (1+),All,million
+22,All,All,All,All,All,No access to car (0),All,million
+23,All,All,All,All,All,No access to car (0),All,million
+26,All,All,All,All,All,No access to car (0),All,million
+115,All,All,All,All,All,Access to car (1+),All,million
+120,All,All,All,All,All,Access to car (1+),All,million
+127,All,All,All,All,All,Access to car (1+),All,million
+14,All,All,All,In full or part time education,All,All,All,million
+17,All,All,All,In full or part time education,All,All,All,million
+11,All,All,All,In full or part time education,All,All,All,million
+15,All,All,All,In full or part time education,All,All,All,million
+13,All,All,All,In full or part time education,All,All,All,million
+16,All,All,All,In full or part time education,All,All,All,million
+14,All,All,All,In full or part time education,All,All,All,million
+88,All,All,All,Employed/self-employed (full or part time),All,All,All,million
+74,All,All,All,Employed/self-employed (full or part time),All,All,All,million
+77,All,All,All,Employed/self-employed (full or part time),All,All,All,million
+67,All,All,All,Employed/self-employed (full or part time),All,All,All,million
+78,All,All,All,Employed/self-employed (full or part time),All,All,All,million
+72,All,All,All,Employed/self-employed (full or part time),All,All,All,million
+68,All,All,All,Employed/self-employed (full or part time),All,All,All,million
+16,All,All,All,Unemployed/not working,All,All,All,million
+11,All,All,All,Unemployed/not working,All,All,All,million
+17,All,All,All,Unemployed/not working,All,All,All,million
+15,All,All,All,Unemployed/not working,All,All,All,million
+15,All,All,All,Unemployed/not working,All,All,All,million
+46,All,All,All,Unemployed/not working,All,All,All,million
+11,All,All,All,Unemployed/not working,All,All,All,million

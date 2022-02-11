@@ -64,7 +64,7 @@ year,value,unit,breakdown_of_domestic_tourism,activity_type
 2016,806,million (£),Expenditure,Day out
 2018,87,million (£),Expenditure,Day out (spa)
 2019,443,million (£),Expenditure,Visitor attraction
-2013,474,million (£),Expenditure,Entertainment - cinema
+2013,474,million (£),Expenditure,Entertainment - cinema etc.
 2017,252,million (£),Expenditure,Day out (spa)
 2019,341,million (£),Expenditure,Day out (spa)
 2018,467,million (£),Expenditure,Visitor attraction
@@ -98,18 +98,18 @@ year,value,unit,breakdown_of_domestic_tourism,activity_type
 2014,5020,million (£),Expenditure,Other
 2019,1841,million (£),Expenditure,Visit family/friends
 2014,462,million (£),Expenditure,Visitor attraction
-2014,469,million (£),Expenditure,Entertainment - cinema
-2018,577,million (£),Expenditure,Entertainment - cinema
+2014,469,million (£),Expenditure,Entertainment - cinema etc.
+2018,577,million (£),Expenditure,Entertainment - cinema etc.
 2016,378,million (£),Expenditure,Visitor attraction
 2016,330,million (£),Expenditure,Day trip - leisure
-2015,593,million (£),Expenditure,Entertainment - cinema
-2019,620,million (£),Expenditure,Entertainment - cinema
+2015,593,million (£),Expenditure,Entertainment - cinema etc.
+2019,620,million (£),Expenditure,Entertainment - cinema etc.
 2016,1158,million (£),Expenditure,Visit family/friends
 2015,1186,million (£),Expenditure,Visit family/friends
 2018,1959,million (£),Expenditure,Eating out
 2014,1376,million (£),Expenditure,Visit family/friends
-2017,903,million (£),Expenditure,Entertainment - cinema
-2016,604,million (£),Expenditure,Entertainment - cinema
+2017,903,million (£),Expenditure,Entertainment - cinema etc.
+2016,604,million (£),Expenditure,Entertainment - cinema etc.
 2018,1698,million (£),Expenditure,Visit family/friends
 2013,11,million,Visits,Visitor attraction
 2013,6,million,Visits,Leisure activity
@@ -125,10 +125,10 @@ year,value,unit,breakdown_of_domestic_tourism,activity_type
 2016,9,million,Visits,Leisure activity
 2015,11,million,Visits,Visitor attraction
 2014,8,million,Visits,Leisure activity
-2017,15,million,Visits,Entertainment - cinema
+2017,15,million,Visits,Entertainment - cinema etc.
 2016,12,million,Visits,Day trip - leisure
-2014,12,million,Visits,Entertainment - cinema
-2013,11,million,Visits,Entertainment - cinema
+2014,12,million,Visits,Entertainment - cinema etc.
+2013,11,million,Visits,Entertainment - cinema etc.
 2014,10,million,Visits,Day trip - leisure
 2013,9,million,Visits,Day trip - leisure
 2015,9,million,Visits,Day trip - leisure
@@ -137,7 +137,7 @@ year,value,unit,breakdown_of_domestic_tourism,activity_type
 2019,5,million,Visits,Day out (spa)
 2015,2,million,Visits,Day out (spa)
 2014,2,million,Visits,Day out (spa)
-2018,13,million,Visits,Entertainment - cinema
+2018,13,million,Visits,Entertainment - cinema etc.
 2017,4,million,Visits,Day out (spa)
 2019,9,million,Visits,Day trip - leisure
 2015,19,million,Visits,Night out
@@ -197,7 +197,7 @@ year,value,unit,breakdown_of_domestic_tourism,activity_type
 2013,22,million,Visits,Outdoor leisure activity
 2016,44,million,Visits,Visit family/friends
 2019,33,million,Visits,Eating out
-2019,13,million,Visits,Entertainment - cinema
+2019,13,million,Visits,Entertainment - cinema etc.
 2017,6,million,Visits,Attend personal event
 2015,46,million,Visits,Visit family/friends
 2013,41,million,Visits,Visit family/friends
@@ -205,9 +205,9 @@ year,value,unit,breakdown_of_domestic_tourism,activity_type
 2018,9,million,Visits,Leisure activity
 2014,11,million,Visits,Visitor attraction
 2016,13,million,Visits,Visitor attraction
-2016,13,million,Visits,Entertainment - cinema
+2016,13,million,Visits,Entertainment - cinema etc.
 2017,9,million,Visits,Leisure activity
-2015,12,million,Visits,Entertainment - cinema
+2015,12,million,Visits,Entertainment - cinema etc.
 2019,11,million,Visits,Leisure activity
 2014,127,million,Visits,Other
 2013,124,million,Visits,Other

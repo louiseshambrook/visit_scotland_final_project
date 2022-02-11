@@ -219,8 +219,8 @@ location_visits <- read_csv("clean_data/location_clean.csv") %>%
          visit_unit = case_when(unit == "million" ~ "million")) %>%
   select(-unit, -breakdown_of_domestic_tourism, -spend_unit) %>%
   filter(!is.na(visit_unit))
-write_csv(location_vists, "clean_data/location_vists.csv")
-rm(location_vists)
+write_csv(location_visits, "clean_data/location_visits.csv")
+rm(location_visits)
 
 location_spend <- read_csv("clean_data/location_clean.csv") %>% 
   mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
@@ -240,11 +240,11 @@ transport_visits <- read_csv("clean_data/transport_clean.csv") %>%
 write_csv(transport_visits, "clean_data/transport_visits.csv")
 rm(transport_visits)
 
-transort_spend <- read_csv("clean_data/transport_clean.csv") %>%
+transport_spend <- read_csv("clean_data/transport_clean.csv") %>%
   mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
          visit_unit = case_when(unit == "million" ~ "million")) %>%
   select(-unit, -breakdown_of_domestic_tourism, -visit_unit) %>%
   filter(!is.na(spend_unit))
-write_csv(transport_visits, "clean_data/transport_visits.csv")
-rm(transport_visits)
+write_csv(transport_spend, "clean_data/transport_visits.csv")
+rm(transport_spend)
 

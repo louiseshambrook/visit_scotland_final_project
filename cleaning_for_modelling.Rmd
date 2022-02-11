@@ -1,0 +1,28 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Data cleaning for predictive modelling in python
+
+Reading in scripts
+```{r}
+library(tidyverse)
+library(janitor)
+library(lubridate)
+```
+
+
+Reading in cleaned data
+```{r}
+activities <- read_csv("clean_data/activities_clean.csv")
+demographics <- read_csv("clean_data/demographics_clean.csv")
+location <- read_csv("clean_data/location_clean.csv")
+transport <- read_csv("clean_data/transport_clean.csv")
+```
+
+Cleaning activities dataset
+```{r}
+
+```
+

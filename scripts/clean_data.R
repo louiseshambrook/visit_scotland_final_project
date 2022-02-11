@@ -190,7 +190,13 @@ activities_spend <- read_csv("clean_data/activities_clean.csv") %>%
   mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
          visit_unit = case_when(unit == "million" ~ "million")) %>%
   select(-unit, -breakdown_of_domestic_tourism, -visit_unit, -year) %>%
-  filter(!is.na(spend_unit)) %>%
+  filter(!is.na(spend_unit),
+         activity_type!= "Other")
+write_csv(activities_spend, "clean_data/activities_spend.csv")
+rm(activities_spend)
+
+# secondary cleaning script
+activities_spend_simplified <- read_csv("clean_data/activities_spend.csv") %>%
   mutate(activity_type = case_when(activity_type == "Shopping" ~ "Shopping",
                                    activity_type == "Watch live sports" ~ "Live entertainment",
                                    activity_type == "Attend public event" ~ "Live entertainment",
@@ -205,11 +211,9 @@ activities_spend <- read_csv("clean_data/activities_clean.csv") %>%
                                    activity_type == "Visitor attraction" ~ "Visit attraction",
                                    activity_type == "Entertainment - cinema etc." ~ "Evening out",
                                    activity_type == "Day trip - leisure" ~ "Day out",
-                                   activity_type == "Visit family/friends" ~ "Visit family/friends",
-                                   activity_type == "Other" ~ "Other")) %>%
-  filter(activity_type!= "Other")
-write_csv(activities_spend, "clean_data/activities_spend.csv")
-rm(activities_spend)
+                                   activity_type == "Visit family/friends" ~ "Visit family/friends"))
+write_csv(activities_spend_simplified, "clean_data/activities_spend_simplified.csv")
+rm(activities_spend_simplified)
 
 
 # demographics

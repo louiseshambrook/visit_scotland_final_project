@@ -174,3 +174,6 @@ regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv") %>%
 write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
 rm(regional_domestic)
 
+
+# scripts for cleaning data for modelling --------------------------------------
+

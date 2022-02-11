@@ -51,6 +51,33 @@ demographics_spend <- demographics %>%
   filter(!is.na(spend_unit))
 ```
 
+```{r}
+location_vists <- location %>% 
+  mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
+         visit_unit = case_when(unit == "million" ~ "million")) %>%
+  select(-unit, -breakdown_of_domestic_tourism, -spend_unit) %>%
+  filter(!is.na(visit_unit))
+
+location_spend <- location %>% 
+  mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
+         visit_unit = case_when(unit == "million" ~ "million")) %>%
+  select(-unit, -breakdown_of_domestic_tourism, -visit_unit) %>%
+  filter(!is.na(spend_unit))
+```
+
+```{r}
+transport_visits <- transport %>%
+  mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
+         visit_unit = case_when(unit == "million" ~ "million")) %>%
+  select(-unit, -breakdown_of_domestic_tourism, -spend_unit) %>%
+  filter(!is.na(visit_unit))
+
+transort_spend <- transport %>%
+  mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
+         visit_unit = case_when(unit == "million" ~ "million")) %>%
+  select(-unit, -breakdown_of_domestic_tourism, -visit_unit) %>%
+  filter(!is.na(spend_unit))
+```
 
 
 

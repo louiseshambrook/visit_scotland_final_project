@@ -727,40 +727,36 @@ write_csv(activities_spend, "clean_data/activities_spend.csv")
 rm(activities_spend)
 ```
 
-```{r}
-# testing out time series
+- before asking for help, try:
+add a surrogate key to each datasset using
+mutate()
+row_numbe()
 
-activities %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
-  group_by(year) %>%
-  summarise(total_per_year = sum(value)) %>%
-  plot()
-
-
-demographics %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
-  group_by(year) %>%
-  summarise(total_per_year = sum(value))
-
-location %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
-  group_by(year) %>%
-  summarise(total_per_year = sum(value))
-
-transport %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
-  group_by(year) %>%
-  summarise(total_per_year = sum(value))
-
-plot(demographics)
-
-```
+(possibly delete the previous datasets I create for python)
 
 ```{r}
+activities_test_two <- activities %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  mutate(activity_id = row_number()) %>%
+  relocate(activity_id, .before = year) %>%
+  select(activity_id, year, value, activity_type) %>%
+  group_by(year, activity_type) %>%
+  summarise(income_per_year = sum(value))
 
+transport_test_two <- transport %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  mutate(transport_id = row_number()) %>%
+  relocate(transport_id, .before = year) %>%
+  select(transport_id, year, value, travel_type) %>%
+  group_by(year, travel_type) %>%
+  mutate(income_per_year = sum(value)) 
+
+joined_table <- inner_join(activities_test_two, transport_test_two, by = "year")
+
+joined_table %>%
+  group_by(year, activity_type, travel_type) %>%
+  summarise(income_per_year = sum(value.x))
 ```
-
-
 
 
 ### Conclusions

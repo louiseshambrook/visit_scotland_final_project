@@ -758,6 +758,57 @@ joined_table %>%
   summarise(income_per_year = sum(value.x))
 ```
 
+Another idea I had, was adding together income
+this may be duplicate values - but still?
+```{r}
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  group_by(year) %>%
+  summarise(total_income_per_year = sum(value))
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  group_by(year) %>%
+  summarise(total_income_per_year = sum(value))
+
+location %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  group_by(year) %>%
+  summarise(total_income_per_year = sum(value))
+```
+Continuing on from this idea
+I will focus on activities and location, just to make my life easier
+It seems like I could shape the data to join it, i.e. location has 8 observations per year, and activities has 16
+So I can either
+Double up (which is what I don't want to do)
+Or I can go the other way, that I considered, and join them together into 8, so they *should* join together nicely?
+
+First, I'll check for how many observations there are per year
+```{r}
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & year == "2019")
+
+location %>%
+    filter(breakdown_of_domestic_tourism == "Expenditure" & year == "2019")
+```
+Checking through all the years, there are indeed 8 and 16.
+
+So, these are the steps I will do.
+
+1. stick to activities and location
+2. change the cleaning of location back to differentiate between the seasides
+3. mutate the activity down to 8 types
+4. join them together, by year
+5. add the values together
+6. complete a linear regression
+
+
+
+```{r}
+
+```
+
+
 
 ### Conclusions
 

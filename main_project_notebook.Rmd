@@ -699,34 +699,7 @@ NOTE TO SELF - I should dig into the individual datasets and see if there are an
 
 ## Plot set # 8 - How to predict change (TO BE ADDED)
 
-```{r}
-# cleaning activities again
-activities_spend <- read_csv("clean_data/activities_clean.csv") %>%
-  mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
-         visit_unit = case_when(unit == "million" ~ "million")) %>%
-  select(-unit, -breakdown_of_domestic_tourism, -visit_unit, -year) %>%
-  filter(!is.na(spend_unit)) %>%
-  mutate(activity_type = case_when(activity_type == "Shopping" ~ "Shopping",
-                                   activity_type == "Watch live sports" ~ "Live entertainment",
-                                   activity_type == "Attend public event" ~ "Live entertainment",
-                                   activity_type == "Attend personal event" ~ "Attend personal event",
-                                   activity_type == "Night out" ~ "Evening out",
-                                   activity_type == "Eat out" ~ "Evening out",
-                                   activity_type == "Leisure activity" ~ "Leisure activity",
-                                   activity_type == "Sports participation" ~ "Leisure activity",
-                                   activity_type == "Outdoor leisure activity" ~ "Leisure activity",
-                                   activity_type == "Day out (spa)" ~ "Day out",
-                                   activity_type == "Day out" ~ "Day out",
-                                   activity_type == "Visitor attraction" ~ "Visit attraction",
-                                   activity_type == "Entertainment - cinema etc." ~ "Evening out",
-                                   activity_type == "Day trip - leisure" ~ "Day out",
-                                   activity_type == "Visit family/friends" ~ "Visit family/friends",
-                                   activity_type == "Other" ~ "Other")) %>%
-  filter(activity_type!= "Other")
-write_csv(activities_spend, "clean_data/activities_spend.csv")
-rm(activities_spend)
-```
-
+### - Preparing data for modelling notes
 - before asking for help, try:
 add a surrogate key to each datasset using
 mutate()
@@ -802,43 +775,9 @@ So, these are the steps I will do.
 5. add the values together
 6. complete a linear regression in R
 
-```{r}
-# to undo it truly, I have to read in the raw data.
-
-location_redone <- read_csv("raw_data/tourism_day_visits_location.csv") %>%
-  clean_names() %>%
-  select(-feature_code, -measurement) %>%
-  rename(year = "date_code",
-         unit = "units") %>%
-  mutate(type_of_location_visited = 
-           case_when(type_of_location_visited == "City/large town"
-                     ~ "City/large town",
-                     type_of_location_visited == "Rural countryside"
-                     ~ "Rural countryside",
-                     type_of_location_visited == "Seaside - beach" ~ "Seaside - beach",
-                     type_of_location_visited == "Seaside - other" ~ "Seaside - other",
-                     type_of_location_visited == "Seaside resort or town"
-                     ~ "Seaside resort or town",
-                     type_of_location_visited == "Small town" ~ "Small town",
-                     type_of_location_visited == "Village" ~ "Village",
-                     type_of_location_visited == "All areas" ~ "Other")) %>%
-  mutate(unit = ifelse(unit == "million pounds (GBP)",
-                       "million (£)", "million")) %>%
-  relocate(value, .after = year) %>%
-  relocate(breakdown_of_domestic_tourism, .after = unit)
-
-location_redone <- location_redone %>%
-  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
-  arrange(year)
-
-```
 
 ```{r}
-
-```
-
-
-```{r}
+# cleaning data to join - test
 activities_redone <- activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   mutate(activity_type = case_when(activity_type == "Shopping" ~ "Shopping",
@@ -861,10 +800,7 @@ activities_redone <- activities %>%
 ```
 
 ```{r}
-activities_redone
-
-location_redone
-
+# test join dataset
 joined_set <- inner_join(activities_redone, location_redone, by = "year")
 
 joined_set %>%
@@ -882,7 +818,12 @@ I think I'm going to do it again, for the last time, with some differences.
 I will also ultimately need to repeat this with visits.
 
 ```{r}
-location_redone <- location_redone %>%
+# cleaning data again before modelling
+location_spend <- read_csv("raw_data/tourism_day_visits_location.csv") %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units") %>%
   mutate(type_of_location_visited = 
            case_when(type_of_location_visited == "City/large town"
                      ~ "City/large town",
@@ -894,11 +835,16 @@ location_redone <- location_redone %>%
                      ~ "Seaside",
                      type_of_location_visited == "Small town" ~ "Small town",
                      type_of_location_visited == "Village" ~ "Village",
-                     type_of_location_visited == "Other" ~ "Other")) %>%
+                     type_of_location_visited == "All areas" ~ "Other")) %>%
+  mutate(unit = ifelse(unit == "million pounds (GBP)",
+                       "million (£)", "million")) %>%
+  relocate(value, .after = year) %>%
+  relocate(breakdown_of_domestic_tourism, .after = unit) %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   group_by(year, type_of_location_visited) %>%
   summarise(total_sum_location = sum(value))  
   
-activities_redone <- activities %>%
+activities_spend <- activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   mutate(activity_type = case_when(activity_type == "Shopping" ~ "Leisure activity",
                                    activity_type == "Watch live sports" ~  "Entertainment",
@@ -921,22 +867,86 @@ activities_redone <- activities %>%
   summarise(total_sum_activity = sum(value))
 ```
 
+### Joined data for modelling
+
+This is what needs sanity checking
 ```{r}
-activities_redone
+spend_joined <- inner_join(activities_spend, location_spend, by = "year")
 
-location_redone
-
-joined_activities_location <- inner_join(activities_redone, location_redone, by = "year")
-
-joined_activities_location <- joined_activities_location %>%
+spend_joined <- spend_joined %>%
   relocate(total_sum_location, .before = type_of_location_visited)
 
-joined_activities_location %>%
+spend_joined  %>%
   group_by(type_of_location_visited) %>%
-  mutate(sum_per_activity_per_location = total_sum_activity + total_sum_location)
+  mutate(sum_spend_activity_per_location = total_sum_activity + total_sum_location) %>%
+  select(-total_sum_activity, -total_sum_location)
+
+```
+### Visits joined 
+
+I will repeat this process with vists - which should be a lot more straight forward, given that I have already done it with spend
+```{r}
+location_visits <- read_csv("raw_data/tourism_day_visits_location.csv") %>%
+  clean_names() %>%
+  select(-feature_code, -measurement) %>%
+  rename(year = "date_code",
+         unit = "units") %>%  
+  mutate(type_of_location_visited = 
+           case_when(type_of_location_visited == "City/large town"
+                     ~ "City/large town",
+                     type_of_location_visited == "Rural countryside"
+                     ~ "Rural countryside",
+                     type_of_location_visited == "Seaside - beach" ~ "Seaside",
+                     type_of_location_visited == "Seaside - other" ~ "Seaside",
+                     type_of_location_visited == "Seaside resort or town"
+                     ~ "Seaside",
+                     type_of_location_visited == "Small town" ~ "Small town",
+                     type_of_location_visited == "Village" ~ "Village",
+                     type_of_location_visited == "All areas" ~ "Other")) %>%
+  mutate(unit = ifelse(unit == "million pounds (GBP)",
+                       "million (£)", "million")) %>%
+  relocate(value, .after = year) %>%
+  relocate(breakdown_of_domestic_tourism, .after = unit) %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(year, type_of_location_visited) %>%
+  summarise(total_sum_location = sum(value))
+
+activities_visits <- activities %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  mutate(activity_type = case_when(activity_type == "Shopping" ~ "Leisure activity",
+                                   activity_type == "Watch live sports" ~  "Entertainment",
+                                   activity_type == "Night out" ~  "Evening out",
+                                   activity_type == "Attend personal event" ~ "Family/friends",
+                                   activity_type == "Leisure activity" ~ "Leisure activity",
+                                   activity_type == "Sports participation" ~ "Leisure activity",
+                                   activity_type == "Attend public event" ~ "Entertainment",
+                                   activity_type == "Eating out" ~  "Evening out",
+                                   activity_type == "Day out (spa)" ~ "Attraction/Day trip",
+                                   activity_type == "Outdoor leisure activity" ~ "Leisure activity",
+                                   activity_type == "Visitor attraction" ~  "Attraction/Day trip",
+                                   activity_type == "Day out" ~ "Attraction/Day trip",
+                                   activity_type == "Entertainment - cinema etc." ~  "Entertainment",
+                                   activity_type == "Day trip - leisure" ~  "Attraction/Day trip",
+                                   activity_type == "Visit family/friends" ~  "Family/friends",
+                                   activity_type == "Other" ~ "Other")) %>%
+  select(-unit, -breakdown_of_domestic_tourism) %>%
+  group_by(year, activity_type) %>%
+  summarise(total_sum_activity = sum(value))
 
 ```
 
+```{r}
+visits_joined <- inner_join(activities_visits, location_visits, by = "year")
+
+visits_joined <- visits_joined %>%
+  relocate(total_sum_location, .before = type_of_location_visited)
+
+visits_joined %>%
+  group_by(type_of_location_visited) %>%
+  mutate(sum_visits_activity_per_location = total_sum_activity + total_sum_location) %>%
+  select(-total_sum_activity, -total_sum_location)
+```
+### Repeating with transport, and adding this into the datasets
 
 
 ```{r}

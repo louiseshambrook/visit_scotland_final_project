@@ -869,14 +869,14 @@ activities_spend <- activities %>%
 
 ### Joined data for modelling
 
-This is what needs sanity checking
+This is what needs sanity checking - activities and location joined (spend)
 ```{r}
 spend_joined <- inner_join(activities_spend, location_spend, by = "year")
 
 spend_joined <- spend_joined %>%
   relocate(total_sum_location, .before = type_of_location_visited)
 
-spend_joined  %>%
+spend_joined <- spend_joined %>%
   group_by(type_of_location_visited) %>%
   mutate(sum_spend_activity_per_location = total_sum_activity + total_sum_location) %>%
   select(-total_sum_activity, -total_sum_location)
@@ -884,7 +884,7 @@ spend_joined  %>%
 ```
 ### Visits joined 
 
-I will repeat this process with vists - which should be a lot more straight forward, given that I have already done it with spend
+I will repeat this process with visits - which should be a lot more straight forward, given that I have already done it with spend
 ```{r}
 location_visits <- read_csv("raw_data/tourism_day_visits_location.csv") %>%
   clean_names() %>%
@@ -935,24 +935,101 @@ activities_visits <- activities %>%
 
 ```
 
+### Get this checked too!!
+activities and location joined (visits)
 ```{r}
 visits_joined <- inner_join(activities_visits, location_visits, by = "year")
 
 visits_joined <- visits_joined %>%
   relocate(total_sum_location, .before = type_of_location_visited)
 
-visits_joined %>%
+visits_joined <- visits_joined %>%
   group_by(type_of_location_visited) %>%
   mutate(sum_visits_activity_per_location = total_sum_activity + total_sum_location) %>%
   select(-total_sum_activity, -total_sum_location)
 ```
+
 ### Repeating with transport, and adding this into the datasets
 
-
 ```{r}
+# transport_spend
+transport_spend <- transport %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  mutate(travel_type = case_when(travel_type == "Bicycle" ~ "Walked/Bicycle",
+                                 travel_type == "Boat/Ship/Ferry" ~ "Boat/Ship/Ferry",
+                                 travel_type == "Bus" ~ "Public transport",
+                                 travel_type == "Car" ~ "Car/Caravan",
+                                 travel_type == "Caravan" ~ "Car/Caravan",
+                                 travel_type == "Lorry" ~ "Other",
+                                 travel_type == "Motorcycle" ~ "Motorcycle",
+                                 travel_type == "Other" ~ "Other",
+                                 travel_type == "Plane" ~ "Plane",
+                                 travel_type == "Taxi" ~ "Taxi",
+                                 travel_type == "Train" ~ "Public transport",
+                                 travel_type == "Tram" ~ "Public transport",
+                                 travel_type == "Tube" ~ "Public transport",
+                                 travel_type == "Walked" ~ "Walked/Bicycle",
+                                 travel_type == "Other" ~ "Other")) %>%
+  relocate(value, .after = year) %>%
+  relocate(breakdown_of_domestic_tourism, .after = unit) %>%
+  group_by(year, travel_type) %>%
+  summarise(total_sum_transport = sum(value))  
 
 ```
 
+Transport joined with activities and location (spend)
+```{r}
+# joining transport with the joined set
+
+spend_joined_transport <- spend_joined %>%
+  inner_join(transport_spend, by = "year") %>%
+  group_by(travel_type) %>%
+  mutate(sum_transport_per_activity_per_location = sum_spend_activity_per_location + total_sum_transport) %>%
+  select(-sum_spend_activity_per_location, -total_sum_transport)
+
+```
+
+```{r}
+# transport_visit
+transport_visit <- transport %>%
+  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  mutate(travel_type = case_when(travel_type == "Bicycle" ~ "Walked/Bicycle",
+                                 travel_type == "Boat/Ship/Ferry" ~ "Boat/Ship/Ferry",
+                                 travel_type == "Bus" ~ "Public transport",
+                                 travel_type == "Car" ~ "Car/Caravan",
+                                 travel_type == "Caravan" ~ "Car/Caravan",
+                                 travel_type == "Lorry" ~ "Other",
+                                 travel_type == "Motorcycle" ~ "Motorcycle",
+                                 travel_type == "Other" ~ "Other",
+                                 travel_type == "Plane" ~ "Plane",
+                                 travel_type == "Taxi" ~ "Taxi",
+                                 travel_type == "Train" ~ "Public transport",
+                                 travel_type == "Tram" ~ "Public transport",
+                                 travel_type == "Tube" ~ "Public transport",
+                                 travel_type == "Walked" ~ "Walked/Bicycle",
+                                 travel_type == "Other" ~ "Other")) %>%
+  relocate(value, .after = year) %>%
+  relocate(breakdown_of_domestic_tourism, .after = unit) %>%
+  group_by(year, travel_type) %>%
+  summarise(total_sum_transport = sum(value))  
+```
+
+
+Transport joined with activities and location (visits)
+```{r}
+# joining tranport with the visit dataset
+
+visits_joined_transport <- visits_joined %>%
+  inner_join(transport_spend, by = "year") %>%
+  group_by(travel_type) %>%
+  mutate(sum_transport_per_activity_per_location = sum_visits_activity_per_location + total_sum_transport) %>%
+  select(-sum_visits_activity_per_location, -total_sum_transport)
+
+```
+
+### Modelling
+
+I may now be ready to build models again - depending on if these datasets are okay?
 
 
 ### Conclusions

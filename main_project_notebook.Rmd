@@ -856,9 +856,7 @@ activities_redone <- activities %>%
                                    activity_type == "Entertainment - cinema etc." ~  "Live entertainment",
                                    activity_type == "Day trip - leisure" ~  "Day trip",
                                    activity_type == "Visit family/friends" ~  "Family/friends",
-                                   activity_type == "Other" ~ "Other")) %>%
-  group_by(activity_type) %>%
-  mutate(total_sum_activity = sum(value))
+                                   activity_type == "Other" ~ "Other")) 
 
 ```
 
@@ -871,6 +869,78 @@ joined_set <- inner_join(activities_redone, location_redone, by = "year")
 
 joined_set %>%
   arrange(year)
+```
+I think this is definitely the right track.
+
+I think I'm going to do it again, for the last time, with some differences.
+
+1. Undo my undoing. Make the locations smaller. For every choice/option there is, the dataset increases exponentially.
+2. The same with activities. I'll try to make it logical, rather than fit a certain size.
+3. I'm going to add in transport.
+4. When they have been joined, I will try to clean up the joined set, so that I can add the incomes together.
+
+I will also ultimately need to repeat this with visits.
+
+```{r}
+location_redone <- location_redone %>%
+  mutate(type_of_location_visited = 
+           case_when(type_of_location_visited == "City/large town"
+                     ~ "City/large town",
+                     type_of_location_visited == "Rural countryside"
+                     ~ "Rural countryside",
+                     type_of_location_visited == "Seaside - beach" ~ "Seaside",
+                     type_of_location_visited == "Seaside - other" ~ "Seaside",
+                     type_of_location_visited == "Seaside resort or town"
+                     ~ "Seaside",
+                     type_of_location_visited == "Small town" ~ "Small town",
+                     type_of_location_visited == "Village" ~ "Village",
+                     type_of_location_visited == "Other" ~ "Other")) %>%
+  group_by(year, type_of_location_visited) %>%
+  summarise(total_sum_location = sum(value))  
+  
+activities_redone <- activities %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+  mutate(activity_type = case_when(activity_type == "Shopping" ~ "Leisure activity",
+                                   activity_type == "Watch live sports" ~  "Entertainment",
+                                   activity_type == "Night out" ~  "Evening out",
+                                   activity_type == "Attend personal event" ~ "Family/friends",
+                                   activity_type == "Leisure activity" ~ "Leisure activity",
+                                   activity_type == "Sports participation" ~ "Leisure activity",
+                                   activity_type == "Attend public event" ~ "Entertainment",
+                                   activity_type == "Eating out" ~  "Evening out",
+                                   activity_type == "Day out (spa)" ~ "Attraction/Day trip",
+                                   activity_type == "Outdoor leisure activity" ~ "Leisure activity",
+                                   activity_type == "Visitor attraction" ~  "Attraction/Day trip",
+                                   activity_type == "Day out" ~ "Attraction/Day trip",
+                                   activity_type == "Entertainment - cinema etc." ~  "Entertainment",
+                                   activity_type == "Day trip - leisure" ~  "Attraction/Day trip",
+                                   activity_type == "Visit family/friends" ~  "Family/friends",
+                                   activity_type == "Other" ~ "Other")) %>%
+  select(-unit, -breakdown_of_domestic_tourism) %>%
+  group_by(year, activity_type) %>%
+  summarise(total_sum_activity = sum(value))
+```
+
+```{r}
+activities_redone
+
+location_redone
+
+joined_activities_location <- inner_join(activities_redone, location_redone, by = "year")
+
+joined_activities_location <- joined_activities_location %>%
+  relocate(total_sum_location, .before = type_of_location_visited)
+
+joined_activities_location %>%
+  group_by(type_of_location_visited) %>%
+  mutate(sum_per_activity_per_location = total_sum_activity + total_sum_location)
+
+```
+
+
+
+```{r}
+
 ```
 
 

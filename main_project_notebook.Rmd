@@ -485,15 +485,16 @@ NOTE - this is the one where it's broken down by percentage.
 # "What type of accomodation is most popular?"
 
 accomodation %>%
+  filter(occupancy_type != "Room Occupancy") %>%
   group_by(accommodation_type, occupancy_type) %>%
   summarise(popular_accomodation = sum(value)/100) %>%
-  ggplot(aes(x = accommodation_type, y = popular_accomodation, fill = occupancy_type)) +
-  geom_col(position = "dodge") +
+  ggplot(aes(x = accommodation_type, y = popular_accomodation, fill = "blue")) +
+  geom_col() +
   theme(legend.position = "none") +
   labs(x = "Type of accommodation",
        y = "Percentage",
-       title = "Types of accommodation by average occupancy 2013-2019")
-  # scale_fill_manual(values = "#af006e")
+       title = "Types of accommodation by average occupancy 2013-2019") +
+  scale_fill_manual(values = "#af006e")
   
 ```
 2012-2019; percentage occupancy.. ? hotel is by far the highest.
@@ -504,13 +505,18 @@ accomodation %>%
   group_by(location, accommodation_type) %>%
   summarise(popular_accomodation = sum(value)/100) %>%
   arrange(desc(popular_accomodation)) %>%
-  ggplot(aes(x = accommodation_type, y = popular_accomodation, fill = "blue")) +
-  geom_col() +
-  theme(legend.position = "none") +
+  ggplot(aes(x = accommodation_type, y = popular_accomodation, fill = accommodation_type)) +
+  geom_col(position = "dodge") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(x = "Type of accommodation",
        y = "Percentage",
-       title = "Types of accommodation by in urban areas 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+       title = "Types of accommodation by area 2013-2019") +
+  scale_fill_manual(values = c("Caravan & Camping Parks" = "#af006e",
+                               "Guest House/B&B" = "#af004e",
+                               "Hostels" = "#af006e",
+                               "Hotels" = "#af004e",
+                               "Self Catering" = "#af006e"))
+
 ```
 2019 data, from location set. When breaking down by location (as above), an interesting finding is that in the urban area, B&B's are just as popular as hotels. Maybe down to a certain B&B site?
 

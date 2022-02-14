@@ -397,7 +397,7 @@ transport %>%
   filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other") %>%
   group_by(travel_type) %>%
   summarise(total_visits = sum(value)) %>%
-  ggplot(aes(x = travel_type, y = total_visits, fill = "blue")) +
+  ggplot(aes(x = reorder(travel_type, -total_visits), y = total_visits, fill = "blue")) +
   geom_col() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "none") +
@@ -413,14 +413,17 @@ These are the sum of million visits in 2019, where visitors reported travelling 
 ```{r}
 demographics %>%
   filter(access_to_car != "All" & breakdown_of_domestic_tourism == "Visits") %>%
-  ggplot(aes(x = year, y = value, fill = access_to_car)) +
-  geom_col(position = "dodge") +
+  group_by(access_to_car) %>%
+  summarise(total_car = sum(value)) %>%
+  ggplot(aes(x = access_to_car, y = total_car, fill = "blue")) +
+  geom_col() +
+  theme(legend.position = "none") +
   labs(x = "Year",
        y = "Total visits (million)",
-       title = "Total visits by demographic 2013-2019",
+       title = "Visits by demographic (access to car) 2013-2019",
        fill = "Access to car") +
-  scale_fill_manual(values = c("Access to car (1+)" = "#6B085E",
-                               "No access to car (0)" = "#905E88"))
+  scale_fill_manual(values = "#6B085E")
+
 ```
 This is underpinned by the finding that across the the (unit) million visits between 2013 and 2019, the majority of visitors report having access to a car.
 
@@ -776,7 +779,36 @@ NOTE TO SELF - I should dig into the individual datasets and see if there are an
 
 ### Summary / descriptive statistics for the presentation
 
-Slide 4 - total car users (visits)
+Slide 4 - total car users (visits) - transport set
+```{r}
+transport %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other") %>%
+  summarise(total_value = sum(value))
+
+transport %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & travel_type == "Car") %>%
+  summarise(total_value = sum(value))
+
+```
+65%
+
+
+```{r}
+demographics %>%
+  filter(access_to_car == "Access to car (1+)" & breakdown_of_domestic_tourism == "Visits") %>%
+  summarise(total_value = sum(value))
+
+demographics %>%
+  filter(access_to_car == "No access to car (0)" & breakdown_of_domestic_tourism == "Visits") %>%
+  summarise(total_value = sum(value))
+
+demographics %>%
+  filter(access_to_car != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  summarise(total_value = sum(value))
+
+```
+81.7% report having access to a car
+18% report not having access
 
 Slide 5 - total in city/large town (visits) - location
 

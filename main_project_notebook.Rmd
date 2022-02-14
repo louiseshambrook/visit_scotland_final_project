@@ -570,7 +570,6 @@ activities %>%
 2013-2019, sum of million visits. Highest is visits with family/friends. Eating out coming in second, and outdoor leisure in third.
 
 Plot set # 5 - demographics 
-
 ```{r}
 # Is there a particular key demographic of visitors we should be focusing on?
 
@@ -602,6 +601,8 @@ demographics %>%
        y = "Visits (million)",
        title = "Vists by age 16-24 across 2013 - 2019")
 ```
+
+
 ```{r}
 demographics %>%
   filter(age == "55-64 years" & breakdown_of_domestic_tourism == "Expenditure") %>%
@@ -655,26 +656,7 @@ demographics %>%
 This is the same issue, but also response / relevance, as the above.
 
 
-```{r}
-# code to group the age column into two groups for analysing
-demographics %>%
-  select(year, value, unit, breakdown_of_domestic_tourism, age) %>%
-  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
-  mutate(age_category = case_when(age == "16-24 years" ~ "low",
-                             age == "25-34 years" ~ "low",
-                             age == "35-44 years" ~ "low",
-                             age == "45-54 years" ~ "high",
-                              age == "54-64 years" ~ "high",
-                              age == "65 years and over" ~ "high",
-                              age == "All" ~ "Other")) %>%
-  filter(age_category == "low") %>%
-  summarise(most_visits = sum(value))
-  
-```
-498 (lower half) vs 290 (higher half)
-
-
-## Plot set # 6 - regional demographics
+Plot set # 6 - regional demographics
 ```{r}
 # When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
 
@@ -698,6 +680,9 @@ demographics %>%
 #        title = "Sum of vists distributed across age groups 2013-2019") +
 #   scale_fill_manual(values = "#6B085E")
 
+# the above code isn't currently used, but I will save it, as I need to make that slide clearer
+
+
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
@@ -710,7 +695,7 @@ regional_domestic %>%
 ```
 
 
-## Plot set # 7 - change over time
+Plot set # 7 - change over time
 ```{r}
 # How have general tourism rates changed over time?
 
@@ -739,7 +724,8 @@ demographics %>%
 The *general* picture over time, is that for visits, it increases until 2017, and then declines (some more than others).
 For expenditure, it increases until 2017, declines in 2018, and increases again in 2019.
 
-NOTE TO SELF - I should dig into the individual datasets and see if there are any other developments to highlight, if I have time.
+Plots set 8 - predicting change
+This has been plotted in python.
 
 
 ### Summary / descriptive statistics for the presentation

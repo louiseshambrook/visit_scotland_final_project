@@ -40,7 +40,7 @@ activities <- read_csv("raw_data/tourism_day_visits_activities.csv") %>%
                      ~ "Outdoor leisure activity",
                      tourism_activity ==
                        "Visitor attraction e.g. theme park, museum, zoo"
-                     ~ "Visitor attraction",
+                     ~ "Visit attraction",
                      tourism_activity ==
                        "General day out/ to explore an area" ~ "Day out",
                      tourism_activity ==

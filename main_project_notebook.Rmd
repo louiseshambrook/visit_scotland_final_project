@@ -557,7 +557,7 @@ activities %>%
   filter(breakdown_of_domestic_tourism == "Visits" & activity_type != "Other") %>%
   group_by(activity_type) %>%
   summarise(highest_income = sum(value)) %>%
-  ggplot(aes(x = activity_type, y = highest_income, fill = "blue")) +
+  ggplot(aes(x = reorder(activity_type, -highest_income), y = highest_income, fill = "blue")) +
   geom_col() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "none") +
@@ -565,8 +565,37 @@ activities %>%
        y = "Visits (million)",
        title = "Total visits by activity type 2013-2019") +
   scale_fill_manual(values = "#6B085E")
+                      
+
+# this code is to colour the relevant columns separately - but it doesn't run.                      
+# c("Shopping" = "#905E88",
+#                                "Watch live sports" = "#905E88",
+#                                "Night out" = "#905E88",
+#                                "Leisure activity" = "#905E88",
+#                                "Attend public event" = "#905E88",
+#                                "Eating out" = "#905E88",
+#                                "Attend personal event" = "#905E88",
+#                                "Sports participation" = "#905E88",
+#                                "Day out (spa)" = "#905E88",
+#                                "Outdoor leisure activity" = "#905E88",
+#                                "Visit attraction" = "#905E88",
+#                                "Day out" = "#905E88",
+#                                "Entertainment - cinema etc." = "#905E88",
+#                                "Day trip - leisure" = "#905E88",
+#                                "Visit family/friends" = ""))
 ```
 2013-2019, sum of million visits. Highest is visits with family/friends. Eating out coming in second, and outdoor leisure in third.
+
+
+```{r}
+activities %>% 
+  filter(breakdown_of_domestic_tourism == "Visits" & activity_type == "Visit family/friends") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_line() +
+  ylim(1,65)
+
+```
+
 
 
 ## Plot set # 5 - demographics 

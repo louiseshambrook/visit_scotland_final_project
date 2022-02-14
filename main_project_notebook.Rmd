@@ -481,11 +481,14 @@ NOTE - this is the one where it's broken down by percentage.
 
 
 Plot set # 3 - accommodation
+
+NOTE TO MYSELF - THIS IS WHERE I NEED TO FIX PLOTS
+
 ```{r}
 # "What type of accomodation is most popular?"
 
 accomodation %>%
-  filter(occupancy_type != "Room Occupancy") %>%
+  filter(occupancy_type != "Unit Occupancy") %>%
   group_by(accommodation_type, occupancy_type) %>%
   summarise(popular_accomodation = sum(value)/100) %>%
   ggplot(aes(x = accommodation_type, y = popular_accomodation, fill = "blue")) +
@@ -501,7 +504,7 @@ accomodation %>%
 
 ```{r}
 accomodation %>%
-  filter(location != "Other" & location == "Urban area") %>%
+  filter(location != "Other" & location == "Urban area" & occupancy_type != "Unit Occupancy") %>%
   group_by(location, accommodation_type) %>%
   summarise(popular_accomodation = sum(value)/100) %>%
   arrange(desc(popular_accomodation)) %>%
@@ -728,163 +731,206 @@ Plots set 8 - predicting change
 This has been plotted in python.
 
 
-### Summary / descriptive statistics for the presentation
+### Summary and descriptive statistics for the presentation
 
-Slide 4 - total car users (visits) - transport set
+Slide 4 - Transport
 ```{r}
+# total transport visits who use other types of transportation
 transport %>%
   filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other") %>%
   summarise(total_value = sum(value))
 
+# total transport visits who use car
 transport %>%
   filter(breakdown_of_domestic_tourism == "Visits" & travel_type == "Car") %>%
   summarise(total_value = sum(value))
 
 ```
+605.3/930.9
 65%
 
 
 ```{r}
+# total from visits who report having access to a car
 demographics %>%
   filter(access_to_car == "Access to car (1+)" & breakdown_of_domestic_tourism == "Visits") %>%
   summarise(total_value = sum(value))
 
-demographics %>%
-  filter(access_to_car == "No access to car (0)" & breakdown_of_domestic_tourism == "Visits") %>%
-  summarise(total_value = sum(value))
-
+# total from visits
 demographics %>%
   filter(access_to_car != "All" & breakdown_of_domestic_tourism == "Visits") %>%
   summarise(total_value = sum(value))
 
 ```
+768/940
 81.7% report having access to a car
-18% report not having access
 
-Slide 5 - total in city/large town (visits) - location
+
+Slide 5 - Location
 ```{r}
+# total who visit city/large town
 location %>%
   filter(breakdown_of_domestic_tourism == "Visits" & type_of_location_visited == "City/large town") %>%
   summarise(total_value = sum(value))
 
+# total who visit (by location)
 location %>%
   filter(breakdown_of_domestic_tourism == "Visits" & type_of_location_visited != "Other") %>%
   summarise(total_value = sum(value))
 ```
+431/1032
+41.7%
 
 ```{r}
+# average accommodation occupancy in urban areas
 accomodation %>%
-  filter(location == "Urban area") %>%
+  filter(location == "Urban area" & occupancy_type != "Unit Occupancy") %>%
   summarise(total_value = sum(value)/100)
 
 ```
+58.5%
 
-Slide 6 - hotels - most popular accommodation 
+
+Slide 6 - Accommodation
 ```{r}
+# average accommodation occupancy
 accomodation %>%
-  filter(occupancy_type != "Room Occupancy") %>%
+  filter(occupancy_type != "Unit Occupancy") %>%
   group_by(accommodation_type, occupancy_type) %>%
   summarise(popular_accomodation = sum(value)/100)
 ```
+Hotels are the highest, with 66.27%
 
-Slide 7 - b&b - what is the difference otherwise?
+Slide 7 - Accommodation
 ```{r}
+# difference in average accommodation for urban areas between hotels and B&B's 
 accomodation %>%
-  filter(location != "Other" & location == "Urban area") %>%
+  filter(location == "Urban area" & occupancy_type != "Unit Occupancy") %>%
   group_by(location, accommodation_type) %>%
   summarise(popular_accomodation = sum(value)/100)
 ```
 
-Slide 8 - children_no (visits), is_married (spend)
-what are the other types?
+Slide 8 - Demographics
 ```{r}
+# sum of expenditure by is_married
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status == "Married") %>%
   summarise(popular_accomodation = sum(value))
-23928
+# 23928 (million)
 
+# sum of expenditure 
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status != "All") %>%
+  summarise(popular_accomodation = sum(value))
+# 35751
+
+```
+23928/35751
+Married - 66.9% spend
+
+Demographics
+```{r}
+# sum of visits by have_children = no
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Visits" & children == "No - Children") %>%
   summarise(popular_accomodation = sum(value))
 683
 
-
-demographics %>%
-  filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status != "All") %>%
-  summarise(popular_accomodation = sum(value))
-35751
-
+# sum visits
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Visits" & children != "All") %>%
   summarise(popular_accomodation = sum(value))
 940
 
 ```
-Married - 66.9% spend
-No children - 72%
+683/940 - 72%
 
-slide 9 - 16-24, (visits)
+
+Slide 9 - Demographics - age
 ```{r}
+# 16-24 year old - sum of visits
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Visits" & age == "16-24 years") %>%
   summarise(popular_accomodation = sum(value))
 
+# sum of visits (all age groups)
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Visits" & age != "All") %>%
   summarise(popular_accomodation = sum(value))
 ```
+184/946 - 19.4%
 
-slide 11 - 55-64 and 65+ - spend - number in 2019
+
+Slide 11 - Demographics - Older age groups
 ```{r}
+# sum of spend of 55-64 year olds
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & age == "55-64 years") %>%
   summarise(total = sum(value))
 5792
 
+# sum of spend 65+
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & age == "65 years and over") %>%
   summarise(total = sum(value))
 5070
 ```
+5070+5792 - 10862 total
 
-slide 12 - visits - diff between scot and eng
+
+Slide 12 - Regional demographics
 ```{r}
+# total visits where region is england
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Visits" & region_of_residence == "England") %>%
   summarise(total = sum(value))
 
-109680
-
+# total visits where region is scotland
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Visits" & region_of_residence == "Scotland") %>%
   summarise(total = sum(value))
 
-112132
 ```
+England - 109680
+Scotland - 112132
 Difference is 2452
 
-slide 13 - eating out - spend; total? percentage? friends/family(visits) - spend/percentage
+Note; haven't used this number.
+
+Slide 13 - Activities
 ```{r}
+# total spend of eating out activity
 activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & activity_type == "Eating out") %>%
   summarise(total = sum(value))
 
+# total spend of all activities
 activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & activity_type != "Other") %>%
   summarise(total = sum(value))
 
+```
+13409/75277
+
+Eating out accounts for 13409 million (17.8%)
+
+```{r}
+# sum of visits for 'visit family/friends' activity
 activities %>%
   filter(breakdown_of_domestic_tourism == "Visits" & activity_type == "Visit family/friends") %>%
   summarise(total = sum(value))
 
+# sum of visits for all activities
 activities %>%
   filter(breakdown_of_domestic_tourism == "Visits" & activity_type != "Other") %>%
   summarise(total = sum(value))
 ```
-Eating out accounts for 13409 million (17.8%)
+315/1694
+
 Visiting family/friends 315 million – 18.5%
 
-### Conclusions
+
+### Conclusions and summary of insights
 
 Majority of visitors have access to / travel by car
 Visitors generally visit urban areas / cities
@@ -894,7 +940,7 @@ no children - are married
 England higher in spend and nights, but Scotland higher in visits
 Most common activities: eating out, visiting friends/family
 
-Recommendations:
+### Main recommendations:
 Confidently Promote remote locations
 Develop partnerships with b&b providers
 Focus on urban areas

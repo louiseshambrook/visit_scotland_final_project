@@ -873,15 +873,65 @@ Married - 66.9% spend
 No children - 72%
 
 slide 9 - 16-24, (visits)
+```{r}
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & age == "16-24 years") %>%
+  summarise(popular_accomodation = sum(value))
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & age != "All") %>%
+  summarise(popular_accomodation = sum(value))
+```
 
 slide 11 - 55-64 and 65+ - spend - number in 2019
+```{r}
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & age == "55-64 years") %>%
+  summarise(total = sum(value))
+5792
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & age == "65 years and over") %>%
+  summarise(total = sum(value))
+5070
+```
 
 slide 12 - visits - diff between scot and eng
+```{r}
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & region_of_residence == "England") %>%
+  summarise(total = sum(value))
+
+109680
+
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & region_of_residence == "Scotland") %>%
+  summarise(total = sum(value))
+
+112132
+```
+Difference is 2452
 
 slide 13 - eating out - spend; total? percentage? friends/family(visits) - spend/percentage
+```{r}
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & activity_type == "Eating out") %>%
+  summarise(total = sum(value))
 
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & activity_type != "Other") %>%
+  summarise(total = sum(value))
 
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & activity_type == "Visit family/friends") %>%
+  summarise(total = sum(value))
 
+activities %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & activity_type != "Other") %>%
+  summarise(total = sum(value))
+```
+Eating out accounts for 13409 million (17.8%)
+Visiting family/friends 315 million – 18.5%
 
 ### Conclusions
 

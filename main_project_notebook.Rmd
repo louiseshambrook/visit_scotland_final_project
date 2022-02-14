@@ -540,7 +540,7 @@ activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & activity_type != "Other") %>%
   group_by(activity_type) %>%
   summarise(highest_income = sum(value)) %>%
-  ggplot(aes(x = activity_type, y = highest_income, fill = "blue")) +
+  ggplot(aes(x = reorder(activity_type, -highest_income), y = highest_income, fill = "blue")) +
   geom_col() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "none") +
@@ -622,6 +622,35 @@ Yes, and no. The data from this dataset isn't great for analysis, because a lot 
 With that said - age is a good variable and gives good insights. Across pretty much everything, the reflection from the data is that the younger generations are the ones attending and spending money.
 
 NOTE TO MYSELF - if I have time, dig further into this, across the different years / visits / spends.
+
+
+```{r}
+# breaking the age group by year
+demographics %>%
+  filter(age == "16-24 years" & breakdown_of_domestic_tourism == "Visits") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Visits (million)",
+       title = "Vists by age 16-24 across 2013 - 2019")
+```
+```{r}
+demographics %>%
+  filter(age == "55-64 years" & breakdown_of_domestic_tourism == "Expenditure") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Spend (million £)",
+       title = "Spend by age group 55-64 across 2013 - 2019") 
+
+demographics %>%
+  filter(age == "65 years and over" & breakdown_of_domestic_tourism == "Expenditure") %>%
+  ggplot(aes(x = year, y = value)) +
+  geom_line() +
+  labs(x = "Year",
+       y = "Visits (million)",
+       title = "Spend by age group 65+ across 2013 - 2019")
+```
 
 
 ```{r}
@@ -744,7 +773,8 @@ For expenditure, it increases until 2017, declines in 2018, and increases again 
 
 NOTE TO SELF - I should dig into the individual datasets and see if there are any other developments to highlight, if I have time.
 
-## Plot set # 8 - How to predict change (TO BE ADDED)
+
+### Summary / descriptive statistics for the presentation
 
 
 ### Conclusions

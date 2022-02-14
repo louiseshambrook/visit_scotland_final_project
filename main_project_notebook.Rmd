@@ -811,13 +811,66 @@ demographics %>%
 18% report not having access
 
 Slide 5 - total in city/large town (visits) - location
+```{r}
+location %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & type_of_location_visited == "City/large town") %>%
+  summarise(total_value = sum(value))
+
+location %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & type_of_location_visited != "Other") %>%
+  summarise(total_value = sum(value))
+```
+
+```{r}
+accomodation %>%
+  filter(location == "Urban area") %>%
+  summarise(total_value = sum(value)/100)
+
+```
 
 Slide 6 - hotels - most popular accommodation 
+```{r}
+accomodation %>%
+  filter(occupancy_type != "Room Occupancy") %>%
+  group_by(accommodation_type, occupancy_type) %>%
+  summarise(popular_accomodation = sum(value)/100)
+```
 
-Slide 7 - b&b - what percentage is it usually?
+Slide 7 - b&b - what is the difference otherwise?
+```{r}
+accomodation %>%
+  filter(location != "Other" & location == "Urban area") %>%
+  group_by(location, accommodation_type) %>%
+  summarise(popular_accomodation = sum(value)/100)
+```
 
 Slide 8 - children_no (visits), is_married (spend)
 what are the other types?
+```{r}
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status == "Married") %>%
+  summarise(popular_accomodation = sum(value))
+23928
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & children == "No - Children") %>%
+  summarise(popular_accomodation = sum(value))
+683
+
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure" & marital_status != "All") %>%
+  summarise(popular_accomodation = sum(value))
+35751
+
+demographics %>%
+  filter(breakdown_of_domestic_tourism == "Visits" & children != "All") %>%
+  summarise(popular_accomodation = sum(value))
+940
+
+```
+Married - 66.9% spend
+No children - 72%
 
 slide 9 - 16-24, (visits)
 

@@ -776,6 +776,27 @@ NOTE TO SELF - I should dig into the individual datasets and see if there are an
 
 ### Summary / descriptive statistics for the presentation
 
+Slide 4 - total car users (visits)
+
+Slide 5 - total in city/large town (visits) - location
+
+Slide 6 - hotels - most popular accommodation 
+
+Slide 7 - b&b - what percentage is it usually?
+
+Slide 8 - children_no (visits), is_married (spend)
+what are the other types?
+
+slide 9 - 16-24, (visits)
+
+slide 11 - 55-64 and 65+ - spend - number in 2019
+
+slide 12 - visits - diff between scot and eng
+
+slide 13 - eating out - spend; total? percentage? friends/family(visits) - spend/percentage
+
+
+
 
 ### Conclusions
 

@@ -173,24 +173,3 @@ regional_domestic <- read_csv("raw_data/regional_domestic_tourism.csv") %>%
   relocate(breakdown_of_domestic_tourism, .after = visit_night_unit)
 write_csv(regional_domestic, "clean_data/regional_domestic_clean.csv")
 rm(regional_domestic)
-
-
-# scripts for cleaning data for modelling --------------------------------------
-
-# activities
-activities_visits <- read_csv("clean_data/activities_clean.csv") %>%
-  mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
-         visit_unit = case_when(unit == "million" ~ "million")) %>%
-  select(-unit, -breakdown_of_domestic_tourism, -spend_unit, -year) %>%
-  filter(!is.na(visit_unit))
-write_csv(activities_visits, "clean_data/activities_visits.csv")
-rm(activities_visits)
-
-activities_spend <- read_csv("clean_data/activities_clean.csv") %>%
-  mutate(spend_unit = case_when(unit == "million (£)" ~ "million (£)"),
-         visit_unit = case_when(unit == "million" ~ "million")) %>%
-  select(-unit, -breakdown_of_domestic_tourism, -visit_unit, -year) %>%
-  filter(!is.na(spend_unit),
-         activity_type!= "Other")
-write_csv(activities_spend, "clean_data/activities_spend.csv")
-rm(activities_spend)

@@ -49,10 +49,14 @@ For the location dataset, I have also simplified the responses, and dropped the 
 - How have general tourism rates changed over time?
 - Is there any way to predict spending and visits for Visit Scotland?
 
-### Notes on Visit Scotland
+### Notes on VisitScotland
 
+Following the challenges with data modelling, I completed further research on VisitScotland's site. They also complete another piece of research, called the Great Britain Tourism Survey. They have noted (https://www.visitscotland.org/binaries/content/assets/dot-org/pdf/research-papers-2/uk-visitors/gbts-gbdvs-update-nov21.pdf) that from 2020 onwards, they will be changing the structure of the data. It seems that they have found the same issues as myself, and are putting similar changes to the ones I recommend in place.
 
-### Data wrangling / Exploratory data analysis
+However, there is no data available yet, as travel has been severely impacted due to Covid.
+https://www.visitscotland.org/binaries/content/assets/dot-org/pdf/research-papers-2/uk-visitors/gbts-gbdvs-update-nov21.pdf
+
+### Initial exploratory data analysis
 
 ```{r}
 summary(accomodation)
@@ -70,9 +74,8 @@ head(domestic_tourism)
 head(accomodation)
 ```
 
-## Q1.
 ```{r}
-# What kind of tourism activity generates the highest income for Scotland?
+# Q1. What kind of tourism activity generates the highest income for Scotland?
 activities %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   group_by(activity_type) %>%
@@ -81,9 +84,8 @@ activities %>%
 
 ```
 
-## Q2.
 ```{r}
-# Which kind of activity generates the most visits to sites?
+# Q2. Which kind of activity generates the most visits to sites?
 activities %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   group_by(activity_type) %>%
@@ -91,8 +93,8 @@ activities %>%
   arrange(desc(highest_income))
 ```
 
-## Q3. 
 ```{r}
+# Q3. 
 # Is there a particular key demographic of visitors we should be focusing on?
 # as there is no inter-relating data (when you isolate one variable, there is no
 # data for the others), I will have to analyse each variable individually.
@@ -157,12 +159,11 @@ demographics %>%
 
 # This mostly speaks for itself; the biggest caveat to this is that there was no data dictionary with this dataset, so I can only assume that it goes top down, but this is not known.
 
-
-
 ```
 
-Q 3.2
+
 ```{r}
+# Q 3.2
 # Who spends the most?
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure" & age != "All") %>%
@@ -197,8 +198,9 @@ demographics %>%
 # The direct answer is people who identify as married - but there are some caveats to this answer. It is only possible to explore one variable at a time, and therefore, the identity of 'married' should be questioned. Additionally, because of the possible survey responses, marital_status only has two choices, whereas age is divided into decades starting at 16. So to best compare, age should be split/merged into two categories, or age is really the only identifier, as it has a range of reasonable options. 
 ```
 
-Q 3.3
+
 ```{r}
+# Q 3.3
 # Who visits the most?
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Visits" & age != "All") %>%
@@ -233,8 +235,8 @@ demographics %>%
 # Answer here is "no- without children.". But there is the same caveat as with the question above. 
 ```
 
-## Q4.
 ```{r}
+# Q4
 # What type of locations receive the most visits?
 location %>%
   filter(type_of_location_visited != "Other") %>%
@@ -244,8 +246,8 @@ location %>%
 
 ```
 
-Q4.2
 ```{r}
+# Q4.2
 # What kinds of locations do people spend the most in?
 location %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
@@ -254,8 +256,8 @@ location %>%
   arrange(desc(total_spend))
 ```
 
-## Q5
 ```{r}
+# Q5
 # Is there a particular method of travel our visitors arrive by?
 transport %>%
   filter(breakdown_of_domestic_tourism == "Visits" & travel_type != "Other") %>%
@@ -269,8 +271,8 @@ transport %>%
 
 ```
 
-## Q6
 ```{r}
+#Q6
 # When looking at regional tourism, what insights can we gain? 
 # How do they differ in
 # the money they spend
@@ -297,8 +299,8 @@ regional_domestic %>%
 # by visits, scotland is bigger than england. This indicates local visiting.
 ```
 
-Q 6.1 
 ```{r}
+# Q6.1
 # Where are our visitors from?
 regional_domestic %>%
   group_by(region_of_residence) %>%
@@ -314,8 +316,8 @@ regional_domestic %>%
 # This provides a nicer breakdown.
 ```
 
-## Q7.
 ```{r}
+# Q7.
 # What type of accomodation is most popular?
 accomodation %>%
   group_by(accommodation_type_and_occupancy) %>%
@@ -329,8 +331,8 @@ accomodation %>%
 # Note: this is like the demographics; where there is data in one variables, the others have NA, i.e. 'All'.
 ```
 
-Q 7.1
 ```{r}
+#Q7.1
 # Is there a difference by location?
 accomodation %>%
   filter(location != "Other") %>%
@@ -342,8 +344,8 @@ accomodation %>%
 
 ```
 
-## Q8.
 ```{r}
+# Q8.
 # How have general tourism rates changed over time?
 activities %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
@@ -382,14 +384,9 @@ location %>%
 ```
 
 
-### Data visualisations / Plots
+### Data visualisations for presentation
 
-
-
-
-
-
-## Plot set # 1 - transport
+Plot set # 1 - transport
 ```{r}
 # "Is there a particular method of travel our visitors arrive by?".
 
@@ -428,7 +425,7 @@ demographics %>%
 This is underpinned by the finding that across the the (unit) million visits between 2013 and 2019, the majority of visitors report having access to a car.
 
 
-## Plot set # 2 - Locations
+Plot set # 2 - Locations
 ```{r}
 # "what type of locations receive the most visits?"
 
@@ -483,7 +480,7 @@ This lines up with accommodation choices; in 2019, most people chose to visit ur
 NOTE - this is the one where it's broken down by percentage.
 
 
-## Plot set # 3 - accommodation
+Plot set # 3 - accommodation
 ```{r}
 # "What type of accomodation is most popular?"
 
@@ -536,7 +533,7 @@ accomodation %>%
 ```
 
 
-## Plot set # 4 - activities
+Plot set # 4 - activities
 ```{r}
 # What kind of tourism activity generates the highest income?
 activities %>%
@@ -568,41 +565,11 @@ activities %>%
        y = "Visits (million)",
        title = "Total visits by activity type 2013-2019") +
   scale_fill_manual(values = "#6B085E")
-                      
 
-# this code is to colour the relevant columns separately - but it doesn't run.                      
-# c("Shopping" = "#905E88",
-#                                "Watch live sports" = "#905E88",
-#                                "Night out" = "#905E88",
-#                                "Leisure activity" = "#905E88",
-#                                "Attend public event" = "#905E88",
-#                                "Eating out" = "#905E88",
-#                                "Attend personal event" = "#905E88",
-#                                "Sports participation" = "#905E88",
-#                                "Day out (spa)" = "#905E88",
-#                                "Outdoor leisure activity" = "#905E88",
-#                                "Visit attraction" = "#905E88",
-#                                "Day out" = "#905E88",
-#                                "Entertainment - cinema etc." = "#905E88",
-#                                "Day trip - leisure" = "#905E88",
-#                                "Visit family/friends" = ""))
 ```
 2013-2019, sum of million visits. Highest is visits with family/friends. Eating out coming in second, and outdoor leisure in third.
 
-
-```{r}
-activities %>% 
-  filter(breakdown_of_domestic_tourism == "Visits" & activity_type == "Visit family/friends") %>%
-  ggplot(aes(x = year, y = value)) +
-  geom_line() +
-  ylim(1,65)
-
-```
-
-
-
-## Plot set # 5 - demographics 
-
+Plot set # 5 - demographics 
 
 ```{r}
 # Is there a particular key demographic of visitors we should be focusing on?
@@ -623,8 +590,6 @@ demographics %>%
 Yes, and no. The data from this dataset isn't great for analysis, because a lot of inferences have to be drawn. A key insight to be drawn from this is to complete further research / get better data.
 
 With that said - age is a good variable and gives good insights. Across pretty much everything, the reflection from the data is that the younger generations are the ones attending and spending money.
-
-NOTE TO MYSELF - if I have time, dig further into this, across the different years / visits / spends.
 
 
 ```{r}

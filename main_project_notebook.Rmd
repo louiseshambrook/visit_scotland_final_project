@@ -403,8 +403,8 @@ transport %>%
         legend.position = "none") +
   labs(x = "Type of transport",
        y = "Total visits (million)",
-       title = "Most popular method of travel for visits 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+       title = "Total visits by transport type 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 
 ```
 These are the sum of million visits in 2019, where visitors reported travelling by X.
@@ -417,10 +417,10 @@ demographics %>%
   geom_col(position = "dodge") +
   labs(x = "Year",
        y = "Total visits (million)",
-       title = "Visitors reporting having access to a car 2013-2019",
+       title = "Total visits by demographic 2013-2019",
        fill = "Access to car") +
-  scale_fill_manual(values = c("Access to car (1+)" = "#af006e",
-                               "No access to car (0)" = "#63003e"))
+  scale_fill_manual(values = c("Access to car (1+)" = "#6B085E",
+                               "No access to car (0)" = "#6B084E"))
 ```
 This is underpinned by the finding that across the the (unit) million visits between 2013 and 2019, the majority of visitors report having access to a car.
 
@@ -439,8 +439,8 @@ location %>%
   theme(legend.position = "none") +
   labs(x = "Type of location",
        y = "Total visits (million)",
-       title = "Types of location and frequency of visits 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+       title = "Total visits by type of location 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
 The sum of million visits in 2019 by location. 
 
@@ -456,8 +456,8 @@ location %>%
   theme(legend.position = "none") +
   labs(x = "Type of location",
        y = "Total spend (million £)",
-       title = "Types of location with highest spend 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+       title = "Total spend by type of location 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
 Sum of spend in 2019 in millions, by location.
 
@@ -472,8 +472,8 @@ accomodation %>%
   theme(legend.position = "none") +
   labs(x = "Type of location",
        y = "Percentage",
-       title = "Types of location by average occupancy (accommodation) 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+       title = "Average occupancy in accommodation by location type 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
 This lines up with accommodation choices; in 2019, most people chose to visit urban areas.
 (note to self: this also answers 'Is there a difference (in accommodation) by location?')
@@ -493,8 +493,8 @@ accomodation %>%
   theme(legend.position = "none") +
   labs(x = "Type of accommodation",
        y = "Percentage",
-       title = "Types of accommodation by average occupancy 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+       title = "Average occupancy by accommodation type 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
   
 ```
 2012-2019; percentage occupancy.. ? hotel is by far the highest.
@@ -510,12 +510,12 @@ accomodation %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(x = "Type of accommodation",
        y = "Percentage",
-       title = "Types of accommodation by area 2013-2019") +
-  scale_fill_manual(values = c("Caravan & Camping Parks" = "#af006e",
+       title = "Average occupancy by accommodation type for Urban Areas 2013-2019") +
+  scale_fill_manual(values = c("Caravan & Camping Parks" = "#6B085E",
                                "Guest House/B&B" = "#af004e",
-                               "Hostels" = "#af006e",
-                               "Hotels" = "#af004e",
-                               "Self Catering" = "#af006e"))
+                               "Hostels" = "#6B085E",
+                               "Hotels" = "#6B085E",
+                               "Self Catering" = "#6B085E"))
 
 ```
 2019 data, from location set. When breaking down by location (as above), an interesting finding is that in the urban area, B&B's are just as popular as hotels. Maybe down to a certain B&B site?
@@ -534,8 +534,8 @@ activities %>%
         legend.position = "none") +
   labs(x = "Type of activity",
        y = "Sum of spend (million £)",
-       title = "Sum of spend on types of activity 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+       title = "Total spend by activity type 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
 2013-2019, sum of value in million pounds. Highest is eating out (with shopping and visiting family/friends following)
 
@@ -550,9 +550,9 @@ activities %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "none") +
   labs(x = "Type of activity",
-       y = "Sum of visits",
-       title = "Sum of vists distributed across types of activity 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+       y = "Visits (million)",
+       title = "Total visits by activity type 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
 2013-2019, sum of million visits. Highest is visits with family/friends. Eating out coming in second, and outdoor leisure in third.
 
@@ -572,9 +572,9 @@ demographics %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "none") +
   labs(x = "Age group",
-       y = "Sum of visits (millions)",
-       title = "Sum of vists distributed across age groups 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+       y = "Visits (million)",
+       title = "Total vists by age group 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
 Yes, and no. The data from this dataset isn't great for analysis, because a lot of inferences have to be drawn. A key insight to be drawn from this is to complete further research / get better data.
 
@@ -592,10 +592,10 @@ demographics %>%
   ggplot(aes(x = marital_status, y = highest_spend, fill = "blue")) +
   geom_col() +
   theme(legend.position = "none") +
-  labs(x = "Age group",
-       y = "Sum of spend (million £)",
-       title = "Sum of spend distributed across age groups 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+  labs(x = "Is married?",
+       y = "Spend (million £)",
+       title = "Total spend 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
 This is where the data is limited, because the survey / options for respondents was limited, so marital_status can't really be fairly compared. However, going by the data strictly (because this does still reflect something, and even when grouping age so that they could be compared, the "married" response comes out higher).
 
@@ -609,10 +609,10 @@ demographics %>%
   ggplot(aes(x = children, y = most_visits, fill = "blue")) +
   geom_col() +
   theme(legend.position = "none") +
-  labs(x = "Age group",
-       y = "Sum of visits (millions)",
-       title = "Sum of vists distributed across age groups 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+  labs(x = "Has children?",
+       y = "Visits (million)",
+       title = "Total vists 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
 This is the same issue, but also response / relevance, as the above.
 
@@ -640,35 +640,35 @@ demographics %>%
 ```{r}
 # When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
 
-regional_domestic %>%
-  filter(breakdown_of_domestic_tourism == "Nights") %>%
-  ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
-  geom_col(position = "dodge") +
-  theme(legend.position = "none") +
-  labs(x = "Age group",
-       y = "Sum of visits",
-       title = "Sum of vists distributed across age groups 2013-2019") +
-  scale_fill_manual(values = "#af006e")
-
-regional_domestic %>%
-  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
-  ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
-  geom_col(position = "dodge") +
-  theme(legend.position = "none") +
-  labs(x = "Age group",
-       y = "Sum of visits",
-       title = "Sum of vists distributed across age groups 2013-2019") +
-  scale_fill_manual(values = "#af006e")
+# regional_domestic %>%
+#   filter(breakdown_of_domestic_tourism == "Nights") %>%
+#   ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
+#   geom_col(position = "dodge") +
+#   theme(legend.position = "none") +
+#   labs(x = "Age group",
+#        y = "Sum of visits",
+#        title = "Sum of vists distributed across age groups 2013-2019") +
+#   scale_fill_manual(values = "#6B085E")
+# 
+# regional_domestic %>%
+#   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
+#   ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
+#   geom_col(position = "dodge") +
+#   theme(legend.position = "none") +
+#   labs(x = "Age group",
+#        y = "Sum of visits",
+#        title = "Sum of vists distributed across age groups 2013-2019") +
+#   scale_fill_manual(values = "#6B085E")
 
 regional_domestic %>%
   filter(breakdown_of_domestic_tourism == "Visits") %>%
   ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
   geom_col(position = "dodge") +
   theme(legend.position = "none") +
-  labs(x = "Age group",
-       y = "Sum of visits",
-       title = "Sum of vists distributed across age groups 2013-2019") +
-  scale_fill_manual(values = "#af004e")
+  labs(x = "Region",
+       y = "Visits (million)",
+       title = "Total vists by region 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
 
 
@@ -685,7 +685,7 @@ transport %>%
   theme(legend.position = "none") +
   labs(x = "Year",
        y = "Sum of visits (millions)",
-       title = "Tourism rates (visits) 2013-2019")
+       title = "Tourism rates (by transport, visits) 2013-2019")
 
 demographics %>%
   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
@@ -696,7 +696,7 @@ demographics %>%
   theme(legend.position = "none") +
   labs(x = "Year",
        y = "Sum of spend (million £)",
-       title = "Tourism rates (spend) 2013-2019")
+       title = "Tourism rates (by demographics, spend) 2013-2019")
 ```
 The *general* picture over time, is that for visits, it increases until 2017, and then declines (some more than others).
 For expenditure, it increases until 2017, declines in 2018, and increases again in 2019.

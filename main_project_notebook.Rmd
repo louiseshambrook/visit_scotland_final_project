@@ -507,7 +507,7 @@ accomodation %>%
 # trying to figure out the correct way of displaying the accommodation data
 accomodation %>%
   filter(location != "Other") %>%
-  group_by(location, accommodation_type, occupancy_type) %>%
+  group_by(location) %>%
   summarise(popular_accomodation = sum(value)/100) %>%
   ggplot(aes(x = location, y = popular_accomodation, fill = "blue")) +
   geom_col(position = "dodge") +
@@ -784,17 +784,11 @@ location %>%
 ```{r}
 # average accommodation occupancy in urban areas
 accomodation %>%
-  filter(location == "Urban area" & occupancy_type != "Unit Occupancy") %>%
-  summarise(total_value = sum(value)/100)
-
-accomodation %>%
   filter(location == "Urban area") %>%
-  group_by(location, accommodation_type, occupancy_type) %>%
   summarise(popular_accomodation = sum(value)/100)
 
 ```
-58.5%
-
+68%
 
 Slide 6 - Accommodation
 ```{r}
@@ -802,18 +796,21 @@ Slide 6 - Accommodation
 accomodation %>%
   group_by(accommodation_type, occupancy_type) %>%
   summarise(popular_accomodation = sum(value)/100)
+
 ```
 Hotels are the highest, with 66.27%
 
 Slide 7 - Accommodation
 ```{r}
-# difference in average accommodation for urban areas between hotels and B&B's 
+# average accommodation occupancy in urban areas
 accomodation %>%
-  filter(location == "Urban area" & occupancy_type != "Pitch Occupancy" &
-           occupancy_type != "Unit Occupancy" & accommodation_type != "Hostels") %>%
-  group_by(location, accommodation_type, occupancy_type) %>%
-  summarise(popular_accomodation = sum(value)/100) 
+  filter(location == "Urban area") %>%
+  summarise(popular_accomodation = sum(value)/100)
+
 ```
+
+Other point is urban B&B increasing.
+
 
 Slide 8 - Demographics
 ```{r}

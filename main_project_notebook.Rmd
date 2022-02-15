@@ -869,6 +869,17 @@ demographics %>%
 ```
 5070+5792 - 10862 total
 
+```{r}
+# finding the difference between 16-24 and older age groups
+demographics %>%
+  filter(age != "All" & breakdown_of_domestic_tourism == "Visits") %>%
+  group_by(age) %>%
+  summarise(most_visits = sum(value))
+```
+16-24 - 184
+55-64 - 158
+65+ - 164
+
 
 Slide 12 - Regional demographics
 ```{r}

@@ -660,41 +660,31 @@ This is the same issue, but also response / relevance, as the above.
 
 
 Plot set # 6 - regional demographics
+
 ```{r}
 # When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
 
-# regional_domestic %>%
-#   filter(breakdown_of_domestic_tourism == "Nights") %>%
-#   ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
-#   geom_col(position = "dodge") +
-#   theme(legend.position = "none") +
-#   labs(x = "Age group",
-#        y = "Sum of visits",
-#        title = "Sum of vists distributed across age groups 2013-2019") +
-#   scale_fill_manual(values = "#6B085E")
-# 
-# regional_domestic %>%
-#   filter(breakdown_of_domestic_tourism == "Expenditure") %>%
-#   ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
-#   geom_col(position = "dodge") +
-#   theme(legend.position = "none") +
-#   labs(x = "Age group",
-#        y = "Sum of visits",
-#        title = "Sum of vists distributed across age groups 2013-2019") +
-#   scale_fill_manual(values = "#6B085E")
-
-# the above code isn't currently used, but I will save it, as I need to make that slide clearer
-
+regional_domestic %>%
+  filter(breakdown_of_domestic_tourism != "Expenditure") %>%
+  ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
+  geom_col(position = "dodge") +
+  labs(x = "Region",
+       y = "Visits/Nights (thousands)",
+       title = "Nights and visits by region",
+       fill = "Measure")+
+  scale_fill_manual(values = c("Nights" = "#6B085E",
+                               "Visits" = "#905E88"))
 
 regional_domestic %>%
-  filter(breakdown_of_domestic_tourism == "Visits") %>%
+  filter(breakdown_of_domestic_tourism == "Expenditure") %>%
   ggplot(aes(x = region_of_residence, y = value, fill = breakdown_of_domestic_tourism)) +
   geom_col(position = "dodge") +
   theme(legend.position = "none") +
   labs(x = "Region",
-       y = "Visits (million)",
-       title = "Total vists by region 2013-2019") +
+       y = "Spend (million £)",
+       title = "Spend by region") +
   scale_fill_manual(values = "#6B085E")
+  
 ```
 
 

@@ -482,22 +482,21 @@ NOTE - this is the one where it's broken down by percentage.
 
 Plot set # 3 - accommodation
 
-NOTE TO MYSELF - THIS IS WHERE I NEED TO FIX PLOTS
-
 ```{r}
 # "What type of accomodation is most popular?"
-
 accomodation %>%
-  filter(occupancy_type != "Unit Occupancy") %>%
   group_by(accommodation_type, occupancy_type) %>%
   summarise(popular_accomodation = sum(value)/100) %>%
-  ggplot(aes(x = accommodation_type, y = popular_accomodation, fill = "blue")) +
-  geom_col() +
+  ggplot(aes(x = accommodation_type, y = popular_accomodation, fill = occupancy_type)) +
+  geom_col(position = "dodge", color = "black") +
   theme(legend.position = "none") +
   labs(x = "Type of accommodation",
        y = "Percentage",
        title = "Average occupancy by accommodation type 2013-2019") +
-  scale_fill_manual(values = "#6B085E")
+  scale_fill_manual(values = c("Room Occupancy" = "#6B085E",
+                               "Unit Occupancy" = "#6B085E",
+                               "Bed Occupancy" = "#6B085E",
+                               "Pitch Occupancy" = "#6B085E"))
   
 ```
 2012-2019; percentage occupancy.. ? hotel is by far the highest.

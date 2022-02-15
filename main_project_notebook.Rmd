@@ -632,7 +632,7 @@ demographics %>%
   group_by(marital_status) %>%
   summarise(highest_spend = sum(value)) %>%
   ggplot(aes(x = marital_status, y = highest_spend, fill = "blue")) +
-  geom_col() +
+  geom_col(width = 0.4) +
   theme(legend.position = "none") +
   labs(x = "Is married?",
        y = "Spend (million £)",
@@ -649,7 +649,7 @@ demographics %>%
   group_by(children) %>%
   summarise(most_visits = sum(value)) %>%
   ggplot(aes(x = children, y = most_visits, fill = "blue")) +
-  geom_col() +
+  geom_col(width = 0.4) +
   theme(legend.position = "none") +
   labs(x = "Has children?",
        y = "Visits (million)",

@@ -501,29 +501,7 @@ accomodation %>%
 ```
 2012-2019; hotel is by far the highest.
 
-
-```{r}
-# this is the old, incorrect, one.
-
-# accomodation %>%
-#   filter(location == "Urban area") %>%
-#   group_by(accommodation_type, occupancy_type) %>%
-#   summarise(popular_accomodation = sum(value)/100) %>%
-#   ggplot(aes(x = accommodation_type, y = popular_accomodation, fill = occupancy_type)) +
-#   geom_col(position = "dodge") +
-#   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-#   labs(x = "Type of accommodation",
-#        y = "Percentage",
-#        title = "Average occupancy by accommodation type for Urban Areas 2013-2019") +
-#   scale_fill_manual(values = c("Caravan & Camping Parks" = "#905E88",
-#                                "Guest House/B&B" = "#6B085E",
-#                                "Hostels" = "#905E88",
-#                                "Hotels" = "#905E88",
-#                                "Self Catering" = "#905E88"))
-
-```
 2019 data, from location set. When breaking down by location (as above), an interesting finding is that in the urban area, B&B's are just as popular as hotels. Maybe down to a certain B&B site?
-
 
 ```{r}
 # trying to figure out the correct way of displaying the accommodation data
@@ -531,33 +509,17 @@ accomodation %>%
   filter(location != "Other") %>%
   group_by(location, accommodation_type, occupancy_type) %>%
   summarise(popular_accomodation = sum(value)/100) %>%
-  ggplot(aes(x = location, y = popular_accomodation)) +
-  geom_col(position = "dodge")
+  ggplot(aes(x = location, y = popular_accomodation, fill = "blue")) +
+  geom_col(position = "dodge") +
+  theme(legend.position = "none") +
+  labs(x = "Location",
+       y = "Percentage",
+       title = "Average occupancy by location type 2013-2019") +
+  scale_fill_manual(values = "#6B085E")
 ```
+Breaking the accommodation down by area, the most popular location type is urban areas.
 
-```{r}
-# this could replace the other plot - but I'm not sure I'll include it.
-
-# accomodation %>%
-#   filter(location == "Urban area" & occupancy_type != "Pitch Occupancy" &
-#            occupancy_type != "Unit Occupancy" & accommodation_type != "Hostels") %>%
-#   group_by(location, accommodation_type, occupancy_type) %>%
-#   summarise(popular_accomodation = sum(value)/100) %>%
-#   ggplot(aes(x = accommodation_type, y = popular_accomodation)) +
-#   geom_col(position = "dodge") +
-#   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-#   labs(x = "Type of accommodation",
-#        y = "Percentage",
-#        title = "Average occupancy by accommodation type for Urban Areas 2013-2019") +
-#   scale_fill_manual(values = c("Caravan & Camping Parks" = "#905E88",
-#                                "Guest House/B&B" = "#6B085E",
-#                                "Hostels" = "#905E88",
-#                                "Hotels" = "#905E88",
-#                                "Self Catering" = "#905E88"))
-
-
-```
-
+Based on my initial analysis, I considered whether B&B could be increasing in popularity in urban areas (this appeared to be the trend). However, considering the breakdown in data in occupancy_type, this makes the data more complex to analyse and the trend less prominent.
 
 
 ```{r}
@@ -571,6 +533,7 @@ accomodation %>%
        y = "Percentage",
        title = "Average occupancy by Urban Area and Guest House/B&B")
 ```
+As B&B's are the second-most popular type, and urban areas are most popular - I wanted to see the trend over time. It is of significant interest that these are steadily increasing. 
 
 
 Plot set # 4 - activities

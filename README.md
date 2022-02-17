@@ -19,7 +19,7 @@ There were also some columns which were irrelvant to my analysis, which were rem
 In the demographics dataset, only one variable which related to the data was available at a time. It is not known whether data was collected across all variables or if this was cleaned prior to being collected, but nonetheless, it lowered the potential quality of the analysis.
 
 ## Ethics
-There were no ethical concerns regarding this data, as it was published by gov.scot, and I am therefore confident in terms of data storage / protection and it did not contain any personally identifiable information. 
+There were no ethical concerns regarding this data, as it was published by scot.gov, and I am therefore confident in terms of data storage / protection and it did not contain any personally identifiable information. 
 
 ## Analysis
 The main stages of my analysis process were loading the datasets into RStudio, and exploring this, using a range of functions.

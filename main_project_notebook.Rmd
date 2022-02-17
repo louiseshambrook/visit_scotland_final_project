@@ -11,16 +11,6 @@ library(janitor)
 library(lubridate)
 ```
 
-### Loading cleaned data
-```{r}
-activities <- read_csv("clean_data/activities_clean.csv")
-accomodation <- read_csv("clean_data/accomodation_clean.csv")
-demographics <- read_csv("clean_data/demographics_clean.csv")
-location <- read_csv("clean_data/location_clean.csv")
-regional_domestic <- read_csv("clean_data/regional_domestic_clean.csv")
-transport <- read_csv("clean_data/transport_clean.csv")
-```
-
 ### Notes on data cleaning
 I will be removing the feature_code from all datasets, as this is the country code for Scotland. I will also be removing the column measurement, as this is irrelevant and duplicated information. 
 
@@ -36,8 +26,19 @@ For the regional_domestic dataset, I have split the unit column into the nights/
 
 For the location dataset, I have also simplified the responses, and dropped the original column. 
 
+### Loading cleaned data
+```{r}
+# data has been cleaned in clean_data script
 
-### Business questions / main questions
+activities <- read_csv("clean_data/activities_clean.csv")
+accomodation <- read_csv("clean_data/accomodation_clean.csv")
+demographics <- read_csv("clean_data/demographics_clean.csv")
+location <- read_csv("clean_data/location_clean.csv")
+regional_domestic <- read_csv("clean_data/regional_domestic_clean.csv")
+transport <- read_csv("clean_data/transport_clean.csv")
+```
+
+### Business questions to explore
 
 - What kind of tourism activity generates the highest income for Scotland?
 - Which kind of activity generates the most visits to sites?
@@ -49,29 +50,18 @@ For the location dataset, I have also simplified the responses, and dropped the 
 - How have general tourism rates changed over time?
 - Is there any way to predict spending and visits for Visit Scotland?
 
-### Notes on VisitScotland
-
-Following the challenges with data modelling, I completed further research on VisitScotland's site. They also complete another piece of research, called the Great Britain Tourism Survey. They have noted (https://www.visitscotland.org/binaries/content/assets/dot-org/pdf/research-papers-2/uk-visitors/gbts-gbdvs-update-nov21.pdf) that from 2020 onwards, they will be changing the structure of the data. It seems that they have found the same issues as myself, and are putting similar changes to the ones I recommend in place.
-
-However, there is no data available yet, as travel has been severely impacted due to Covid.
-https://www.visitscotland.org/binaries/content/assets/dot-org/pdf/research-papers-2/uk-visitors/gbts-gbdvs-update-nov21.pdf
-
 ### Initial exploratory data analysis
 
 ```{r}
+# checking for NA values (aside from the "all" values)
 summary(accomodation)
 summary(activities)
 summary(demographics)
 summary(domestic_tourism)
 summary(location)
 summary(transport)
-# checking for NA values (aside from the "all" values)
 
-head(activities)
-head(location)
-head(transport)
-head(domestic_tourism)
-head(accomodation)
+
 ```
 
 ```{r}
@@ -386,7 +376,7 @@ location %>%
 
 ### Data visualisations for presentation
 
-Plot set # 1 - transport
+Transport
 ```{r}
 # "Is there a particular method of travel our visitors arrive by?".
 
@@ -425,7 +415,7 @@ demographics %>%
 This is underpinned by the finding that across the the (unit) million visits between 2013 and 2019, the majority of visitors report having access to a car.
 
 
-Plot set # 2 - Locations
+Locations
 ```{r}
 # "what type of locations receive the most visits?"
 
@@ -477,11 +467,9 @@ accomodation %>%
 ```
 This lines up with accommodation choices; in 2019, most people chose to visit urban areas.
 (note to self: this also answers 'Is there a difference (in accommodation) by location?')
-NOTE - this is the one where it's broken down by percentage.
 
 
-Plot set # 3 - accommodation
-
+Accommodation
 ```{r}
 # "What type of accomodation is most popular?"
 accomodation %>%
@@ -489,19 +477,20 @@ accomodation %>%
   summarise(popular_accomodation = sum(value)/100) %>%
   ggplot(aes(x = accommodation_type, y = popular_accomodation, fill = occupancy_type)) +
   geom_col(position = "dodge", color = "black") +
-  theme(legend.position = "none") +
   labs(x = "Type of accommodation",
        y = "Percentage",
-       title = "Average occupancy by accommodation type 2013-2019") +
+       title = "Average occupancy by accommodation type 2013-2019",
+       fill = "Occupancy type") +
   scale_fill_manual(values = c("Room Occupancy" = "#6B085E",
                                "Unit Occupancy" = "#6B085E",
-                               "Bed Occupancy" = "#6B085E",
+                               "Bed Occupancy" = "#905E88",
                                "Pitch Occupancy" = "#6B085E"))
   
 ```
 2012-2019; hotel is by far the highest.
 
 2019 data, from location set. When breaking down by location (as above), an interesting finding is that in the urban area, B&B's are just as popular as hotels. Maybe down to a certain B&B site?
+
 
 ```{r}
 # trying to figure out the correct way of displaying the accommodation data
@@ -519,7 +508,6 @@ accomodation %>%
 ```
 Breaking the accommodation down by area, the most popular location type is urban areas.
 
-Based on my initial analysis, I considered whether B&B could be increasing in popularity in urban areas (this appeared to be the trend). However, considering the breakdown in data in occupancy_type, this makes the data more complex to analyse and the trend less prominent.
 
 
 ```{r}
@@ -536,7 +524,7 @@ accomodation %>%
 As B&B's are the second-most popular type, and urban areas are most popular - I wanted to see the trend over time. It is of significant interest that these are steadily increasing. 
 
 
-Plot set # 4 - activities
+Activities
 ```{r}
 # What kind of tourism activity generates the highest income?
 activities %>%
@@ -572,7 +560,7 @@ activities %>%
 ```
 2013-2019, sum of million visits. Highest is visits with family/friends. Eating out coming in second, and outdoor leisure in third.
 
-Plot set # 5 - demographics 
+Demographics 
 ```{r}
 # Is there a particular key demographic of visitors we should be focusing on?
 
@@ -659,7 +647,7 @@ demographics %>%
 This is the same issue, but also response / relevance, as the above.
 
 
-Plot set # 6 - regional demographics
+Regional demographics
 
 ```{r}
 # When looking at regional tourism, what insights can we gain? Where are our visitors from? How do they differ in the money they spend, nights they spend in Scotland, or number of visits they do?
@@ -688,7 +676,7 @@ regional_domestic %>%
 ```
 
 
-Plot set # 7 - change over time
+Change over time
 ```{r}
 # How have general tourism rates changed over time?
 
@@ -717,13 +705,13 @@ demographics %>%
 The *general* picture over time, is that for visits, it increases until 2017, and then declines (some more than others).
 For expenditure, it increases until 2017, declines in 2018, and increases again in 2019.
 
-Plots set 8 - predicting change
-This has been plotted in python.
+Predicting change
+This has been plotted in python. The model was inaccurate. I also tried to clean/wrangle the data so that I could plot it in R, but this didn't work either.
 
 
 ### Summary and descriptive statistics for the presentation
 
-Slide 4 - Transport
+Transport slides
 ```{r}
 # total transport visits who use other types of transportation
 transport %>%
@@ -756,7 +744,7 @@ demographics %>%
 81.7% report having access to a car
 
 
-Slide 5 - Location
+Location slides
 ```{r}
 # total who visit city/large town
 location %>%
@@ -780,7 +768,7 @@ accomodation %>%
 ```
 68%
 
-Slide 6 - Accommodation
+Accommodation slides
 ```{r}
 # average accommodation occupancy
 accomodation %>%
@@ -790,7 +778,7 @@ accomodation %>%
 ```
 Hotels are the highest, with 66.27%
 
-Slide 7 - Accommodation
+Accommodation slides
 ```{r}
 # average accommodation occupancy in urban areas
 accomodation %>%
@@ -802,7 +790,7 @@ accomodation %>%
 Other point is urban B&B increasing.
 
 
-Slide 8 - Demographics
+Demographics slides
 ```{r}
 # sum of expenditure by is_married
 demographics %>%
@@ -838,7 +826,7 @@ demographics %>%
 683/940 - 72%
 
 
-Slide 9 - Demographics - age
+Demographics slides - age
 ```{r}
 # 16-24 year old - sum of visits
 demographics %>%
@@ -853,7 +841,7 @@ demographics %>%
 184/946 - 19.4%
 
 
-Slide 11 - Demographics - Older age groups
+Demographics slides - Older age groups
 ```{r}
 # sum of spend of 55-64 year olds
 demographics %>%
@@ -881,7 +869,7 @@ demographics %>%
 65+ - 164
 
 
-Slide 12 - Regional demographics
+Regional demographics
 ```{r}
 # total visits where region is england
 regional_domestic %>%
@@ -900,7 +888,7 @@ Difference is 2452
 
 Note; haven't used this number.
 
-Slide 13 - Activities
+Activities
 ```{r}
 # total spend of eating out activity
 activities %>%
@@ -933,25 +921,21 @@ activities %>%
 Visiting family/friends 315 million – 18.5%
 
 
-### Conclusions and summary of insights
 
-Majority of visitors have access to / travel by car
-Visitors generally visit urban areas / cities
-Hotels and b&b most popular accommodation
-no children - are married
-16-24 most popular age group, but decreasing
-England higher in spend and nights, but Scotland higher in visits
-Most common activities: eating out, visiting friends/family
+### Notes on VisitScotland updating their data
+Following the challenges with data modelling, I completed further research on VisitScotland's site. They also complete another piece of research, called the Great Britain Tourism Survey. They have noted (https://www.visitscotland.org/binaries/content/assets/dot-org/pdf/research-papers-2/uk-visitors/gbts-gbdvs-update-nov21.pdf) that from 2020 onwards, they will be changing the structure of the data. It seems that they have found the same issues as myself, and are putting similar changes to the ones I recommend in place.
+
+However, there is no data available yet, as travel has been severely impacted due to Covid.
+
+https://www.visitscotland.org/binaries/content/assets/dot-org/pdf/research-papers-2/uk-visitors/gbts-gbdvs-update-nov21.pdf
+
+### Conclusions and summary of insights
+Specifically, the insights from my analysis were that the majority of visitors travel by and have access to a car. Additionally, there is a trend of visitors visiting cities; this is evident by exploring both the location data, but also by exploring the accommodations visitors use. Continuing on this thread, B&B's and hotels are the most popular type of accommodation. Additionally, there is an interesting intersection in data between urban areas, and the average occupation of B&B's, as this has been increasing since 2016. The overall profile of a visitor to Scotland is someone who does not have children, and is married; however, a key caveat to this is that the data collection method in demographics is binary, and therefore there are limited options. A better way to profile visitors is by age; 16-24 is the most popular age group, but this is declining, and so for an age group to target, the age group of 55+ is most prolific, as the attendance of these have been steadily increasing since 2015. Data is also profiled by home country, and here England is the dominant feature; however, this is also a dataset where there are limited options, as Wales and Northern Ireland are not included. Lastly, the most common activities in Scotland by visitors are eating out, and visiting family and friends
 
 ### Main recommendations:
-Confidently Promote remote locations
-Develop partnerships with b&b providers
-Focus on urban areas
-Target elder age groups
-
-Develop the questions asked for demographics
-Collect data more frequently  
-
+From my analysis and insights, I have recommended that VisitScotland can be confident that the majority of their customers travel by and have access to car, so any promotions that they may have planned which involve remote locations, they can confidently proceed with.
+I recommended that VisitScotland develop partnerships with B&B providers, particularly in urban areas, which is an area that they should focus on. In terms of profiling a demographic, the age group of 55+ is the age group I recommend to target.
+The key takeaway from my analysis however, is to restructure their data collection, as there were shortcomings in two datasets which made analysis a challenge. I also recommended that they collect data more frequently, e.g. monthly, as this would allow for predictive models to be built, which is not currently possible. 
 
 
 

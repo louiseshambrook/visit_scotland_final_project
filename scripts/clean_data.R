@@ -1,4 +1,4 @@
-# Cleaning and wrangling of data
+# Cleaning and wrangling of data for VisitScotland
 
 # loading the required libraries
 library(tidyverse)

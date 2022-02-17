@@ -57,7 +57,7 @@ transport <- read_csv("clean_data/transport_clean.csv")
 summary(accomodation)
 summary(activities)
 summary(demographics)
-summary(domestic_tourism)
+summary(regional_domestic)
 summary(location)
 summary(transport)
 
@@ -310,7 +310,7 @@ regional_domestic %>%
 # Q7.
 # What type of accomodation is most popular?
 accomodation %>%
-  group_by(accommodation_type_and_occupancy) %>%
+  group_by(accommodation_type, occupancy_type) %>%
   summarise(popular_accomodation = sum(value)) %>%
   arrange(desc(popular_accomodation))
 
